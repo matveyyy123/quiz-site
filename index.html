@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Загрузка...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        
+        .loader-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+            width: 90%;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            margin: 30px auto;
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        p {
+            color: #666;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        
+        .redirect-text {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader-container">
+        <h1>🎯 Тесты</h1>
+        <div class="loader"></div>
+        <p>Загрузка...</p>
+        <div class="redirect-text">Через пару секунд вы будете перенаправлены</div>
+    </div>
+
+    <script>
+        // Перенаправление на main.html через 3 секунды
+        setTimeout(function() {
+            window.location.href = 'main.html';
+        }, 3000);
+    </script>
+</body>
+</html>

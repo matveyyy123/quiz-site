@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты супергерой?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+                                        <script>
+        // ТЕМНАЯ ТЕМА - ДО ЗАГРУЗКИ СТРАНИЦЫ
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+            <h1>🦸 Какой ты супергерой?</h1>
+            <p class="subtitle">Пройди тест и узнай своего супергероя!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1: Главная черта (первые 5 героев) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Твоя главная черта?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="spider">🕷️ Ответственность</button>
+                    <button class="answer-btn" data-value="iron">🤖 Гениальность</button>
+                    <button class="answer-btn" data-value="bat">🦇 Загадочность</button>
+                    <button class="answer-btn" data-value="superman">🦸 Справедливость</button>
+                    <button class="answer-btn" data-value="thor">⚡ Могучесть</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2: Вторая группа героев -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что ты выберешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="captain">🛡️ Защищать слабых</button>
+                    <button class="answer-btn" data-value="hulk">💚 Быть сильным</button>
+                    <button class="answer-btn" data-value="strange">📿 Магия и мудрость</button>
+                    <button class="answer-btn" data-value="wonder">👸 Быть воином</button>
+                    <button class="answer-btn" data-value="flash">⚡ Быть быстрым</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3: Характер (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Твой характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="spider">😊 Дружелюбный</button>
+                    <button class="answer-btn" data-value="iron">😎 Самоуверенный</button>
+                    <button class="answer-btn" data-value="bat">😐 Мрачный</button>
+                    <button class="answer-btn" data-value="superman">😇 Добрый</button>
+                    <button class="answer-btn" data-value="thor">😄 Веселый</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4: Суперсила (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Какую суперсилу выберешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="captain">🛡️ Непробиваемый щит</button>
+                    <button class="answer-btn" data-value="hulk">💪 Невероятная сила</button>
+                    <button class="answer-btn" data-value="strange">🔮 Магия времени</button>
+                    <button class="answer-btn" data-value="wonder">👸 Ловкость и сила</button>
+                    <button class="answer-btn" data-value="flash">🏃 Суперскорость</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5: Цвет (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Любимый цвет?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="spider">🔴 Красный</button>
+                    <button class="answer-btn" data-value="iron">🟡 Золотой</button>
+                    <button class="answer-btn" data-value="bat">⚫ Черный</button>
+                    <button class="answer-btn" data-value="superman">🔵 Синий</button>
+                    <button class="answer-btn" data-value="thor">🟤 Коричневый</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6: Оружие (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Какое оружие выберешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="captain">🛡️ Щит</button>
+                    <button class="answer-btn" data-value="hulk">👊 Кулаки</button>
+                    <button class="answer-btn" data-value="strange">📿 Плащ левитации</button>
+                    <button class="answer-btn" data-value="wonder">⚔️ Меч и лассо</button>
+                    <button class="answer-btn" data-value="flash">👟 Кроссовки</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7: Отдых (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Как отдыхаешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="spider">📸 Фотографирую</button>
+                    <button class="answer-btn" data-value="iron">🔧 Изобретаю</button>
+                    <button class="answer-btn" data-value="bat">🦇 Сижу в темноте</button>
+                    <button class="answer-btn" data-value="superman">📰 Читаю газеты</button>
+                    <button class="answer-btn" data-value="thor">🍻 Пью с друзьями</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8: Транспорт (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">На чем передвигаешься?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="captain">🏍️ На мотоцикле</button>
+                    <button class="answer-btn" data-value="hulk">🦘 Прыжками</button>
+                    <button class="answer-btn" data-value="strange">🌀 Портал</button>
+                    <button class="answer-btn" data-value="wonder">👼 Невидимый самолет</button>
+                    <button class="answer-btn" data-value="flash">🏃 Бегом</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9: Еда (смешанный) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Любимая еда?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="spider">🍕 Пицца</button>
+                    <button class="answer-btn" data-value="iron">🥩 Стейк</button>
+                    <button class="answer-btn" data-value="captain">🍔 Гамбургер</button>
+                    <button class="answer-btn" data-value="thor">🍖 Мясо</button>
+                    <button class="answer-btn" data-value="flash">🍩 Пончики</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10: Девиз (смешанный) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Твой девиз?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="spider">🕷️ "С великой силой приходит великая ответственность"</button>
+                    <button class="answer-btn" data-value="iron">🤖 "Я — Железный человек"</button>
+                    <button class="answer-btn" data-value="bat">🦇 "Я — рыцарь в темноте"</button>
+                    <button class="answer-btn" data-value="superman">🦸 "Правда, справедливость и лучший путь"</button>
+                    <button class="answer-btn" data-value="wonder">👸 "Я — чудо"</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🦸 Твой супергерой:</h2>
+                <div id="result-content"></div>
+                <!-- Оценка теста -->
+                <div class="rating-section">
+          <h4 style="color: #6f6f6f;">Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        // Результаты для теста "Супергерой"
+        const heroResults = {
+            spider: {
+                title: "🕷️ Человек-паук",
+                desc: "Ты — ответственный и добрый. Всегда готов прийти на помощь, даже если это трудно. Ты ценишь друзей и семью, и всегда стараешься поступать правильно. С великой силой приходит великая ответственность — это про тебя!",
+                emoji: "🕸️",
+                color: "#cc0000"
+            },
+            iron: {
+                title: "🤖 Железный человек",
+                desc: "Ты — гениальный, харизматичный и уверенный в себе. Ты не боишься быть в центре внимания и всегда знаешь, чего хочешь. Твоя сила — в уме и технологиях. Ты можешь пошутить в любой ситуации, но когда надо — становишься серьезным.",
+                emoji: "🔧",
+                color: "#b31b1b"
+            },
+            bat: {
+                title: "🦇 Бэтмен",
+                desc: "Ты — загадочный и целеустремленный. Ты работаешь в тени, но всегда добиваешься цели. Ты дисциплинирован, силен духом и готов на все ради справедливости. Твоя сила — в подготовке и воле.",
+                emoji: "🌃",
+                color: "#1a1a1a"
+            },
+            superman: {
+                title: "🦸 Супермен",
+                desc: "Ты — настоящий герой с добрым сердцем. Ты всегда стоишь на стороне добра, защищаешь слабых и веришь в лучшее. Ты сильный, но при этом очень человечный. Люди доверяют тебе и верят в тебя.",
+                emoji: "⭐",
+                color: "#1e3a8a"
+            },
+            thor: {
+                title: "⚡ Тор",
+                desc: "Ты — могучий и благородный. Ты любишь жизнь, друзей и хорошую драку. Ты прямолинейный, честный и всегда готов защитить тех, кто тебе дорог. Твоя сила — в твоем сердце и молоте.",
+                emoji: "🔨",
+                color: "#4b5563"
+            },
+            captain: {
+                title: "🛡️ Капитан Америка",
+                desc: "Ты — патриот и защитник. Ты веришь в идеалы и всегда стоишь за правду. Ты дисциплинированный, сильный и надежный. На тебя можно положиться в любой ситуации.",
+                emoji: "⭐",
+                color: "#1e40af"
+            },
+            hulk: {
+                title: "💚 Халк",
+                desc: "Ты — сильный и эмоциональный. Внутри тебя бушует ураган страстей, но ты учишься контролировать свою силу. Ты верный друг и опасный враг. Главное — не злить тебя!",
+                emoji: "💪",
+                color: "#2e7d32"
+            },
+            strange: {
+                title: "📿 Доктор Стрэндж",
+                desc: "Ты — мудрый и загадочный. Ты смотришь глубже, чем другие, и видишь больше возможностей. Ты веришь в магию и силу духа. Твоя мудрость помогает другим найти путь.",
+                emoji: "🔮",
+                color: "#b8860b"
+            },
+            wonder: {
+                title: "👸 Чудо-женщина",
+                desc: "Ты — сильная, мудрая и справедливая. Ты воин, но с добрым сердцем. Ты веришь в любовь и правду, и готова сражаться за них. Ты вдохновляешь других своей силой и красотой.",
+                emoji: "⚔️",
+                color: "#c7922e"
+            },
+            flash: {
+                title: "⚡ Флэш",
+                desc: "Ты — быстрый, энергичный и позитивный. Ты всегда в движении, везде успеваешь и помогаешь другим. Ты любишь жизнь и несешь добро. С тобой никогда не скучно!",
+                emoji: "🏃",
+                color: "#b33c1f"
+            }
+        };
+
+        // Цвета фона для вопросов
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        // Создаем и запускаем тест
+        const quiz = new QuizTest(10, heroResults, backgroundColors, 'hero');
+        
+        // Функция для оценки теста
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach((btn, i) => {
+                if (i < rating) {
+                    btn.classList.add('selected');
+                } else {
+                    btn.classList.remove('selected');
+                }
+            });
+            
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        // Подсветка звезд при наведении
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const stars = document.querySelectorAll('.star-btn');
+                if (stars.length === 0) return;
+                
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach((s, i) => {
+                            if (i <= index) {
+                                s.classList.add('hover');
+                            } else {
+                                s.classList.remove('hover');
+                            }
+                        });
+                    });
+                    
+                    star.addEventListener('mouseleave', function() {
+                        stars.forEach(s => {
+                            s.classList.remove('hover');
+                        });
+                    });
+                });
+            }, 200);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => quiz.init());
+    </script>
+</body>
+</html>

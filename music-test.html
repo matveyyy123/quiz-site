@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты жанр музыки?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+                                        <script>
+        // ТЕМНАЯ ТЕМА - ДО ЗАГРУЗКИ СТРАНИЦЫ
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+            <h1>🎵 Какой ты жанр музыки?</h1>
+            <p class="subtitle">Пройди тест и узнай, какая музыка отражает твою душу!</p>
+        </header>
+
+<main class="quiz">
+    <!-- Вопрос 1: Место отдыха (первые 5 жанров) -->
+    <div class="question-card active" id="question1">
+        <br>
+        <h2 class="question-title">Какое место для отдыха выбираешь?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 1/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="rock">🏔️ Горы, скалы</button>
+            <button class="answer-btn" data-value="pop">🌆 Шумный город</button>
+            <button class="answer-btn" data-value="jazz">🎷 Джаз-клуб</button>
+            <button class="answer-btn" data-value="classical">🏛️ Театр/филармония</button>
+            <button class="answer-btn" data-value="electronic">🌃 Ночной клуб</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 2: Место отдыха (вторые 5 жанров) -->
+    <div class="question-card" id="question2">
+        <br>
+        <h2 class="question-title">Где любишь гулять?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 2/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="rap">🏙️ Улицы города</button>
+            <button class="answer-btn" data-value="reggae">🌴 Пляж, пальмы</button>
+            <button class="answer-btn" data-value="metal">🏰 Заброшки, индустриальные районы</button>
+            <button class="answer-btn" data-value="indie">🌲 Парк, лес</button>
+            <button class="answer-btn" data-value="blues">🏚️ Маленькие уютные улочки</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 3: Стиль одежды (первые 5) -->
+    <div class="question-card" id="question3">
+        <br>
+        <h2 class="question-title">Твой стиль одежды?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 3/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="rock">👕 Косуха, джинсы, кожа</button>
+            <button class="answer-btn" data-value="pop">👗 Ярко, модно, стильно</button>
+            <button class="answer-btn" data-value="jazz">🎩 Классика, шляпы, ретро</button>
+            <button class="answer-btn" data-value="classical">👔 Строгий костюм</button>
+            <button class="answer-btn" data-value="electronic">🕶️ Неоновое, футуристичное</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 4: Стиль одежды (вторые 5) -->
+    <div class="question-card" id="question4">
+        <br>
+        <h2 class="question-title">Что носишь чаще?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 4/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="rap">👟 Спорт-шик, кеды</button>
+            <button class="answer-btn" data-value="reggae">🩴 Шорты, футболки, расслабленный стиль</button>
+            <button class="answer-btn" data-value="metal">🖤 Черное, цепи, банданы</button>
+            <button class="answer-btn" data-value="indie">🧣 Винтаж, свитера, очки</button>
+            <button class="answer-btn" data-value="blues">🧥 Джинса, клетчатые рубашки</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 5: В песне (первые 5) -->
+    <div class="question-card" id="question5">
+        <br>
+        <h2 class="question-title">Что для тебя важнее в песне?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 5/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="rock">🎸 Гитара, драйв</button>
+            <button class="answer-btn" data-value="pop">🎤 Мелодия, припев</button>
+            <button class="answer-btn" data-value="jazz">🎺 Импровизация, духовые</button>
+            <button class="answer-btn" data-value="classical">🎻 Симфония, оркестр</button>
+            <button class="answer-btn" data-value="electronic">🎛️ Бит, синтезатор</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 6: В песне (вторые 5) -->
+    <div class="question-card" id="question6">
+        <br>
+        <h2 class="question-title">Что слушаешь в первую очередь?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 6/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="rap">🎤 Текст, читка</button>
+            <button class="answer-btn" data-value="reggae">🎸 Ритм, бас</button>
+            <button class="answer-btn" data-value="metal">🥁 Ударные, мощь</button>
+            <button class="answer-btn" data-value="indie">🎹 Атмосфера, мелодия</button>
+            <button class="answer-btn" data-value="blues">🎻 Гитара, эмоции</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 7: Идеальный вечер (первые 5) -->
+    <div class="question-card" id="question7">
+        <br>
+        <h2 class="question-title">Твой идеальный вечер?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 7/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="rock">🤘 Концерт любимой группы</button>
+            <button class="answer-btn" data-value="pop">🪩 Караоке с друзьями</button>
+            <button class="answer-btn" data-value="jazz">🥃 Бар с живой музыкой</button>
+            <button class="answer-btn" data-value="classical">🎫 Поход в оперу</button>
+            <button class="answer-btn" data-value="electronic">💃 Фестиваль/вечеринка</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 8: Идеальный вечер (вторые 5) -->
+    <div class="question-card" id="question8">
+        <br>
+        <h2 class="question-title">Как тусуешься?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 8/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="rap">🎤 Хип-хоп вечеринка</button>
+            <button class="answer-btn" data-value="reggae">🌴 Лаунж, чиллаут</button>
+            <button class="answer-btn" data-value="metal">🤘 Андеграунд, рок-клуб</button>
+            <button class="answer-btn" data-value="indie">🎻 Квартирник</button>
+            <button class="answer-btn" data-value="blues">🎤 Блюз-бар</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 9: Характер (смешанный) -->
+    <div class="question-card" id="question9">
+        <br>
+        <h2 class="question-title">Твой характер?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 9/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="rock">⚡ Бунтарский, дерзкий</button>
+            <button class="answer-btn" data-value="pop">🌟 Яркий, общительный</button>
+            <button class="answer-btn" data-value="jazz">😎 Расслабленный, утонченный</button>
+            <button class="answer-btn" data-value="blues">😔 Меланхоличный, глубокий</button>
+            <button class="answer-btn" data-value="reggae">🌞 Спокойный, позитивный</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 10: Девиз (смешанный) -->
+    <div class="question-card" id="question10">
+        <br>
+        <h2 class="question-title">Твой девиз?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 10/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="metal">🤘 "Сила и мощь"</button>
+            <button class="answer-btn" data-value="indie">🍂 "Быть уникальным"</button>
+            <button class="answer-btn" data-value="classical">🎻 "Гармония во всем"</button>
+            <button class="answer-btn" data-value="rap">💎 "Пробиваться наверх"</button>
+            <button class="answer-btn" data-value="electronic">🚀 "Будущее уже здесь"</button>
+        </div>
+    </div>
+
+    <!-- Результат -->
+    <div class="result-card" id="result">
+        <br>
+        <h2>🎵 Твой жанр музыки:</h2>
+        <div id="result-content"></div>
+        <!-- Оценка теста -->
+        <div class="rating-section">
+          <h4 style="color: #6f6f6f;">Оцените этот тест</h4>
+            <div class="stars-container">
+                <button class="star-btn" onclick="rateTest(1)">★</button>
+                <button class="star-btn" onclick="rateTest(2)">★</button>
+                <button class="star-btn" onclick="rateTest(3)">★</button>
+                <button class="star-btn" onclick="rateTest(4)">★</button>
+                <button class="star-btn" onclick="rateTest(5)">★</button>
+            </div>
+        </div>
+        <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+        <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+    </div>
+</main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        // Результаты для теста "Жанр музыки"
+        const musicResults = {
+            rock: {
+                title: "🤘 Рок",
+                desc: "Ты — бунтарь с большой душой! Любишь свободу, драйв и настоящие эмоции. Ты не боишься быть собой и идти против системы. Твоя энергия заражает окружающих, а твоя искренность подкупает. В жизни ты ищешь правду и не терпишь фальши.",
+                emoji: "🎸",
+                color: "#2c3e50"
+            },
+            pop: {
+                title: "🌟 Поп-музыка",
+                desc: "Ты — яркая звезда! Любишь быть в центре внимания, следишь за трендами и обожаешь жизнь. Ты позитивный, общительный и всегда знаешь, что сейчас модно. С тобой легко и весело, ты заряжаешь всех своим оптимизмом.",
+                emoji: "✨",
+                color: "#ff69b4"
+            },
+            jazz: {
+                title: "🎷 Джаз",
+                desc: "Ты — утонченная натура с хорошим вкусом. Любишь импровизацию, ценишь качество и стиль. Ты расслабленный, но при этом глубокий человек. Умеешь наслаждаться моментом и создавать вокруг себя атмосферу уюта и элегантности.",
+                emoji: "🥃",
+                color: "#8b4513"
+            },
+            classical: {
+                title: "🎻 Классика",
+                desc: "Ты — интеллигентный и гармоничный человек. Ценишь порядок, красоту и вечные ценности. Ты спокоен, мудр и уравновешен. В любой ситуации сохраняешь достоинство и хороший вкус. К тебе приходят за советом и мудростью.",
+                emoji: "🏛️",
+                color: "#daa520"
+            },
+            electronic: {
+                title: "🔊 Электронная музыка",
+                desc: "Ты — человек будущего! Любишь технологии, эксперименты и все новое. Ты современный, прогрессивный и всегда в движении. Ночная жизнь, фестивали и инновации — твоя стихия. Ты не боишься менять этот мир.",
+                emoji: "🚀",
+                color: "#00bfff"
+            },
+            rap: {
+                title: "🎤 Хип-хоп",
+                desc: "Ты — уверенный в себе и целеустремленный. Любишь ритм, слово и стиль. Ты знаешь себе цену и умеешь добиваться своего. Твоя сила — в текстах и умении говорить правду. Ты идешь к цели, несмотря на препятствия.",
+                emoji: "💎",
+                color: "#ff8c00"
+            },
+            reggae: {
+                title: "🌴 Регги",
+                desc: "Ты — спокойный и философский. Любишь солнце, море и позитив. Ты не суетишься, принимаешь жизнь такой, какая она есть. Твоя мудрость в расслабленности и умении радоваться простым вещам. Ты несешь добро и свет.",
+                emoji: "☀️",
+                color: "#ffd700"
+            },
+            metal: {
+                title: "🤘 Метал",
+                desc: "Ты — сильный и глубокий человек. За внешней суровостью скрывается чуткая душа. Ты ценишь мощь, красоту и настоящие чувства. Ты верен своим идеалам и никогда не предаешь близких. Твоя сила — в твоей преданности.",
+                emoji: "⚡",
+                color: "#4a4a4a"
+            },
+            indie: {
+                title: "🎸 Инди",
+                desc: "Ты — творческая и неординарная личность. Любишь все уникальное, некоммерческое, душевное. Ты ищешь свой путь и не гонишься за модой. Ты ценишь искренность и создаешь вокруг себя особую атмосферу уюта и творчества.",
+                emoji: "🍂",
+                color: "#9acd32"
+            },
+            blues: {
+                title: "🎸 Блюз",
+                desc: "Ты — чувствительный и глубокий человек. Твоя душа полна переживаний, но ты умеешь превращать их в искусство. Ты ценишь искренность, настоящие эмоции и жизненный опыт. В тебе есть грусть, но есть и светлая надежда.",
+                emoji: "😌",
+                color: "#4682b4"
+            }
+        };
+
+        // Цвета фона для вопросов
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        // Создаем и запускаем тест
+        const quiz = new QuizTest(10, musicResults, backgroundColors, 'music');
+        
+/// Функция для оценки теста
+window.rateTest = function(rating) {
+    const stars = document.querySelectorAll('.star-btn');
+    
+    if (stars[0] && stars[0].disabled) return;
+    
+    stars.forEach((btn, i) => {
+        if (i < rating) {
+            btn.classList.add('selected');
+        } else {
+            btn.classList.remove('selected');
+        }
+    });
+    
+    quiz.saveRating(rating);
+    
+    stars.forEach(btn => {
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+        btn.style.cursor = 'default';
+    });
+};
+
+// Подсветка звезд при наведении (запускаем после загрузки)
+document.addEventListener('DOMContentLoaded', function() {
+    // Ждем появления звезд
+    setTimeout(function() {
+        const stars = document.querySelectorAll('.star-btn');
+        if (stars.length === 0) return; // Если звезд нет - выходим
+        
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseenter', function() {
+                if (this.disabled) return;
+                stars.forEach((s, i) => {
+                    if (i <= index) {
+                        s.style.color = '#ffaa00';
+                        s.style.borderColor = '#ffaa00';
+                    } else {
+                        s.style.color = '#aaa';
+                        s.style.borderColor = '#e0e0e0';
+                    }
+                });
+            });
+            
+            star.addEventListener('mouseleave', function() {
+                stars.forEach(s => {
+                    if (!s.disabled) {
+                        s.style.color = '#aaa';
+                        s.style.borderColor = '#e0e0e0';
+                    }
+                    if (s.classList.contains('selected')) {
+                        s.style.color = '#ffaa00';
+                        s.style.borderColor = '#ffaa00';
+                    }
+                });
+            });
+        });
+    }, 200);
+});
+
+// Запускаем тест
+document.addEventListener('DOMContentLoaded', () => {
+    quiz.init();
+});
+    </script>
+</body>
+</html>

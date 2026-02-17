@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Куда поехать в отпуск?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+                                        <script>
+        // ТЕМНАЯ ТЕМА - ДО ЗАГРУЗКИ СТРАНИЦЫ
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+            <h1>🏖️ Куда поехать в отпуск?</h1>
+            <p class="subtitle">Пройди тест и узнай идеальное место для отдыха!</p>
+        </header>
+
+<main class="quiz">
+    <!-- Вопрос 1: Тип отдыха (первые 5 стран) -->
+    <div class="question-card active" id="question1">
+        <br>
+        <h2 class="question-title">Какой отдых ты предпочитаешь?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 1/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="thailand">🏝️ Пляжный, лежать и ничего не делать</button>
+            <button class="answer-btn" data-value="iceland">🏔️ Активный, походы и приключения</button>
+            <button class="answer-btn" data-value="italy">🏛️ Экскурсионный, музеи и история</button>
+            <button class="answer-btn" data-value="japan">🏯 Культурный, традиции и еда</button>
+            <button class="answer-btn" data-value="spain">🎉 Тусовки, вечеринки и фестивали</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 2: Тип отдыха (вторые 5 стран) -->
+    <div class="question-card" id="question2">
+        <br>
+        <h2 class="question-title">Что важнее в отпуске?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 2/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="greece">🏛️ Древняя история и мифы</button>
+            <button class="answer-btn" data-value="egypt">🐫 Загадки древних цивилизаций</button>
+            <button class="answer-btn" data-value="france">🥐 Романтика и изысканность</button>
+            <button class="answer-btn" data-value="turkey">🏖️ Море и отдых "Все включено"</button>
+            <button class="answer-btn" data-value="usa">🗽 Мегаполисы и природа</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 3: Погода (первые 5) -->
+    <div class="question-card" id="question3">
+        <br>
+        <h2 class="question-title">Какая погода тебе по душе?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 3/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="thailand">☀️ Жарко, солнечно, +30</button>
+            <button class="answer-btn" data-value="iceland">❄️ Прохладно, снег, горы</button>
+            <button class="answer-btn" data-value="italy">🌤️ Умеренно, тепло, комфортно</button>
+            <button class="answer-btn" data-value="japan">🍁 Все сезоны, люблю разнообразие</button>
+            <button class="answer-btn" data-value="spain">☀️ Жарко, но с ветерком</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 4: Погода (вторые 5) -->
+    <div class="question-card" id="question4">
+        <br>
+        <h2 class="question-title">Какое время года любишь?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 4/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="greece">☀️ Жаркое лето</button>
+            <button class="answer-btn" data-value="egypt">🌞 Солнце круглый год</button>
+            <button class="answer-btn" data-value="france">🌸 Весна</button>
+            <button class="answer-btn" data-value="turkey">🍂 Бархатный сезон</button>
+            <button class="answer-btn" data-value="usa">❄️ Зимние приключения</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 5: Еда (первые 5) -->
+    <div class="question-card" id="question5">
+        <br>
+        <h2 class="question-title">Что ты будешь есть в отпуске?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 5/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="thailand">🍜 Местную уличную еду</button>
+            <button class="answer-btn" data-value="iceland">🥘 Национальную кухню</button>
+            <button class="answer-btn" data-value="italy">🍝 Пицца и паста</button>
+            <button class="answer-btn" data-value="japan">🍣 Суши, рамен, морепродукты</button>
+            <button class="answer-btn" data-value="spain">🥘 Паэлью, тапас, хамон</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 6: Еда (вторые 5) -->
+    <div class="question-card" id="question6">
+        <br>
+        <h2 class="question-title">Какую кухню предпочитаешь?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 6/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="greece">🥗 Греческую (мусака, дзадзыки)</button>
+            <button class="answer-btn" data-value="egypt">🍲 Восточную (кебабы, хумус)</button>
+            <button class="answer-btn" data-value="france">🥐 Французскую (круассаны, сыры)</button>
+            <button class="answer-btn" data-value="turkey">🍢 Турецкую (кебабы, пахлава)</button>
+            <button class="answer-btn" data-value="usa">🍔 Американскую (бургеры, стейки)</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 7: Активности (первые 5) -->
+    <div class="question-card" id="question7">
+        <br>
+        <h2 class="question-title">Что будешь делать вечером?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 7/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="thailand">🥥 Пить коктейли на пляже</button>
+            <button class="answer-btn" data-value="iceland">✨ Смотреть северное сияние</button>
+            <button class="answer-btn" data-value="italy">🍷 Ужин в ресторане с вином</button>
+            <button class="answer-btn" data-value="japan">♨️ Горячие источники</button>
+            <button class="answer-btn" data-value="spain">💃 Танцевать в клубах до утра</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 8: Активности (вторые 5) -->
+    <div class="question-card" id="question8">
+        <br>
+        <h2 class="question-title">Чем займешься днем?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 8/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="greece">🏗️ Осмотр древних руин</button>
+            <button class="answer-btn" data-value="egypt">🐫 Поездка на верблюдах</button>
+            <button class="answer-btn" data-value="france">🏛️ Посещение Лувра</button>
+            <button class="answer-btn" data-value="turkey">🛍️ Шоппинг на базарах</button>
+            <button class="answer-btn" data-value="usa">🏞️ Национальные парки</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 9: Бюджет (смешанный) -->
+    <div class="question-card" id="question9">
+        <br>
+        <h2 class="question-title">Какой бюджет на отпуск?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 9/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="thailand">💳 Дорого, но красиво</button>
+            <button class="answer-btn" data-value="iceland">💴 Готов платить за впечатления</button>
+            <button class="answer-btn" data-value="turkey">💶 Люблю комфорт</button>
+            <button class="answer-btn" data-value="egypt">💵 Средний, главное море</button>
+            <button class="answer-btn" data-value="spain">📄 Бюджетно, но весело</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 10: Девиз (смешанный) -->
+    <div class="question-card" id="question10">
+        <br>
+        <h2 class="question-title">Твой девиз в путешествиях?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 10/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="japan">🌸 "Познать гармонию"</button>
+            <button class="answer-btn" data-value="italy">🍝 "Живи вкусно"</button>
+            <button class="answer-btn" data-value="france">🥐 "Наслаждаться моментом"</button>
+            <button class="answer-btn" data-value="greece">🏛️ "Прикоснуться к истории"</button>
+            <button class="answer-btn" data-value="usa">🗽 "Все возможно"</button>
+        </div>
+    </div>
+
+    <!-- Результат -->
+    <div class="result-card" id="result">
+        <br>
+        <h2>🌍 Твое идеальное направление:</h2>
+        <div id="result-content"></div>
+        <!-- Оценка теста -->
+        <div class="rating-section">
+          <h4 style="color: #6f6f6f;">Оцените этот тест</h4>
+            <div class="stars-container">
+                <button class="star-btn" onclick="rateTest(1)">★</button>
+                <button class="star-btn" onclick="rateTest(2)">★</button>
+                <button class="star-btn" onclick="rateTest(3)">★</button>
+                <button class="star-btn" onclick="rateTest(4)">★</button>
+                <button class="star-btn" onclick="rateTest(5)">★</button>
+            </div>
+        </div>
+        <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+        <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+    </div>
+</main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        // Результаты для теста "Путешествия"
+        const travelResults = {
+            thailand: {
+                title: "🏝️ Таиланд",
+                desc: "Тебе нужен настоящий рай! Белый песок, бирюзовая вода, кокосы и полное расслабление. Ты хочешь забыть о проблемах и просто наслаждаться жизнью. Массажи, острова, фрукты и улыбчивые люди — вот твой идеальный отпуск.",
+                emoji: "🥥",
+                color: "#ff9a3c"
+            },
+            iceland: {
+                title: "❄️ Исландия",
+                desc: "Ты ищешь приключений! Ледники, водопады, вулканы и северное сияние. Ты не боишься холода и готов к походам. Твоя стихия — дикая природа и захватывающие дух пейзажи. Только ты и суровая красота севера.",
+                emoji: "✨",
+                color: "#4682b4"
+            },
+            italy: {
+                title: "🍕 Италия",
+                desc: "Ты ценишь красоту, историю и вкусную еду. Рим, Флоренция, Венеция — города искусства. Паста, пицца, вино и джелато. Ты хочешь жить красиво, есть вкусно и дышать историей. Италия создана для тебя!",
+                emoji: "🍷",
+                color: "#8b4513"
+            },
+            japan: {
+                title: "🗻 Япония",
+                desc: "Ты тянешься к гармонии, традициям и технологиям. Храмы Киото, неон Токио, сакура и онсэн. Ты хочешь понять другую культуру, попробовать настоящий рамен и прикоснуться к древним традициям. Япония ждет тебя!",
+                emoji: "🎌",
+                color: "#d94f4f"
+            },
+            spain: {
+                title: "💃 Испания",
+                desc: "Ты любишь жизнь во всех ее проявлениях! Фламенко, коррида, сангрия и фиеста. Барселона, Мадрид, Коста-Брава. Ты хочешь танцевать до утра, есть паэлью и ловить каждый момент. Оле!",
+                emoji: "💃",
+                color: "#e67e22"
+            },
+            greece: {
+                title: "🇬🇷 Греция",
+                desc: "Ты мечтаешь о синеве неба и белых домиках. Санторини, Афины, Крит. Ты хочешь смотреть на закаты, пить узо и есть оливки. Античная история и кристально чистое море — твой выбор.",
+                emoji: "⛪",
+                color: "#1e90ff"
+            },
+            egypt: {
+                title: "🇪🇬 Египет",
+                desc: "Тебя манят тайны древних цивилизаций. Пирамиды, Сфинкс, Красное море и дайвинг. Ты хочешь прикоснуться к истории и понырять среди кораллов. Жара, пустыня и загадки фараонов.",
+                emoji: "🐫",
+                color: "#d2691e"
+            },
+            france: {
+                title: "🇫🇷 Франция",
+                desc: "Ты романтик! Париж, Эйфелева башня, круассаны и лавандовые поля. Ты хочешь гулять по узким улочкам, пить кофе в уличных кафе и чувствовать себя героем французского фильма.",
+                emoji: "🥐",
+                color: "#d4af37"
+            },
+            turkey: {
+                title: "🇹🇷 Турция",
+                desc: "Тебе нужно all inclusive! Море, солнце, бассейн и анимация. Ты хочешь, чтобы было включено всё: еда, напитки, развлечения. Просто приехал и отдыхаешь, ни о чем не думая.",
+                emoji: "🏖️",
+                color: "#cd5c5c"
+            },
+            usa: {
+                title: "🇺🇸 США",
+                desc: "Ты хочешь всего и сразу! Нью-Йорк, Лас-Вегас, Гранд Каньон. Мегаполисы, природа, развлечения. Ты хочешь увидеть Америку во всем ее разнообразии.",
+                emoji: "🗽",
+                color: "#2c3e50"
+            }
+        };
+
+        // Цвета фона для вопросов
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        // Создаем и запускаем тест
+        const quiz = new QuizTest(10, travelResults, backgroundColors, 'travel');
+        
+        // Функция для оценки теста
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach((btn, i) => {
+                if (i < rating) {
+                    btn.classList.add('selected');
+                } else {
+                    btn.classList.remove('selected');
+                }
+            });
+            
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        // Подсветка звезд при наведении
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const stars = document.querySelectorAll('.star-btn');
+                if (stars.length === 0) return;
+                
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach((s, i) => {
+                            if (i <= index) {
+                                s.classList.add('hover');
+                            } else {
+                                s.classList.remove('hover');
+                            }
+                        });
+                    });
+                    
+                    star.addEventListener('mouseleave', function() {
+                        stars.forEach(s => {
+                            s.classList.remove('hover');
+                        });
+                    });
+                });
+            }, 200);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => quiz.init());
+    </script>
+</body>
+</html>

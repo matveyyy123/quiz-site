@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты напиток?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header class="header">
+                            <script>
+        // ТЕМНАЯ ТЕМА - ДО ЗАГРУЗКИ СТРАНИЦЫ
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+            <h1>🥤 Какой ты напиток?</h1>
+            <p class="subtitle">Пройди тест и узнай свою напиточную душу!</p>
+
+        </header>
+
+<main class="quiz">
+    <!-- Вопрос 1: Утро -->
+    <div class="question-card active" id="question1">
+        <br>
+        <h2 class="question-title">Твое идеальное утро?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 1/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="espresso">☕ Быстрый кофе и бежать</button>
+            <button class="answer-btn" data-value="green-tea">🧘 Медленное пробуждение</button>
+            <button class="answer-btn" data-value="lemonade">🏃 Зарядка и активность</button>
+            <button class="answer-btn" data-value="hot-chocolate">📚 С книгой и пледом</button>
+            <button class="answer-btn" data-value="mojito">🌞 На веранде/балконе</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 2: Выбор в кафе (вторая группа напитков) -->
+    <div class="question-card" id="question2">
+        <br>
+        <h2 class="question-title">Что ты выберешь в кафе?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 2/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="matcha">🍵 Матча латте</button>
+            <button class="answer-btn" data-value="milkshake">🥤 Молочный коктейль</button>
+            <button class="answer-btn" data-value="chai">🍂 Чай с пряностями</button>
+            <button class="answer-btn" data-value="pumpkin-spice">🎃 Тыквенный латте</button>
+            <button class="answer-btn" data-value="smoothie">🥭 Смузи</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 3: Характер (первые 5) -->
+    <div class="question-card" id="question3">
+        <br>
+        <h2 class="question-title">Твой характер?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 3/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="espresso">⚡ Быстрый, решительный</button>
+            <button class="answer-btn" data-value="green-tea">🌊 Спокойный</button>
+            <button class="answer-btn" data-value="lemonade">🎉 Веселый</button>
+            <button class="answer-btn" data-value="hot-chocolate">🤗 Мягкий</button>
+            <button class="answer-btn" data-value="mojito">🌿 Свободный</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 4: Время года (вторая группа) -->
+    <div class="question-card" id="question4">
+        <br>
+        <h2 class="question-title">Любимое время года?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 4/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="matcha">🌸 Весна</button>
+            <button class="answer-btn" data-value="smoothie">☀️ Лето</button>
+            <button class="answer-btn" data-value="pumpkin-spice">🍂 Осень</button>
+            <button class="answer-btn" data-value="chai">❄️ Зима</button>
+            <button class="answer-btn" data-value="milkshake">🍃 Любое</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 5: Девиз (первые 5) -->
+    <div class="question-card" id="question5">
+        <br>
+        <h2 class="question-title">Твой девиз?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 5/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="espresso">⚡ "Быстрее, выше, сильнее!"</button>
+            <button class="answer-btn" data-value="green-tea">🧘 "Главное - гармония"</button>
+            <button class="answer-btn" data-value="lemonade">🎈 "Наслаждайся моментом!"</button>
+            <button class="answer-btn" data-value="hot-chocolate">❤️ "Неси добро"</button>
+            <button class="answer-btn" data-value="mojito">🌊 "Будь собой"</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 6: Выходные (вторая группа) -->
+    <div class="question-card" id="question6">
+        <br>
+        <h2 class="question-title">Как проводишь выходные?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 6/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="smoothie">🏃 Активно, с пользой</button>
+            <button class="answer-btn" data-value="milkshake">🛋️ Дома с пледом</button>
+            <button class="answer-btn" data-value="matcha">🎉 С друзьями</button>
+            <button class="answer-btn" data-value="chai">🌳 На природе</button>
+            <button class="answer-btn" data-value="pumpkin-spice">🧭 Путешествия</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 7: Десерт (смешанный) -->
+    <div class="question-card" id="question7">
+        <br>
+        <h2 class="question-title">Твой любимый десерт?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 7/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="hot-chocolate">🍫 Шоколадный торт</button>
+            <button class="answer-btn" data-value="lemonade">🍋 Фруктовый салат</button>
+            <button class="answer-btn" data-value="milkshake">🍦 Мороженое</button>
+            <button class="answer-btn" data-value="matcha">🍰 Чизкейк</button>
+            <button class="answer-btn" data-value="smoothie">🍎 Фрукты</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 8: Погода (смешанный) -->
+    <div class="question-card" id="question8">
+        <br>
+        <h2 class="question-title">Какая погода тебе по душе?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 8/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="lemonade">☀️ Солнечная</button>
+            <button class="answer-btn" data-value="green-tea">🌧️ Дождливая</button>
+            <button class="answer-btn" data-value="pumpkin-spice">☁️ Пасмурная</button>
+            <button class="answer-btn" data-value="chai">❄️ Морозная</button>
+            <button class="answer-btn" data-value="mojito">🍃 Ветреная</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 9: Стиль одежды (смешанный) -->
+    <div class="question-card" id="question9">
+        <br>
+        <h2 class="question-title">Твой стиль одежды?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 9/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="espresso">👔 Классический</button>
+            <button class="answer-btn" data-value="lemonade">👕 Яркий</button>
+            <button class="answer-btn" data-value="green-tea">🧥 Спокойный</button>
+            <button class="answer-btn" data-value="mojito">🧢 Спортивный</button>
+            <button class="answer-btn" data-value="matcha">👘 Минимализм</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 10: Ценности (смешанный) -->
+    <div class="question-card" id="question10">
+        <br>
+        <h2 class="question-title">Что ценишь в людях?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 10/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="espresso">⚡ Решительность</button>
+            <button class="answer-btn" data-value="green-tea">🌿 Спокойствие</button>
+            <button class="answer-btn" data-value="lemonade">😄 Оптимизм</button>
+            <button class="answer-btn" data-value="hot-chocolate">❤️ Доброту</button>
+            <button class="answer-btn" data-value="chai">🧠 Мудрость</button>
+        </div>
+    </div>
+
+    <!-- Результат -->
+    <div class="result-card" id="result">
+        <br>
+        <h2>🍹 Твой напиток:</h2>
+        <div id="result-content"></div>
+        <!-- Оценка теста -->
+        <div class="rating-section">
+            <h4 style="color: #6f6f6f;">Оцените этот тест</h4>
+            <div class="stars-container">
+                <button class="star-btn" onclick="rateTest(1)">★</button>
+                <button class="star-btn" onclick="rateTest(2)">★</button>
+                <button class="star-btn" onclick="rateTest(3)">★</button>
+                <button class="star-btn" onclick="rateTest(4)">★</button>
+                <button class="star-btn" onclick="rateTest(5)">★</button>
+            </div>
+        </div>
+        <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+        <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+    </div>
+</main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        // Результаты для теста "Напитки"
+        const drinkResults = {
+            espresso: {
+                title: "☕ Эспрессо",
+                desc: "Ты — настоящий энерджайзер! Бодрый, решительный и всегда в движении. Ты не тратишь время зря и всегда достигаешь целей. Ты — прирожденный лидер, заряжаешь окружающих своей энергией.",
+                emoji: "⚡",
+                color: "#3b1e1e"
+            },
+            "green-tea": {
+                title: "🍵 Зеленый чай",
+                desc: "Ты — воплощение гармонии и мудрости. Ценишь качество во всем, любишь спокойствие и уют. К тебе приходят за советом, ты умеешь слушать и слышать других. С тобой легко и спокойно.",
+                emoji: "🧘",
+                color: "#2c5e2e"
+            },
+            lemonade: {
+                title: "🍋 Лимонад",
+                desc: "Ты — душа компании! Позитивный, искрящийся и всегда готовый к приключениям. Твой оптимизм заразителен, ты умеешь радоваться жизни и делиться этой радостью с другими.",
+                emoji: "🎉",
+                color: "#f3d250"
+            },
+            "hot-chocolate": {
+                title: "🍫 Горячий шоколад",
+                desc: "Ты — само тепло и уют! Мягкий, заботливый и нежный. Рядом с тобой хочется завернуться в плед и смотреть любимые фильмы. Ты делаешь этот мир добрее.",
+                emoji: "🤗",
+                color: "#7b3f00"
+            },
+            mojito: {
+                title: "🌿 Мохито",
+                desc: "Ты — свободная душа! Любишь приключения, свежий ветер и новые впечатления. Ты не сидишь на месте и всегда ищешь что-то интересное. С тобой не соскучишься!",
+                emoji: "🌊",
+                color: "#1e5f5a"
+            },
+            matcha: {
+                title: "🍵 Матча",
+                desc: "Ты — современный и стильный. Идешь в ногу со временем, следишь за трендами, но при этом ценишь традиции. Ты загадочный, многогранный и всегда выглядишь безупречно.",
+                emoji: "💚",
+                color: "#6b8e4c"
+            },
+            milkshake: {
+                title: "🥤 Молочный коктейль",
+                desc: "Ты — нежный и романтичный. Немного мечтательный и чувствительный. Любишь уют и сладости, ценишь простые радости жизни. С тобой тепло и безопасно.",
+                emoji: "🍓",
+                color: "#ffb7c5"
+            },
+            chai: {
+                title: "🍂 Чай с пряностями",
+                desc: "Ты — глубокий и многогранный. В тебе есть что-то восточное, мудрое. Ты согреваешь окружающих своим теплом, но в тебе есть и пряная острота. Ты — загадка.",
+                emoji: "🧡",
+                color: "#b1560f"
+            },
+            "pumpkin-spice": {
+                title: "🎃 Тыквенный латте",
+                desc: "Ты — уютный и атмосферный. Любишь осень, уютные вечера и красивые вещи. Ты ценишь эстетику во всем и создаешь вокруг себя красоту и гармонию.",
+                emoji: "🍁",
+                color: "#e67e22"
+            },
+            smoothie: {
+                title: "🥭 Смузи",
+                desc: "Ты — активный и здоровый! Заботишься о себе и окружающих. Ты энергичен, позитивен и всегда полон идей для новых начинаний. С тобой хочется развиваться.",
+                emoji: "💪",
+                color: "#ff9a3c"
+            }
+        };
+
+        // Цвета фона для вопросов
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        // Создаем и запускаем тест
+        const quiz = new QuizTest(10, drinkResults, backgroundColors, 'drink');
+        
+// Функция для оценки теста
+window.rateTest = function(rating) {
+    const stars = document.querySelectorAll('.star-btn');
+    
+    // Проверяем, не заблокированы ли звезды
+    if (stars[0] && stars[0].disabled) return;
+    
+    // Сначала убираем все выделения
+    stars.forEach(btn => {
+        btn.classList.remove('selected');
+    });
+    
+    // Подсвечиваем выбранные звезды
+    for (let i = 0; i < rating; i++) {
+        stars[i].classList.add('selected');
+    }
+    
+    // Сохраняем оценку
+    quiz.saveRating(rating);
+    
+    // Блокируем звезды
+    stars.forEach(btn => {
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+        btn.style.cursor = 'default';
+    });
+};
+
+// Подсветка звезд при наведении
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const stars = document.querySelectorAll('.star-btn');
+        if (stars.length === 0) return;
+        
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseenter', function() {
+                // Если звезды заблокированы - ничего не делаем
+                if (this.disabled) return;
+                
+                // Убираем предыдущие hover
+                stars.forEach(s => {
+                    s.classList.remove('hover');
+                });
+                
+                // Добавляем hover только на звезды до текущей
+                for (let i = 0; i <= index; i++) {
+                    stars[i].classList.add('hover');
+                }
+            });
+            
+            star.addEventListener('mouseleave', function() {
+                // При уходе мыши убираем все hover
+                stars.forEach(s => {
+                    s.classList.remove('hover');
+                });
+            });
+        });
+    }, 200);
+});
+
+// Запускаем тест
+document.addEventListener('DOMContentLoaded', () => {
+    quiz.init();
+});
+</script>
+</body>
+</html>

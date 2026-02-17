@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Все тесты</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+<header class="header">
+    <div style="display: flex; justify-content: center; align-items: center; position: relative;">
+        <h1 style="margin: 0;">🎯 Все наши тесты</h1>
+        <button class="theme-toggle" id="themeToggle" style="position: absolute; right: 0;">🌙</button>
+    </div>
+    <p class="subtitle">Выбери тест и узнай что-то новое о себе!</p>
+</header>
+
+        <main>
+<div class="tests-grid">
+    <!-- Тест 1: Напитки (готов) -->
+    <div class="test-card drink" onclick="location.href='drink-test.html'">
+        <div class="test-emoji">🥤</div>
+        <div class="test-title">Какой ты напиток?</div>
+        <div class="test-desc">Узнай свой напиток по характеру</div>
+    </div>
+    
+<!-- Тест 2: Супергерой (готов) -->
+<div class="test-card hero" onclick="location.href='hero-test.html'">
+    <div class="test-emoji">🦸</div>
+    <div class="test-title">Какой ты супергерой?</div>
+    <div class="test-desc">Узнай своего супергероя</div>
+</div>
+    
+<!-- Тест 3: Животное (готов) -->
+<div class="test-card animal" onclick="location.href='animal-test.html'">
+    <div class="test-emoji">🐱</div>
+    <div class="test-title">Какое ты животное?</div>
+    <div class="test-desc">Найди свое тотемное животное</div>
+</div>
+    
+<!-- Тест 4: Музыка (готов) -->
+<div class="test-card music" onclick="location.href='music-test.html'">
+    <div class="test-emoji">🎵</div>
+    <div class="test-title">Какой ты жанр музыки?</div>
+    <div class="test-desc">Определи свой музыкальный стиль</div>
+</div>
+    
+<!-- Тест 5: Отпуск (готов) -->
+<div class="test-card travel" onclick="location.href='travel-test.html'">
+    <div class="test-emoji">🌍</div>
+    <div class="test-title">Куда поехать в отпуск?</div>
+    <div class="test-desc">Подбери страну для путешествия</div>
+</div>
+    
+<!-- Тест 6: Пицца (готов) -->
+<div class="test-card pizza" onclick="location.href='pizza-test.html'">
+    <div class="test-emoji">🍕</div>
+    <div class="test-title">Какая ты пицца?</div>
+    <div class="test-desc">Узнай, какая пицца твоя душа</div>
+</div>
+</div>
+
+            <!-- СВЯЗЬ С НАМИ -->
+<div class="contact-section">
+    <h2 class="contact-title">Связь с нами</h2>
+    <p class="contact-text">Есть предложения или вопросы? Хочешь оставить анонимный отзыв?</p>
+    <button class="contact-btn" onclick="location.href='contact.html'">Написать нам</button>
+</div>
+        </main>
+    </div>
+<script>
+    
+// Обновленная функция updateTestCounters с объединенной статистикой
+function updateTestCounters() {
+    const stats = JSON.parse(localStorage.getItem('quizStats')) || {};
+    const ratings = JSON.parse(localStorage.getItem('testRatings')) || {};
+    
+    // Словарь для тестов
+const tests = {
+    drink: { selector: '.test-card.drink', name: 'Напитки' },
+    animal: { selector: '.test-card.animal', name: 'Животное' },
+    music: { selector: '.test-card.music', name: 'Музыка' },
+    travel: { selector: '.test-card.travel', name: 'Отпуск' },
+    pizza: { selector: '.test-card.pizza', name: 'Пицца' },
+    hero: { selector: '.test-card.hero', name: 'Супергерой' }
+};
+    
+    // Находим самый популярный тест
+    let mostPopularId = null;
+    let maxCount = 0;
+    
+    for (let [id, count] of Object.entries(stats)) {
+        if (count > maxCount) {
+            maxCount = count;
+            mostPopularId = id;
+        }
+    }
+    
+    // Убираем огонек у всех и старую статистику
+    document.querySelectorAll('.test-card').forEach(card => {
+        card.classList.remove('most-popular');
+        
+        const oldStats = card.querySelector('.test-stats');
+        if (oldStats) oldStats.remove();
+    });
+    
+    // Добавляем статистику на каждую карточку
+    for (let [id, test] of Object.entries(tests)) {
+        const card = document.querySelector(test.selector);
+        if (card) {
+            const count = stats[id] || 0;
+            const testRating = ratings[id] || { average: 0, count: 0 };
+            
+            // Создаем контейнер для статистики
+            const statsDiv = document.createElement('div');
+            statsDiv.className = 'test-stats';
+            
+            // Счетчик прохождений
+            const counterSpan = document.createElement('span');
+            counterSpan.className = 'test-counter';
+            counterSpan.innerHTML = `👥 ${count} ${getWord(count)}`;
+            
+            // Разделитель
+            const separator = document.createElement('span');
+            separator.className = 'stats-separator';
+            separator.innerHTML = '|';
+            
+            // Рейтинг
+            const ratingSpan = document.createElement('span');
+            ratingSpan.className = 'test-rating';
+            
+            if (testRating.count === 0) {
+                ratingSpan.innerHTML = `<span class="rating-stars">☆☆☆☆☆</span> <span class="rating-value">0.0</span>`;
+            } else {
+                // Округляем до целого числа (3.1 → 3 звезды, 3.6 → 4 звезды)
+                const starCount = Math.round(testRating.average);
+                
+                // Создаем звезды
+                let filled = '★'.repeat(starCount);      // Золотые звезды
+                let empty = '☆'.repeat(5 - starCount);   // Пустые звезды
+                
+                ratingSpan.innerHTML = `
+                    <span class="rating-stars">
+                        <span class="stars-filled">${filled}</span>
+                        <span class="stars-empty">${empty}</span>
+                    </span>
+                    <span class="rating-value">${testRating.average.toFixed(1)}</span>
+                `;
+            }
+            
+            // Собираем все вместе
+            statsDiv.appendChild(counterSpan);
+            statsDiv.appendChild(separator);
+            statsDiv.appendChild(ratingSpan);
+            
+            // Добавляем на карточку
+            card.appendChild(statsDiv);
+            
+            // Ставим огонек самому популярному
+            if (id === mostPopularId) {
+                card.classList.add('most-popular');
+            }
+        }
+    }
+}
+
+// Склонение слова "прохождение" (если нужно отдельно)
+function getWord(count) {
+    if (count % 10 === 1 && count % 100 !== 11) return 'прохождение';
+    if ([2,3,4].includes(count % 10) && ![12,13,14].includes(count % 100)) return 'прохождения';
+    return 'прохождений';
+}
+
+// ========== ПЕРЕКЛЮЧЕНИЕ ТЕМЫ ==========
+(function() {
+    const themeToggle = document.getElementById('themeToggle');
+    
+    // Загружаем сохраненную тему
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeToggle.textContent = '☀️';
+    }
+    
+    // Переключение темы
+    themeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme');
+        
+        if (document.body.classList.contains('dark-theme')) {
+            themeToggle.textContent = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            themeToggle.textContent = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+})();
+
+// Делаем функции глобальными
+window.updateTestCounters = updateTestCounters;
+
+// Обновляем при загрузке страницы
+document.addEventListener('DOMContentLoaded', updateTestCounters);
+
+// Обновляем каждые 5 секунд
+setInterval(updateTestCounters, 5000);
+</script>
+<script src="test-helper.js"></script>
+
+<script>
+    (function() {
+        function forceFixBorder() {
+            // Находим все популярные карточки
+            document.querySelectorAll('.test-card.most-popular').forEach(card => {
+                // Создаем и добавляем стили прямо в head
+                const styleId = 'popular-fix-style';
+                if (!document.getElementById(styleId)) {
+                    const style = document.createElement('style');
+                    style.id = styleId;
+                    style.innerHTML = `
+                        .test-card.most-popular::before {
+                            border: 2px solid #ffaa00 !important;
+                            border-color: #ffaa00 !important;
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+                
+                // Принудительно перерисовываем
+                card.style.transform = 'scale(1)';
+            });
+        }
+        
+        // Запускаем несколько раз для надежности
+        forceFixBorder();
+        setTimeout(forceFixBorder, 500);
+        setTimeout(forceFixBorder, 1000);
+        setTimeout(forceFixBorder, 2000);
+    })();
+</script>
+```
+</body>
+</html>
