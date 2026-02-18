@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какая ты планета?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🪐 Какая ты планета?</h1>
+            <p class="subtitle">Пройди тест и узнай куда тебе нужно переехать!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1: Группа А (меркурий, венера, земля, марс, юпитер) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какой твой характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="mercury">⚡ Быстрый, энергичный</button>
+                    <button class="answer-btn" data-value="venus">🌸 Нежный, романтичный</button>
+                    <button class="answer-btn" data-value="earth">🌿 Спокойный, уравновешенный</button>
+                    <button class="answer-btn" data-value="mars">🔥 Страстный, воинственный</button>
+                    <button class="answer-btn" data-value="jupiter">👑 Мудрый, величественный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2: Группа Б (сатурн, уран, нептун, плутон, луна) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что тебе ближе?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="saturn">💍 Порядок и дисциплина</button>
+                    <button class="answer-btn" data-value="uranus">🌀 Нестандартность</button>
+                    <button class="answer-btn" data-value="neptune">🌊 Загадочность</button>
+                    <button class="answer-btn" data-value="pluto">🕯️ Тайны и глубины</button>
+                    <button class="answer-btn" data-value="moon">🌙 Переменчивость</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3: Группа А -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Какой цвет любишь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="mercury">🤍 Серебристый</button>
+                    <button class="answer-btn" data-value="venus">💗 Розовый</button>
+                    <button class="answer-btn" data-value="earth">💙 Голубой</button>
+                    <button class="answer-btn" data-value="mars">❤️ Красный</button>
+                    <button class="answer-btn" data-value="jupiter">🧡 Оранжевый</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4: Группа Б -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Как ты проводишь время?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="saturn">📅 По расписанию</button>
+                    <button class="answer-btn" data-value="uranus">✨ Экспериментирую</button>
+                    <button class="answer-btn" data-value="neptune">🎨 Мечтаю</button>
+                    <button class="answer-btn" data-value="pluto">🔍 Исследую тайны</button>
+                    <button class="answer-btn" data-value="moon">🔄 Меняю занятия</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5: Группа А -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Твоя главная черта?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="mercury">💨 Скорость</button>
+                    <button class="answer-btn" data-value="venus">💖 Красота</button>
+                    <button class="answer-btn" data-value="earth">🌱 Гармония</button>
+                    <button class="answer-btn" data-value="mars">⚔️ Сила</button>
+                    <button class="answer-btn" data-value="jupiter">🧠 Мудрость</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6: Группа Б -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Чего ты боишься?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="saturn">📉 Хаоса</button>
+                    <button class="answer-btn" data-value="uranus">🔄 Рутины</button>
+                    <button class="answer-btn" data-value="neptune">🌫️ Одиночества</button>
+                    <button class="answer-btn" data-value="pluto">☀️ Света</button>
+                    <button class="answer-btn" data-value="moon">⚖️ Постоянства</button>
+                </div>
+            </div>
+
+<!-- Вопрос 7: Смешанный -->
+<div class="question-card" id="question7">
+    <br>
+    <h2 class="question-title">Что для тебя важно в жизни?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 7/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="mercury">🏃 Движение</button>
+        <button class="answer-btn" data-value="neptune">🌊 Вдохновение</button>
+        <button class="answer-btn" data-value="earth">🌍 Семья</button>
+        <button class="answer-btn" data-value="saturn">📐 Порядок</button>
+        <button class="answer-btn" data-value="moon">🌙 Перемены</button>
+    </div>
+</div>
+
+<!-- Вопрос 8: Смешанный -->
+<div class="question-card" id="question8">
+    <br>
+    <h2 class="question-title">Какая стихия тебе ближе?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 8/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="mars">🔥 Огонь</button>
+        <button class="answer-btn" data-value="neptune">💧 Вода</button>
+        <button class="answer-btn" data-value="earth">🌍 Земля</button>
+        <button class="answer-btn" data-value="pluto">🕯️ Тьма</button>
+        <button class="answer-btn" data-value="uranus">⚡ Эфир</button>
+    </div>
+</div>
+
+<!-- Вопрос 9: Смешанный -->
+<div class="question-card" id="question9">
+    <br>
+    <h2 class="question-title">Твой девиз?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 9/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="jupiter">🌌 "Вселенная во мне"</button>
+        <button class="answer-btn" data-value="saturn">⏳ "Всему свое время"</button>
+        <button class="answer-btn" data-value="pluto">🕳️ "Ищи в глубине"</button>
+        <button class="answer-btn" data-value="moon">🌓 "Я разная"</button>
+        <button class="answer-btn" data-value="venus">💫 "Любовь спасет мир"</button>
+    </div>
+</div>
+
+<!-- Вопрос 10: Смешанный -->
+<div class="question-card" id="question10">
+    <br>
+    <h2 class="question-title">Какая супер сила тебе нужна?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 10/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="mercury">⚡ Сверхскорость</button>
+        <button class="answer-btn" data-value="mars">🛡️ Непобедимость</button>
+        <button class="answer-btn" data-value="jupiter">👁️ Всеведение</button>
+        <button class="answer-btn" data-value="uranus">🌀 Телепортация</button>
+        <button class="answer-btn" data-value="venus">💖 Притягательность</button>
+    </div>
+</div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🪐 Твоя планета:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4 style="color: #6f6f6f;">Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const planetResults = {
+            mercury: {
+                title: "⚡ Меркурий",
+                desc: "Ты — быстрый и коммуникабельный! Легко находишь общий язык с людьми, любишь узнавать новое и делиться информацией. Ты всегда в движении и не терпишь застоя.",
+                emoji: "🪐",
+                color: "#95a5a6"
+            },
+            venus: {
+                title: "💫 Венера",
+                desc: "Ты — воплощение красоты и гармонии! Ценишь искусство, комфорт и красивые вещи. Ты романтичная, нежная и умеешь создавать уют вокруг себя.",
+                emoji: "🪐",
+                color: "#e84393"
+            },
+            earth: {
+                title: "🌿 Земля",
+                desc: "Ты — надежный и уравновешенный! Как настоящая Земля, ты даешь опору окружающим. Ценишь природу, семью и все живое. Ты — настоящий дом для своих близких.",
+                emoji: "🌍",
+                color: "#2ecc71"
+            },
+            mars: {
+                title: "⚔️ Марс",
+                desc: "Ты — воин и защитник! Энергичный, страстный и целеустремленный. Ты не боишься трудностей и всегда готов бороться за то, что важно.",
+                emoji: "🪐",
+                color: "#e74c3c"
+            },
+            jupiter: {
+                title: "🧠 Юпитер",
+                desc: "Ты — мудрый лидер! Оптимистичный, щедрый и великодушный. Ты умеешь видеть общую картину и вдохновлять других. Твоя удача притягивает возможности.",
+                emoji: "🪐",
+                color: "#f39c12"
+            },
+            saturn: {
+                title: "👔 Сатурн",
+                desc: "Ты — дисциплинированный и ответственный. Ценишь порядок, традиции и время. Ты умеешь ждать и строить долгосрочные планы. На тебя можно положиться.",
+                emoji: "🪐",
+                color: "#34495e"
+            },
+            uranus: {
+                title: "⚙️ Уран",
+                desc: "Ты — гениальный изобретатель! Любишь все необычное, оригинальное и прогрессивное. Ты мыслишь нестандартно и часто опережаешь свое время.",
+                emoji: "🪐",
+                color: "#1abc9c"
+            },
+            neptune: {
+                title: "🌠 Нептун",
+                desc: "Ты — загадочный мечтатель! Живешь в мире грез, идеалов и вдохновения. Ты тонко чувствуешь искусство и настроение других людей.",
+                emoji: "🪐",
+                color: "#3498db"
+            },
+            pluto: {
+                title: "🦅 Плутон",
+                desc: "Ты — глубинная и трансформирующая личность! Проходишь через испытания и становишься сильнее. Ты умеешь возрождаться, как феникс, и видишь скрытое.",
+                emoji: "🪐",
+                color: "#8e44ad"
+            },
+            moon: {
+                title: "🌙 Луна",
+                desc: "Ты — переменчивая и чувствительная! Твои эмоции меняются, как фазы луны. Ты интуитивна, заботлива и очень эмпатична. Люди тянутся к твоему свету.",
+                emoji: "🌑",
+                color: "#f1c40f"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, planetResults, backgroundColors, 'planet');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const stars = document.querySelectorAll('.star-btn');
+                if (stars.length === 0) return;
+                
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    
+                    star.addEventListener('mouseleave', function() {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

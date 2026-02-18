@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какая ты профессия?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>💼 Какая ты профессия?</h1>
+            <p class="subtitle">Пройди тест и узнай какая профессия тебе подходит!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1: Группа А (врач, учитель, инженер, художник, программист) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Что тебе больше нравится?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="doctor">🩺 Помогать людям</button>
+                    <button class="answer-btn" data-value="teacher">📚 Учить других</button>
+                    <button class="answer-btn" data-value="engineer">🏗️ Строить и создавать</button>
+                    <button class="answer-btn" data-value="artist">🎨 Рисовать и творить</button>
+                    <button class="answer-btn" data-value="programmer">💻 Работать с кодом</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2: Группа Б (повар, водитель, продавец, фермер, ученый) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что ты любишь делать?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cook">🍳 Готовить еду</button>
+                    <button class="answer-btn" data-value="driver">🚗 Водить машину</button>
+                    <button class="answer-btn" data-value="seller">🛍️ Общаться с людьми</button>
+                    <button class="answer-btn" data-value="farmer">🌾 Работать на земле</button>
+                    <button class="answer-btn" data-value="scientist">🔬 Исследовать новое</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3: Группа А -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Какой у тебя характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="doctor">❤️ Заботливый</button>
+                    <button class="answer-btn" data-value="teacher">🧠 Терпеливый</button>
+                    <button class="answer-btn" data-value="engineer">🔧 Технический склад ума</button>
+                    <button class="answer-btn" data-value="artist">🎭 Креативный</button>
+                    <button class="answer-btn" data-value="programmer">🤖 Логический</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4: Группа Б -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Как ты отдыхаешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cook">👨‍🍳 Готовлю новое блюдо</button>
+                    <button class="answer-btn" data-value="driver">🚙 Путешествую</button>
+                    <button class="answer-btn" data-value="seller">👥 Встречаюсь с друзьями</button>
+                    <button class="answer-btn" data-value="farmer">🌳 На природе</button>
+                    <button class="answer-btn" data-value="scientist">📖 Читаю научпоп</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5: Группа А -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Что важнее в работе?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="doctor">✨ Помогать другим</button>
+                    <button class="answer-btn" data-value="teacher">📝 Передавать знания</button>
+                    <button class="answer-btn" data-value="engineer">⚙️ Создавать механизмы</button>
+                    <button class="answer-btn" data-value="artist">🌈 Самовыражаться</button>
+                    <button class="answer-btn" data-value="programmer">⚡ Решать задачи</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6: Группа Б -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Твой любимый предмет в школе?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cook">🍳 Технология</button>
+                    <button class="answer-btn" data-value="driver">🚗 ОБЖ</button>
+                    <button class="answer-btn" data-value="seller">📈 Экономика</button>
+                    <button class="answer-btn" data-value="farmer">🌱 Биология</button>
+                    <button class="answer-btn" data-value="scientist">🔬 Химия/Физика</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7: Смешанный -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Какой у тебя стиль работы?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="doctor">👥 В команде</button>
+                    <button class="answer-btn" data-value="engineer">🛠️ Один над проектом</button>
+                    <button class="answer-btn" data-value="artist">🎨 Вдохновение приходит само</button>
+                    <button class="answer-btn" data-value="scientist">📊 По плану</button>
+                    <button class="answer-btn" data-value="cook">👨‍🍳 По настроению</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8: Смешанный -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Что ты ценишь в людях?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="teacher">🎓 Ум</button>
+                    <button class="answer-btn" data-value="programmer">💡 Смекалку</button>
+                    <button class="answer-btn" data-value="driver">🚚 Надежность</button>
+                    <button class="answer-btn" data-value="farmer">🌿 Доброту</button>
+                    <button class="answer-btn" data-value="seller">🤝 Честность</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9: Смешанный -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Твой девиз?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="doctor">❤️ "Спешите делать добро"</button>
+                    <button class="answer-btn" data-value="teacher">📚 "Учиться, учиться и учиться"</button>
+                    <button class="answer-btn" data-value="engineer">🔨 "Делу время, потехе час"</button>
+                    <button class="answer-btn" data-value="artist">🎭 "Творить, нельзя остановиться"</button>
+                    <button class="answer-btn" data-value="scientist">🔬 "Наука - двигатель прогресса"</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10: Смешанный -->
+<!-- Вопрос 10: Смешанный -->
+<div class="question-card" id="question10">
+    <br>
+    <h2 class="question-title">Какая супер сила тебе нужна?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 10/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="programmer">🧠 Супер-интеллект</button>
+        <button class="answer-btn" data-value="driver">⏱️ Замедление времени</button>
+        <button class="answer-btn" data-value="cook">🍲 Создавать еду из воздуха</button>
+        <button class="answer-btn" data-value="seller">🤝 Убеждать кого угодно</button>
+        <button class="answer-btn" data-value="farmer">🌱 Управлять растениями</button>
+    </div>
+</div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>💼 Твоя профессия:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4 style="color: #6f6f6f;">Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const jobResults = {
+            doctor: {
+                title: "🩺 Врач",
+                desc: "Ты — прирожденный целитель! Ты заботливый, внимательный и всегда готов прийти на помощь. Люди доверяют тебе свои жизни, потому что ты надежный и ответственный.",
+                emoji: "❤️",
+                color: "#2ecc71"
+            },
+            teacher: {
+                title: "🍎 Учитель",
+                desc: "Ты — проводник знаний! Терпеливый, мудрый и умеешь объяснять сложное простыми словами. Ты вдохновляешь других и помогаешь им расти.",
+                emoji: "📚",
+                color: "#3498db"
+            },
+            engineer: {
+                title: "⚙️ Инженер",
+                desc: "Ты — создатель! Любишь строить, проектировать и придумывать новые механизмы. У тебя технический склад ума и ты умеешь решать сложные задачи.",
+                emoji: "🏗️",
+                color: "#e67e22"
+            },
+            artist: {
+                title: "🖌️ Художник",
+                desc: "Ты — творец! Видишь красоту в обычных вещах и умеешь создавать невероятное. Твой внутренний мир богат и уникален, ты выражаешь его через искусство.",
+                emoji: "🎨",
+                color: "#9b59b6"
+            },
+            programmer: {
+                title: "⚡ Программист",
+                desc: "Ты — логик! Любишь порядок, алгоритмы и решение головоломок. Ты создаешь цифровые миры и умеешь заставить технику работать.",
+                emoji: "💻",
+                color: "#34495e"
+            },
+            cook: {
+                title: "🍳 Повар",
+                desc: "Ты — волшебник на кухне! Любишь экспериментировать со вкусами и радовать других своими блюдами. Ты чувственный и щедрый.",
+                emoji: "👨‍🍳",
+                color: "#d35400"
+            },
+            driver: {
+                title: "🚗 Водитель",
+                desc: "Ты — свободная душа! Любишь дорогу, скорость и новые места. Ты надежный и ответственный, всегда довезешь до цели.",
+                emoji: "🚚",
+                color: "#7f8c8d"
+            },
+            seller: {
+                title: "🤝 Продавец",
+                desc: "Ты — душа компании! Легко находишь общий язык с людьми, умеешь убеждать и помогать с выбором. Ты общительный и дружелюбный.",
+                emoji: "🛍️",
+                color: "#f1c40f"
+            },
+            farmer: {
+                title: "🚜 Фермер",
+                desc: "Ты — человек земли! Любишь природу, животных и труд на свежем воздухе. Ты терпеливый, заботливый и ценишь простые радости жизни.",
+                emoji: "🌾",
+                color: "#27ae60"
+            },
+            scientist: {
+                title: "🧪 Ученый",
+                desc: "Ты — исследователь! Вечно задаешь вопросы и ищешь на них ответы. Ты любознательный, умный и готов менять мир с помощью науки.",
+                emoji: "🔬",
+                color: "#2980b9"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, jobResults, backgroundColors, 'job');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const stars = document.querySelectorAll('.star-btn');
+                if (stars.length === 0) return;
+                
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    
+                    star.addEventListener('mouseleave', function() {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

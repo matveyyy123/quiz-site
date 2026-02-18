@@ -7,24 +7,14 @@
     box-sizing: border-box;
 }
 
-/* Растягиваем фон на весь экран */
-html {
-    min-height: 100vh;
-    width: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
 /* Стили для всего тела страницы */
 body {
     min-height: 100vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: transparent; /* прозрачный, фон берется из html */
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 /* ========== КОНТЕЙНЕР ========== */
@@ -36,7 +26,7 @@ body {
     padding: 40px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     backdrop-filter: blur(10px);
-    margin: 50px auto;
+    margin-top: 50px;
 }
 
 /* ========== ШАПКА ========== */
@@ -126,24 +116,10 @@ body {
     border: 2px solid #ff9a9e;
 }
 
-.test-card.drink::after {
-    content: "🔥";
-    background: #ff9a9e;
-    color: white;
-    box-shadow: 0 2px 10px rgba(255,107,107,0.5);
-}
-
-/* КАРТОЧКА 2: Супергерой */
+/* КАРТОЧКА 2: Персонаж */
 .test-card.hero {
     background: linear-gradient(135deg, #cfcfff, #ffffff);
     border: 2px solid #a0a7fe;
-}
-
-.test-card.hero::after {
-    content: "⏳";
-    background: #a0a7fe;
-    color: #333;
-    box-shadow: 0 2px 10px rgba(161,140,209,0.5);
 }
 
 /* КАРТОЧКА 3: Животное */
@@ -152,24 +128,10 @@ body {
     border: 2px solid #f6d365;
 }
 
-.test-card.animal::after {
-    content: "🐾";
-    background: #f6d365;
-    color: #333;
-    box-shadow: 0 2px 10px rgba(246,211,101,0.5);
-}
-
 /* КАРТОЧКА 4: Музыка */
 .test-card.music {
     background: linear-gradient(135deg, #e2d0ff, #ffffff);
     border: 2px solid #a18cd1;
-}
-
-.test-card.music::after {
-    content: "🎵";
-    background: #a18cd1;
-    color: #333;
-    box-shadow: 0 2px 10px rgba(161,140,209,0.5);
 }
 
 /* КАРТОЧКА 5: Отпуск */
@@ -178,24 +140,52 @@ body {
     border: 2px solid #9be8b7;
 }
 
-.test-card.travel::after {
-    content: "🏖️";
-    background: #9be8b7;
-    color: #333;
-    box-shadow: 0 2px 10px rgba(132,250,176,0.5);
-}
-
 /* КАРТОЧКА 6: Пицца */
 .test-card.pizza {
     background: linear-gradient(135deg, #ffe0cd, #ffffff);
     border: 2px solid #ffcdb2;
 }
 
-.test-card.pizza::after {
-    content: "⏳";
-    background: #ffcdb2;
-    color: #333;
-    box-shadow: 0 2px 10px rgba(255, 211, 178, 0.5);
+/* КАРТОЧКА 7: Профессия */
+.test-card.job {
+    background: linear-gradient(135deg, #e0f0ff, #ffffff);
+    border: 2px solid #7fb3d5;
+}
+
+/* КАРТОЧКА 8: Планета */
+.test-card.planet {
+    background: linear-gradient(135deg, #ffe0e0, #ffffff);
+    border: 2px solid #d39b9b;
+}
+
+/* КАРТОЧКА 9: День недели */
+.test-card.weekday {
+    background: linear-gradient(135deg, #ffe6cc, #ffffff);
+    border: 2px solid #f9cb9c;
+}
+
+/* КАРТОЧКА 10: Жанры кино */
+.test-card.genre {
+    background: linear-gradient(135deg, #e0e1ff, #ffffff);
+    border: 2px solid #5c43e8;
+}
+
+/* КАРТОЧКА 11: Вредные привычки */
+.test-card.habits {
+    background: linear-gradient(135deg, #ffe0e0, #ffffff);
+    border: 2px solid #c0392b;
+}
+
+/* КАРТОЧКА 12: Страхи/Фобии */
+.test-card.fears {
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    border: 2px solid #2c3e50;
+}
+
+/* КАРТОЧКА 13: Динозавры */
+.test-card.dinosaurs {
+    background: linear-gradient(135deg, #d4f0d4, #ffffff);
+    border: 2px solid #27ae60;
 }
 
 /* ========== СЕКЦИЯ СВЯЗИ ========== */
@@ -205,7 +195,7 @@ body {
     padding: 40px 20px;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     border-radius: 20px;
-    width: 100%;
+    width: 100%;  /* растягиваем на всю ширину контейнера */
     box-sizing: border-box;
 }
 
@@ -371,6 +361,9 @@ body {
     border-color: #667eea;
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.emoji-btn.selected {
     color: white;
 }
 
@@ -453,29 +446,9 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Рамка под цвет карточки */
-.test-card.drink.most-popular::before {
-    border: 2px solid #ff9a9e;
-}
-
-.test-card.animal.most-popular::before {
-    border: 2px solid #f6d365;
-}
-
-.test-card.music.most-popular::before {
-    border: 2px solid #a18cd1;
-}
-
-.test-card.travel.most-popular::before {
-    border: 2px solid #9be8b7;
-}
-
-.test-card.pizza.most-popular::before {
-    border: 2px solid #ffcdb2;
-}
-
-.test-card.hero.most-popular::before {
-    border: 2px solid #a0a7fe;
+/* Рамка под цвет карточки - ОДИН ЦВЕТ ДЛЯ ВСЕХ */
+.test-card.most-popular::before {
+    border: 2px solid #ffaa00;  /* Один цвет для всех тестов */
 }
 
 /* Убираем все остальные бейджики */
@@ -487,6 +460,7 @@ body {
     0%, 100% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.1); opacity: 0.9; }
 }
+
 
 /* ========== СТАТИСТИКА НА КАРТОЧКЕ ========== */
 .test-stats {
@@ -571,7 +545,7 @@ body {
 
 /* Темная тема */
 body.dark-theme {
-    background: transparent;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
 }
 
 body.dark-theme .container {
@@ -694,15 +668,10 @@ body.dark-theme .textarea-char-counter {
     border-color: #3a3a4a;
 }
 
+
 /* ========== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ========== */
 @media (max-width: 768px) {
-    html {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-    
     .container {
-        width: 94%;
-        margin: 15px auto;
         padding: 25px;
     }
     
@@ -712,15 +681,10 @@ body.dark-theme .textarea-char-counter {
     
     .tests-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
     
     .test-emoji {
         font-size: 3.5em;
-    }
-    
-    .test-title {
-        font-size: 1.4em;
     }
     
     .contact-section {
@@ -765,16 +729,10 @@ body.dark-theme .textarea-char-counter {
         font-size: 0.85em;
     }
     
+    /* ✅ ДОБАВЬ СЮДА */
     .test-card.most-popular::before {
         font-size: 0.65em;
         padding: 3px 10px;
         top: -8px;
-    }
-}
-
-/* Темная тема для телефонов */
-@media (max-width: 768px) {
-    html.dark-theme {
-        background: linear-gradient(135deg, #1a1a2e, #16213e);
     }
 }

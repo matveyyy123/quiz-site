@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой у тебя страх?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header class="header">
+            <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+            </script>
+            <h1>😨 Какой у тебя страх?</h1>
+            <p class="subtitle">Пройди тест и узнай какой твой главный страх!</p>
+        </header>
+
+<main class="quiz">
+    <!-- Вопрос 1: нечетный (высота, темнота, пауки, змеи, замкнутое пространство) -->
+    <div class="question-card active" id="question1">
+        <br>
+        <h2 class="question-title">Куда бы ты точно не пошел?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 1/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="heights">🗼 Крыша небоскреба</button>
+            <button class="answer-btn" data-value="dark">🕳️ Темная комната</button>
+            <button class="answer-btn" data-value="spiders">🕸️ Подвал с паутиной</button>
+            <button class="answer-btn" data-value="snakes">🐍 Террариум</button>
+            <button class="answer-btn" data-value="claustrophobia">🏙️ Лифт</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 2: четный (публичные выступления, одиночество, вода, полеты, стоматолог) -->
+    <div class="question-card" id="question2">
+        <br>
+        <h2 class="question-title">От чего у тебя мурашки?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 2/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="public">🎙️ Выступление на сцене</button>
+            <button class="answer-btn" data-value="loneliness">🏝️ Остаться одному</button>
+            <button class="answer-btn" data-value="water">🌊 Глубокая вода</button>
+            <button class="answer-btn" data-value="flying">🛩️ Турбулентность</button>
+            <button class="answer-btn" data-value="dentist">🔊 Звук бормашины</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 3: нечетный (высота, темнота, пауки, змеи, замкнутое пространство) -->
+    <div class="question-card" id="question3">
+        <br>
+        <h2 class="question-title">Что тебе снится в кошмарах?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 3/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="heights">⛰️ Падение с высоты</button>
+            <button class="answer-btn" data-value="dark">🌃 Темнота</button>
+            <button class="answer-btn" data-value="spiders">🕷️ Полчища пауков</button>
+            <button class="answer-btn" data-value="snakes">🐉 Змеи</button>
+            <button class="answer-btn" data-value="claustrophobia">🧰 Закрытая коробка</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 4: четный (публичные выступления, одиночество, вода, полеты, стоматолог) -->
+    <div class="question-card" id="question4">
+        <br>
+        <h2 class="question-title">Какую ситуацию избегаешь?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 4/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="public">🎤 Говорить тост на свадьбе</button>
+            <button class="answer-btn" data-value="loneliness">🏜️ Быть дома в пятницу вечером</button>
+            <button class="answer-btn" data-value="water">🏄 Плавать в море</button>
+            <button class="answer-btn" data-value="flying">🛫 Летать на самолете</button>
+            <button class="answer-btn" data-value="dentist">🏥 Идти к стоматологу</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 5: нечетный (высота, темнота, пауки, змеи, замкнутое пространство) -->
+    <div class="question-card" id="question5">
+        <br>
+        <h2 class="question-title">Что берешь с собой в поездку?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 5/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="heights">🧗 Страховку</button>
+            <button class="answer-btn" data-value="dark">💡 Ночник</button>
+            <button class="answer-btn" data-value="spiders">🦟 Фумигатор</button>
+            <button class="answer-btn" data-value="snakes">🥾 Высокие сапоги</button>
+            <button class="answer-btn" data-value="claustrophobia">💊 Успокоительное</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 6: четный (публичные выступления, одиночество, вода, полеты, стоматолог) -->
+    <div class="question-card" id="question6">
+        <br>
+        <h2 class="question-title">Что тебя пугает в людях?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 6/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="public">👀 Внимание</button>
+            <button class="answer-btn" data-value="loneliness">🚫 Игнорирование</button>
+            <button class="answer-btn" data-value="water">🌊 Эмоции</button>
+            <button class="answer-btn" data-value="flying">🎢 Непредсказуемость</button>
+            <button class="answer-btn" data-value="dentist">👁️ Пристальный взгляд</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 7: нечетный (высота, темнота, пауки, змеи, замкнутое пространство) -->
+    <div class="question-card" id="question7">
+        <br>
+        <h2 class="question-title">Какая погода тебе неприятна?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 7/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="heights">💨 Сильный ветер</button>
+            <button class="answer-btn" data-value="dark">🌌 Полярная ночь</button>
+            <button class="answer-btn" data-value="spiders">☀️ Жара</button>
+            <button class="answer-btn" data-value="snakes">🏜️ Засуха</button>
+            <button class="answer-btn" data-value="claustrophobia">🌪️ Туман</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 8: четный (публичные выступления, одиночество, вода, полеты, стоматолог) -->
+    <div class="question-card" id="question8">
+        <br>
+        <h2 class="question-title">Что делаешь во время стресса?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 8/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="public">🙈 Прячусь</button>
+            <button class="answer-btn" data-value="loneliness">📞 Звоню другу</button>
+            <button class="answer-btn" data-value="water">🤐 Молчу</button>
+            <button class="answer-btn" data-value="flying">🧘 Дышу глубоко</button>
+            <button class="answer-btn" data-value="dentist">😬 Сжимаю зубы</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 9: нечетный (высота, темнота, пауки, змеи, замкнутое пространство) -->
+    <div class="question-card" id="question9">
+        <br>
+        <h2 class="question-title">Какое животное не любишь?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 9/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="heights">🦅 Птиц</button>
+            <button class="answer-btn" data-value="dark">🦇 Летучих мышей</button>
+            <button class="answer-btn" data-value="spiders">🕷️ Пауков</button>
+            <button class="answer-btn" data-value="snakes">🐍 Змей</button>
+            <button class="answer-btn" data-value="claustrophobia">🐭 Кротов</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 10: четный (публичные выступления, одиночество, вода, полеты, стоматолог) -->
+    <div class="question-card" id="question10">
+        <br>
+        <h2 class="question-title">Чего боишься в будущем?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 10/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="public">😳 Позора</button>
+            <button class="answer-btn" data-value="loneliness">🙊 Одиночества</button>
+            <button class="answer-btn" data-value="water">🌊 Потонуть в проблемах</button>
+            <button class="answer-btn" data-value="flying">🌀 Неопределенности</button>
+            <button class="answer-btn" data-value="dentist">🤕 Боли</button>
+        </div>
+    </div>
+
+    <!-- Результат -->
+    <div class="result-card" id="result">
+        <br>
+        <h2>😨 Твой страх:</h2>
+        <div id="result-content"></div>
+        <div class="rating-section">
+            <h4 style="color: #6f6f6f;">Оцените этот тест</h4>
+            <div class="stars-container">
+                <button class="star-btn" onclick="rateTest(1)">★</button>
+                <button class="star-btn" onclick="rateTest(2)">★</button>
+                <button class="star-btn" onclick="rateTest(3)">★</button>
+                <button class="star-btn" onclick="rateTest(4)">★</button>
+                <button class="star-btn" onclick="rateTest(5)">★</button>
+            </div>
+        </div>
+        <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+        <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+    </div>
+</main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+const fearResults = {
+    heights: {
+        title: "⛰️ Акрофобия (страх высоты)",
+        desc: "Ты боишься высоты! Даже стоя на балконе, ты чувствуешь головокружение. Но это делает тебя осторожным и предусмотрительным. Ты всегда смотришь под ноги.",
+        emoji: "🪂",
+        color: "#7f8c8d"
+    },
+    dark: {
+        title: "🌑 Никтофобия (страх темноты)",
+        desc: "Ты боишься темноты! Даже во взрослом возрасте тебе неуютно без света. Но это значит, что у тебя богатое воображение и чувствительная натура.",
+        emoji: "🌌",
+        color: "#2c3e50"
+    },
+    spiders: {
+        title: "🕷️ Арахнофобия (страх пауков)",
+        desc: "Ты боишься пауков! Даже маленький паучок вызывает ужас. Но ты внимателен к деталям и всегда замечаешь то, что другие не видят.",
+        emoji: "🕸️",
+        color: "#34495e"
+    },
+    snakes: {
+        title: "🐉 Офидиофобия (страх змей)",
+        desc: "Ты боишься змей! Их вид вызывает дрожь. Но это делает тебя осторожным и бдительным. Ты умеешь предвидеть опасность.",
+        emoji: "🐍",
+        color: "#27ae60"
+    },
+    claustrophobia: {
+        title: "🧱 Клаустрофобия (страх замкнутого пространства)",
+        desc: "Ты боишься замкнутых пространств! Лифты и маленькие комнаты — твой кошмар. Но ты ценишь свободу и открытость в отношениях.",
+        emoji: "📦",
+        color: "#95a5a6"
+    },
+    public: {
+        title: "🎤 Глоссофобия (страх публичных выступлений)",
+        desc: "Ты боишься выступать на публике! Даже тост за столом — испытание. Но ты хороший слушатель и ценишь искренние разговоры наедине.",
+        emoji: "🎭",
+        color: "#e67e22"
+    },
+    loneliness: {
+        title: "🏝️ Автофобия (страх одиночества)",
+        desc: "Ты боишься одиночества! Тебе важно быть среди людей, чувствовать поддержку. Ты ценишь дружбу и умеешь быть хорошим другом.",
+        emoji: "🏝️",
+        color: "#3498db"
+    },
+    water: {
+        title: "💧 Аквафобия (страх воды)",
+        desc: "Ты боишься воды! Глубина и неизвестность пугают тебя. Но ты осторожен и предусмотрителен, не лезешь в омут с головой.",
+        emoji: "🚣",
+        color: "#2980b9"
+    },
+    flying: {
+        title: "🪂 Авиафобия (страх полетов)",
+        desc: "Ты боишься летать! Каждый взлет — подвиг. Но ты смелый человек, ведь ты все равно путешествуешь, преодолевая свой страх.",
+        emoji: "✈️",
+        color: "#9b59b6"
+    },
+    dentist: {
+        title: "💊 Дентофобия (страх стоматолога)",
+        desc: "Ты боишься стоматологов! Звук бормашины — музыка ужаса. Но ты терпелив и умеешь терпеть боль ради результата.",
+        emoji: "🦷",
+        color: "#e74c3c"
+    }
+};
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, fearResults, backgroundColors, 'fears');
+        
+// Функция для оценки теста
+window.rateTest = function(rating) {
+    const stars = document.querySelectorAll('.star-btn');
+    
+    // Проверяем, не заблокированы ли звезды
+    if (stars[0] && stars[0].disabled) return;
+    
+    // Сначала убираем все выделения
+    stars.forEach(btn => {
+        btn.classList.remove('selected');
+    });
+    
+    // Подсвечиваем выбранные звезды
+    for (let i = 0; i < rating; i++) {
+        stars[i].classList.add('selected');
+    }
+    
+    // Сохраняем оценку
+    quiz.saveRating(rating);
+    
+    // Блокируем звезды
+    stars.forEach(btn => {
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+        btn.style.cursor = 'default';
+    });
+};
+
+// Подсветка звезд при наведении
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const stars = document.querySelectorAll('.star-btn');
+        if (stars.length === 0) return;
+        
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseenter', function() {
+                // Если звезды заблокированы - ничего не делаем
+                if (this.disabled) return;
+                
+                // Убираем предыдущие hover
+                stars.forEach(s => {
+                    s.classList.remove('hover');
+                });
+                
+                // Добавляем hover только на звезды до текущей
+                for (let i = 0; i <= index; i++) {
+                    stars[i].classList.add('hover');
+                }
+            });
+            
+            star.addEventListener('mouseleave', function() {
+                // При уходе мыши убираем все hover
+                stars.forEach(s => {
+                    s.classList.remove('hover');
+                });
+            });
+        });
+    }, 200);
+});
+
+// Запускаем тест
+document.addEventListener('DOMContentLoaded', () => {
+    quiz.init();
+});
+    </script>
+</body>
+</html>

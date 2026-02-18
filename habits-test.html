@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какая у тебя вредная привычка?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header class="header">
+            <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+            </script>
+            <h1>😈 Какая твоя слабость?</h1>
+            <p class="subtitle">Пройди тест и узнай от чего стоит отказаться!</p>
+        </header>
+
+<main class="quiz">
+    <!-- Вопрос 1: нечетный (кофеман, сладкоежка, трудоголик, селфи-зависимый, сериаломан) -->
+    <div class="question-card active" id="question1">
+        <br>
+        <h2 class="question-title">Как начинается твое утро?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 1/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="coffee">☕ С чашки кофе</button>
+            <button class="answer-btn" data-value="sweet">🍰 С вкусняшки</button>
+            <button class="answer-btn" data-value="work">💼 С проверки почты</button>
+            <button class="answer-btn" data-value="selfie">🤳 С селфи</button>
+            <button class="answer-btn" data-value="series">📺 С включенного сериала</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 2: четный (шопоголик, соцсети, геймер, прокрастинатор, спортик) -->
+    <div class="question-card" id="question2">
+        <br>
+        <h2 class="question-title">На что тратишь деньги?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 2/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="shop">🛍️ На шмотки</button>
+            <button class="answer-btn" data-value="social">📱 На подписки</button>
+            <button class="answer-btn" data-value="gamer">🎮 На игры</button>
+            <button class="answer-btn" data-value="procrastinator">⏰ На кофе</button>
+            <button class="answer-btn" data-value="sport">💪 На спорт</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 3: нечетный (кофеман, сладкоежка, трудоголик, селфи-зависимый, сериаломан) -->
+    <div class="question-card" id="question3">
+        <br>
+        <h2 class="question-title">Что делаешь в свободное время?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 3/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="coffee">☕ Сижу в кофейне</button>
+            <button class="answer-btn" data-value="sweet">🍩 Ем сладкое</button>
+            <button class="answer-btn" data-value="work">💼 Работаю</button>
+            <button class="answer-btn" data-value="selfie">🤳 Фоткаюсь</button>
+            <button class="answer-btn" data-value="series">📺 Смотрю сериалы</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 4: четный (шопоголик, соцсети, геймер, прокрастинатор, спортик) -->
+    <div class="question-card" id="question4">
+        <br>
+        <h2 class="question-title">Что у тебя в телефоне?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 4/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="shop">🛍️ Приложения магазинов</button>
+            <button class="answer-btn" data-value="social">📱 Инстаграм/ТикТок</button>
+            <button class="answer-btn" data-value="gamer">🎮 Мобильные игры</button>
+            <button class="answer-btn" data-value="procrastinator">⏰ Будильники</button>
+            <button class="answer-btn" data-value="sport">💪 Фитнес-трекер</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 5: нечетный (кофеман, сладкоежка, трудоголик, селфи-зависимый, сериаломан) -->
+    <div class="question-card" id="question5">
+        <br>
+        <h2 class="question-title">Что тебе говорят друзья?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 5/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="coffee">☕ "Ты пьешь слишком много кофе"</button>
+            <button class="answer-btn" data-value="sweet">🍰 "Хватит есть сладкое"</button>
+            <button class="answer-btn" data-value="work">💼 "Ты слишком много работаешь"</button>
+            <button class="answer-btn" data-value="selfie">🤳 "Ты постоянно фоткаешься"</button>
+            <button class="answer-btn" data-value="series">📺 "Ты снова смотришь сериалы?"</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 6: четный (шопоголик, соцсети, геймер, прокрастинатор, спортик) -->
+    <div class="question-card" id="question6">
+        <br>
+        <h2 class="question-title">Что ты покупаешь чаще всего?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 6/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="shop">👗 Одежду</button>
+            <button class="answer-btn" data-value="social">📱 Зарядку для телефона</button>
+            <button class="answer-btn" data-value="gamer">🎮 Стим-пополнение</button>
+            <button class="answer-btn" data-value="procrastinator">⏰ Кофе</button>
+            <button class="answer-btn" data-value="sport">💪 Протеин</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 7: нечетный (кофеман, сладкоежка, трудоголик, селфи-зависимый, сериаломан) -->
+    <div class="question-card" id="question7">
+        <br>
+        <h2 class="question-title">Как выглядит твой стол?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 7/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="coffee">☕ Кружки от кофе</button>
+            <button class="answer-btn" data-value="sweet">🍬 Фантики от конфет</button>
+            <button class="answer-btn" data-value="work">📄 Стикеры с задачами</button>
+            <button class="answer-btn" data-value="selfie">🤳 Зеркальце для селфи</button>
+            <button class="answer-btn" data-value="series">📺 Ноутбук с сериалом</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 8: четный (шопоголик, соцсети, геймер, прокрастинатор, спортик) -->
+    <div class="question-card" id="question8">
+        <br>
+        <h2 class="question-title">Что ты делаешь перед сном?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 8/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="shop">🛍️ Смотрю товары</button>
+            <button class="answer-btn" data-value="social">📱 Листаю ленту</button>
+            <button class="answer-btn" data-value="gamer">🎮 Играю</button>
+            <button class="answer-btn" data-value="procrastinator">⏰ Думаю что пора спать</button>
+            <button class="answer-btn" data-value="sport">💪 Планирую тренировку</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 9: нечетный (кофеман, сладкоежка, трудоголик, селфи-зависимый, сериаломан) -->
+    <div class="question-card" id="question9">
+        <br>
+        <h2 class="question-title">Что ты берешь с собой?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 9/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="coffee">☕ Термокружку</button>
+            <button class="answer-btn" data-value="sweet">🍫 Шоколадку</button>
+            <button class="answer-btn" data-value="work">💼 Ноутбук</button>
+            <button class="answer-btn" data-value="selfie">🤳 Пауэрбанк</button>
+            <button class="answer-btn" data-value="series">📺 Планшет</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 10: четный (шопоголик, соцсети, геймер, прокрастинатор, спортик) -->
+    <div class="question-card" id="question10">
+        <br>
+        <h2 class="question-title">Твоя мечта?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 10/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="shop">🛍️ Бесконечный шопинг</button>
+            <button class="answer-btn" data-value="social">📱 Стать блогером</button>
+            <button class="answer-btn" data-value="gamer">🎮 Стать киберспортсменом</button>
+            <button class="answer-btn" data-value="procrastinator">⏰ Ничего не делать</button>
+            <button class="answer-btn" data-value="sport">💪 Идеальное тело</button>
+        </div>
+    </div>
+
+    <!-- Результат -->
+    <div class="result-card" id="result">
+        <br>
+        <h2>😈 Твоя вредная привычка:</h2>
+        <div id="result-content"></div>
+        <div class="rating-section">
+            <h4 style="color: #6f6f6f;">Оцените этот тест</h4>
+            <div class="stars-container">
+                <button class="star-btn" onclick="rateTest(1)">★</button>
+                <button class="star-btn" onclick="rateTest(2)">★</button>
+                <button class="star-btn" onclick="rateTest(3)">★</button>
+                <button class="star-btn" onclick="rateTest(4)">★</button>
+                <button class="star-btn" onclick="rateTest(5)">★</button>
+            </div>
+        </div>
+        <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+        <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+    </div>
+</main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const habitResults = {
+            coffee: {
+                title: "☕ Кофеман",
+                desc: "Ты — энерджайзер на кофеине! Без чашки кофе ты не человек. Ты ценишь бодрость, драйв и готов работать 24/7. Кофе — твой лучший друг и помощник.",
+                emoji: "⚡",
+                color: "#6f4e37"
+            },
+            sweet: {
+                title: "🍰 Сладкоежка",
+                desc: "Ты — нежный и ранимый, но очень сладкий! Жизнь без десертов для тебя не жизнь. Ты умеешь находить радость в мелочах и делиться ей с другими.",
+                emoji: "🍬",
+                color: "#f8b195"
+            },
+            work: {
+                title: "💼 Трудоголик",
+                desc: "Ты — человек дела! Работа для тебя на первом месте. Ты ответственный, целеустремленный и всегда добиваешься своего. Но иногда забываешь отдыхать.",
+                emoji: "📊",
+                color: "#355c7d"
+            },
+            selfie: {
+                title: "🤳 Селфи-зависимый",
+                desc: "Ты — звезда своего инстаграма! Любишь внимание, умеешь подать себя и всегда в тренде. Твоя жизнь — яркая лента, полная красивых моментов.",
+                emoji: "📸",
+                color: "#c06c84"
+            },
+            series: {
+                title: "📺 Сериаломан",
+                desc: "Ты — мастер залипания в сериалы! Еще одна серия превращается в 5 утра. Ты живешь жизнью героев и всегда знаешь, что посоветовать.",
+                emoji: "🍿",
+                color: "#6c5b7b"
+            },
+            shop: {
+                title: "🛍️ Шопоголик",
+                desc: "Ты — охотник за скидками! Шопинг для тебя терапия. Ты всегда в курсе новых коллекций и умеешь находить крутые вещи.",
+                emoji: "👗",
+                color: "#f67280"
+            },
+            social: {
+                title: "📱 Соц-зависимый",
+                desc: "Ты — король ленты! Ты первый узнаешь все новости, лайкаешь и комментируешь. Телефон — продолжение твоей руки.",
+                emoji: "❤️",
+                color: "#3b9ae1"
+            },
+            gamer: {
+                title: "🎮 Геймер",
+                desc: "Ты — покоритель виртуальных миров! Игры для тебя искусство. Ты стратег, тактик и просто любишь провести время за джойстиком.",
+                emoji: "🕹️",
+                color: "#2a363b"
+            },
+            procrastinator: {
+                title: "⏰ Прокрастинатор",
+                desc: "Ты — мастер откладывания на потом! Сделать завтра то, что можно сегодня — твой девиз. Но в последний момент ты собираешься и все успеваешь.",
+                emoji: "😴",
+                color: "#99b898"
+            },
+            sport: {
+                title: "💪 Спортик",
+                desc: "Ты — фанат ЗОЖ! Спортзал — твой храм, протеин — твой напиток. Ты следишь за питанием и вдохновляешь других на тренировки.",
+                emoji: "🏋️",
+                color: "#4a96ad"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, habitResults, backgroundColors, 'habits');
+        
+// Функция для оценки теста
+window.rateTest = function(rating) {
+    const stars = document.querySelectorAll('.star-btn');
+    
+    // Проверяем, не заблокированы ли звезды
+    if (stars[0] && stars[0].disabled) return;
+    
+    // Сначала убираем все выделения
+    stars.forEach(btn => {
+        btn.classList.remove('selected');
+    });
+    
+    // Подсвечиваем выбранные звезды
+    for (let i = 0; i < rating; i++) {
+        stars[i].classList.add('selected');
+    }
+    
+    // Сохраняем оценку
+    quiz.saveRating(rating);
+    
+    // Блокируем звезды
+    stars.forEach(btn => {
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+        btn.style.cursor = 'default';
+    });
+};
+
+// Подсветка звезд при наведении
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const stars = document.querySelectorAll('.star-btn');
+        if (stars.length === 0) return;
+        
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseenter', function() {
+                // Если звезды заблокированы - ничего не делаем
+                if (this.disabled) return;
+                
+                // Убираем предыдущие hover
+                stars.forEach(s => {
+                    s.classList.remove('hover');
+                });
+                
+                // Добавляем hover только на звезды до текущей
+                for (let i = 0; i <= index; i++) {
+                    stars[i].classList.add('hover');
+                }
+            });
+            
+            star.addEventListener('mouseleave', function() {
+                // При уходе мыши убираем все hover
+                stars.forEach(s => {
+                    s.classList.remove('hover');
+                });
+            });
+        });
+    }, 200);
+});
+
+// Запускаем тест
+document.addEventListener('DOMContentLoaded', () => {
+    quiz.init();
+});
+    </script>
+</body>
+</html>

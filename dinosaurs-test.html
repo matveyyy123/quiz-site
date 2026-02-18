@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты динозавр?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header class="header">
+            <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+            </script>
+            <h1>🦖 Какой ты динозавр?</h1>
+            <p class="subtitle">Пройди тест и узнай какой ты внутренний динозавр!</p>
+        </header>
+
+<main class="quiz">
+    <!-- Вопрос 1: нечетный -->
+    <div class="question-card active" id="question1">
+        <br>
+        <h2 class="question-title">Твой характер?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 1/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="trex">👑 Королевский</button>
+            <button class="answer-btn" data-value="triceratops">🛡️ Защитник</button>
+            <button class="answer-btn" data-value="stegosaurus">🌿 Спокойный</button>
+            <button class="answer-btn" data-value="raptor">⚡ Хитрый</button>
+            <button class="answer-btn" data-value="brachiosaurus">🌳 Добрый</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 2: четный -->
+    <div class="question-card" id="question2">
+        <br>
+        <h2 class="question-title">Что любишь есть?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 2/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="pterodactyl">🐟 Рыбу</button>
+            <button class="answer-btn" data-value="ankylosaurus">🌱 Растения</button>
+            <button class="answer-btn" data-value="spinosaurus">🦐 Всё подряд</button>
+            <button class="answer-btn" data-value="diplodocus">🍃 Листья</button>
+            <button class="answer-btn" data-value="parasaurolophus">🍎 Фрукты</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 3: нечетный -->
+    <div class="question-card" id="question3">
+        <br>
+        <h2 class="question-title">Твой любимый цвет?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 3/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="trex">🔴 Красный</button>
+            <button class="answer-btn" data-value="triceratops">🟠 Оранжевый</button>
+            <button class="answer-btn" data-value="stegosaurus">🟢 Зеленый</button>
+            <button class="answer-btn" data-value="raptor">🟡 Желтый</button>
+            <button class="answer-btn" data-value="brachiosaurus">🔵 Синий</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 4: четный -->
+    <div class="question-card" id="question4">
+        <br>
+        <h2 class="question-title">Где бы жил?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 4/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="pterodactyl">🏔️ В горах</button>
+            <button class="answer-btn" data-value="ankylosaurus">🌲 В лесу</button>
+            <button class="answer-btn" data-value="spinosaurus">🌊 В воде</button>
+            <button class="answer-btn" data-value="diplodocus">🦕 В стае</button>
+            <button class="answer-btn" data-value="parasaurolophus">🏝️ На острове</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 5: нечетный -->
+    <div class="question-card" id="question5">
+        <br>
+        <h2 class="question-title">Как ты двигаешься?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 5/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="trex">🏃 Быстро</button>
+            <button class="answer-btn" data-value="triceratops">🚶 Медленно</button>
+            <button class="answer-btn" data-value="stegosaurus">🐢 Осторожно</button>
+            <button class="answer-btn" data-value="raptor">🦘 Прыжками</button>
+            <button class="answer-btn" data-value="brachiosaurus">🌉 Плавно</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 6: четный -->
+    <div class="question-card" id="question6">
+        <br>
+        <h2 class="question-title">Твой размер?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 6/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="pterodactyl">🦅 Средний</button>
+            <button class="answer-btn" data-value="ankylosaurus">🐘 Крупный</button>
+            <button class="answer-btn" data-value="spinosaurus">🐋 Огромный</button>
+            <button class="answer-btn" data-value="diplodocus">🌲 Гигантский</button>
+            <button class="answer-btn" data-value="parasaurolophus">🦌 Небольшой</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 7: нечетный -->
+    <div class="question-card" id="question7">
+        <br>
+        <h2 class="question-title">Твоя защита?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 7/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="trex">🦷 Зубы</button>
+            <button class="answer-btn" data-value="triceratops">🦏 Рога</button>
+            <button class="answer-btn" data-value="stegosaurus">🔪 Шипы</button>
+            <button class="answer-btn" data-value="raptor">🗡️ Когти</button>
+            <button class="answer-btn" data-value="brachiosaurus">📏 Длинная шея</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 8: четный -->
+    <div class="question-card" id="question8">
+        <br>
+        <h2 class="question-title">С кем ты в стае?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 8/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="pterodactyl">🦇 С летунами</button>
+            <button class="answer-btn" data-value="ankylosaurus">🦏 С броненосцами</button>
+            <button class="answer-btn" data-value="spinosaurus">🐊 С водными</button>
+            <button class="answer-btn" data-value="diplodocus">🦕 С длинношеями</button>
+            <button class="answer-btn" data-value="parasaurolophus">🎺 С музыкантами</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 9: нечетный -->
+    <div class="question-card" id="question9">
+        <br>
+        <h2 class="question-title">Твое хобби?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 9/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="trex">👑 Охотиться</button>
+            <button class="answer-btn" data-value="triceratops">🛡️ Защищать</button>
+            <button class="answer-btn" data-value="stegosaurus">🌿 Пастись</button>
+            <button class="answer-btn" data-value="raptor">🃏 Хитрить</button>
+            <button class="answer-btn" data-value="brachiosaurus">🌳 Объедать деревья</button>
+        </div>
+    </div>
+
+    <!-- Вопрос 10: четный -->
+    <div class="question-card" id="question10">
+        <br>
+        <h2 class="question-title">Твой девиз?</h2>
+        <div class="question-header">
+            <h4 class="question-number">Вопрос 10/10</h4>
+            <a href="main.html" class="back-small-btn">Назад к тестам</a>
+        </div>
+        <div class="answers">
+            <button class="answer-btn" data-value="pterodactyl">🦅 "Выше всех"</button>
+            <button class="answer-btn" data-value="ankylosaurus">🛡️ "Меня не пробить"</button>
+            <button class="answer-btn" data-value="spinosaurus">🌊 "Сила в воде"</button>
+            <button class="answer-btn" data-value="diplodocus">🌲 "Я большой, я добрый"</button>
+            <button class="answer-btn" data-value="parasaurolophus">🎶 "Жизнь - музыка"</button>
+        </div>
+    </div>
+
+    <!-- Результат -->
+    <div class="result-card" id="result">
+        <br>
+        <h2>🦕 Твой динозавр:</h2>
+        <div id="result-content"></div>
+        <div class="rating-section">
+            <h4 style="color: #6f6f6f;">Оцените этот тест</h4>
+            <div class="stars-container">
+                <button class="star-btn" onclick="rateTest(1)">★</button>
+                <button class="star-btn" onclick="rateTest(2)">★</button>
+                <button class="star-btn" onclick="rateTest(3)">★</button>
+                <button class="star-btn" onclick="rateTest(4)">★</button>
+                <button class="star-btn" onclick="rateTest(5)">★</button>
+            </div>
+        </div>
+        <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+        <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+    </div>
+</main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const dinosaurResults = {
+            trex: {
+                title: "👑 Тираннозавр Рекс",
+                desc: "Ты — король динозавров! Сильный, властный, уверенный в себе. Ты рожден быть лидером и не боишься трудностей. Ты всегда добиваешься своего.",
+                emoji: "🦖",
+                color: "#c0392b"
+            },
+            triceratops: {
+                title: "🛡️ Трицератопс",
+                desc: "Ты — защитник и опора. Надежный, сильный, всегда готов прийти на помощь. Ты ценишь семью и друзей, и ради них готов на все.",
+                emoji: "🛡️",
+                color: "#8e44ad"
+            },
+            stegosaurus: {
+                title: "🌿 Стегозавр",
+                desc: "Ты — спокойный и миролюбивый. Любишь уют и комфорт, но если надо — можешь показать шипы. Ты умный и осторожный.",
+                emoji: "🍀",
+                color: "#27ae60"
+            },
+            raptor: {
+                title: "🚄 Велоцираптор",
+                desc: "Ты — хитрый и быстрый! Всегда найдешь выход из любой ситуации. Ты сообразительный, ловкий и не любишь сидеть на месте.",
+                emoji: "⚡",
+                color: "#f39c12"
+            },
+            brachiosaurus: {
+                title: "🌳 Брахиозавр",
+                desc: "Ты — добрый и величественный. Спокойный, мудрый, смотришь на мир свысока. Ты не лезешь в конфликты, но всегда видишь всю картину целиком.",
+                emoji: "🦕",
+                color: "#2ecc71"
+            },
+            pterodactyl: {
+                title: "🦇 Птеродактиль",
+                desc: "Ты — свободная птица! Любишь высоту, скорость и новые горизонты. Ты независимый и всегда смотришь на мир с другой стороны.",
+                emoji: "🦅",
+                color: "#3498db"
+            },
+            ankylosaurus: {
+                title: "🛡️ Анкилозавр",
+                desc: "Ты — непробиваемый! У тебя толстая кожа и ты всегда защищен. Тебя нелегко вывести из себя, но если разозлить — мало не покажется.",
+                emoji: "🔨",
+                color: "#7f8c8d"
+            },
+            spinosaurus: {
+                title: "🌊 Спинозавр",
+                desc: "Ты — загадочный и сильный. Чувствуешь себя как рыба в воде, но и на суше не пропадешь. Ты многогранный и умеешь приспосабливаться.",
+                emoji: "🌊",
+                color: "#2980b9"
+            },
+            diplodocus: {
+                title: "🌿 Диплодок",
+                desc: "Ты — огромный и добрый. Дружелюбный, спокойный, с тобой легко и приятно. Ты всех любишь и хочешь мира во всем мире.",
+                emoji: "🌲",
+                color: "#16a085"
+            },
+            parasaurolophus: {
+                title: "🎺 Паразауролоф",
+                desc: "Ты — творческая личность! Любишь музыку, искусство, все красивое. Ты умеешь заявить о себе и не боишься быть в центре внимания.",
+                emoji: "🎵",
+                color: "#9b59b6"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, dinosaurResults, backgroundColors, 'dinosaurs');
+        
+// Функция для оценки теста
+window.rateTest = function(rating) {
+    const stars = document.querySelectorAll('.star-btn');
+    
+    // Проверяем, не заблокированы ли звезды
+    if (stars[0] && stars[0].disabled) return;
+    
+    // Сначала убираем все выделения
+    stars.forEach(btn => {
+        btn.classList.remove('selected');
+    });
+    
+    // Подсвечиваем выбранные звезды
+    for (let i = 0; i < rating; i++) {
+        stars[i].classList.add('selected');
+    }
+    
+    // Сохраняем оценку
+    quiz.saveRating(rating);
+    
+    // Блокируем звезды
+    stars.forEach(btn => {
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+        btn.style.cursor = 'default';
+    });
+};
+
+// Подсветка звезд при наведении
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const stars = document.querySelectorAll('.star-btn');
+        if (stars.length === 0) return;
+        
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseenter', function() {
+                // Если звезды заблокированы - ничего не делаем
+                if (this.disabled) return;
+                
+                // Убираем предыдущие hover
+                stars.forEach(s => {
+                    s.classList.remove('hover');
+                });
+                
+                // Добавляем hover только на звезды до текущей
+                for (let i = 0; i <= index; i++) {
+                    stars[i].classList.add('hover');
+                }
+            });
+            
+            star.addEventListener('mouseleave', function() {
+                // При уходе мыши убираем все hover
+                stars.forEach(s => {
+                    s.classList.remove('hover');
+                });
+            });
+        });
+    }, 200);
+});
+
+// Запускаем тест
+document.addEventListener('DOMContentLoaded', () => {
+    quiz.init();
+});
+    </script>
+</body>
+</html>

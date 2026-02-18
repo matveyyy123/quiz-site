@@ -21,14 +21,14 @@
     <div class="test-card drink" onclick="location.href='drink-test.html'">
         <div class="test-emoji">🥤</div>
         <div class="test-title">Какой ты напиток?</div>
-        <div class="test-desc">Узнай свой напиток по характеру</div>
+        <div class="test-desc">Узнай свой любимый вкус</div>
     </div>
     
 <!-- Тест 2: Супергерой (готов) -->
 <div class="test-card hero" onclick="location.href='hero-test.html'">
     <div class="test-emoji">🦸</div>
     <div class="test-title">Какой ты супергерой?</div>
-    <div class="test-desc">Узнай своего супергероя</div>
+    <div class="test-desc">Раскрой свою суперсилу</div>
 </div>
     
 <!-- Тест 3: Животное (готов) -->
@@ -56,7 +56,56 @@
 <div class="test-card pizza" onclick="location.href='pizza-test.html'">
     <div class="test-emoji">🍕</div>
     <div class="test-title">Какая ты пицца?</div>
-    <div class="test-desc">Узнай, какая пицца твоя душа</div>
+    <div class="test-desc">Узнай какая пицца твоя душа</div>
+</div>
+
+<!-- Тест 7: Профессия (готов) -->
+<div class="test-card job" onclick="location.href='job-test.html'">
+    <div class="test-emoji">💼</div>
+    <div class="test-title">Какая ты профессия?</div>
+    <div class="test-desc">Узнай какая профессия тебе подходит</div>
+</div>
+
+<!-- Тест 8: Планета (готов) -->
+<div class="test-card planet" onclick="location.href='planet-test.html'">
+    <div class="test-emoji">🪐</div>
+    <div class="test-title">Какая ты планета?</div>
+    <div class="test-desc">Найди свою планету</div>
+</div>
+
+<!-- Тест 9: День недели (готов) -->
+<div class="test-card weekday" onclick="location.href='weekday-test.html'">
+    <div class="test-emoji">📅</div>
+    <div class="test-title">Какой ты день недели?</div>
+    <div class="test-desc">Узнай какой день похож на тебя</div>
+</div>
+
+<!-- Тест 10: Жанры кино (новый) -->
+<div class="test-card genre" onclick="location.href='genre-test.html'">
+    <div class="test-emoji">🎬</div>
+    <div class="test-title">Какой ты жанр кино?</div>
+    <div class="test-desc">Пойми свой жанр</div>
+</div>
+
+<!-- Тест 11: Вредные привычки (новый) -->
+<div class="test-card habits" onclick="location.href='habits-test.html'">
+    <div class="test-emoji">😈</div>
+    <div class="test-title">Какая твоя слабость?</div>
+    <div class="test-desc">Узнай свою главную вредную привычку</div>
+</div>
+
+<!-- Тест 12: Страхи/Фобии (новый) -->
+<div class="test-card fears" onclick="location.href='fears-test.html'">
+    <div class="test-emoji">😨</div>
+    <div class="test-title">Какой у тебя страх?</div>
+    <div class="test-desc">Какая фобия живет внутри тебя</div>
+</div>
+
+<!-- Тест 13: Динозавры (новый) -->
+<div class="test-card dinosaurs" onclick="location.href='dinosaurs-test.html'">
+    <div class="test-emoji">🦖</div>
+    <div class="test-title">Какой ты динозавр?</div>
+    <div class="test-desc">Найди динозавра в своей душе</div>
 </div>
 </div>
 
@@ -69,21 +118,27 @@
         </main>
     </div>
 <script>
-    
-// Обновленная функция updateTestCounters с объединенной статистикой
+// Обновленная функция updateTestCounters - ТОЛЬКО ОБНОВЛЯЕТ ДАННЫЕ, НЕ УДАЛЯЕТ СТИЛИ
 function updateTestCounters() {
     const stats = JSON.parse(localStorage.getItem('quizStats')) || {};
     const ratings = JSON.parse(localStorage.getItem('testRatings')) || {};
     
     // Словарь для тестов
-const tests = {
-    drink: { selector: '.test-card.drink', name: 'Напитки' },
-    animal: { selector: '.test-card.animal', name: 'Животное' },
-    music: { selector: '.test-card.music', name: 'Музыка' },
-    travel: { selector: '.test-card.travel', name: 'Отпуск' },
-    pizza: { selector: '.test-card.pizza', name: 'Пицца' },
-    hero: { selector: '.test-card.hero', name: 'Супергерой' }
-};
+    const tests = {
+        drink: { selector: '.test-card.drink', name: 'Напитки' },
+        animal: { selector: '.test-card.animal', name: 'Животное' },
+        music: { selector: '.test-card.music', name: 'Музыка' },
+        travel: { selector: '.test-card.travel', name: 'Отпуск' },
+        pizza: { selector: '.test-card.pizza', name: 'Пицца' },
+        hero: { selector: '.test-card.hero', name: 'Супергерой' },
+        job: { selector: '.test-card.job', name: 'Профессия' },
+        planet: { selector: '.test-card.planet', name: 'Планета' },
+        weekday: { selector: '.test-card.weekday', name: 'День недели' },
+        genre: { selector: '.test-card.genre', name: 'Жанры кино' },
+        habits: { selector: '.test-card.habits', name: 'Вредные привычки' },
+        fears: { selector: '.test-card.fears', name: 'Страхи' },
+        dinosaurs: { selector: '.test-card.dinosaurs', name: 'Динозавры' }
+    };
     
     // Находим самый популярный тест
     let mostPopularId = null;
@@ -96,24 +151,28 @@ const tests = {
         }
     }
     
-    // Убираем огонек у всех и старую статистику
+    // Убираем класс most-popular у всех
     document.querySelectorAll('.test-card').forEach(card => {
         card.classList.remove('most-popular');
-        
-        const oldStats = card.querySelector('.test-stats');
-        if (oldStats) oldStats.remove();
     });
     
-    // Добавляем статистику на каждую карточку
+    // Обновляем статистику на каждой карточке
     for (let [id, test] of Object.entries(tests)) {
         const card = document.querySelector(test.selector);
         if (card) {
             const count = stats[id] || 0;
             const testRating = ratings[id] || { average: 0, count: 0 };
             
-            // Создаем контейнер для статистики
-            const statsDiv = document.createElement('div');
-            statsDiv.className = 'test-stats';
+            // Ищем существующий блок статистики или создаем новый
+            let statsDiv = card.querySelector('.test-stats');
+            if (!statsDiv) {
+                statsDiv = document.createElement('div');
+                statsDiv.className = 'test-stats';
+                card.appendChild(statsDiv);
+            }
+            
+            // Очищаем содержимое, но не удаляем сам блок
+            statsDiv.innerHTML = '';
             
             // Счетчик прохождений
             const counterSpan = document.createElement('span');
@@ -132,12 +191,9 @@ const tests = {
             if (testRating.count === 0) {
                 ratingSpan.innerHTML = `<span class="rating-stars">☆☆☆☆☆</span> <span class="rating-value">0.0</span>`;
             } else {
-                // Округляем до целого числа (3.1 → 3 звезды, 3.6 → 4 звезды)
                 const starCount = Math.round(testRating.average);
-                
-                // Создаем звезды
-                let filled = '★'.repeat(starCount);      // Золотые звезды
-                let empty = '☆'.repeat(5 - starCount);   // Пустые звезды
+                let filled = '★'.repeat(starCount);
+                let empty = '☆'.repeat(5 - starCount);
                 
                 ratingSpan.innerHTML = `
                     <span class="rating-stars">
@@ -148,13 +204,9 @@ const tests = {
                 `;
             }
             
-            // Собираем все вместе
             statsDiv.appendChild(counterSpan);
             statsDiv.appendChild(separator);
             statsDiv.appendChild(ratingSpan);
-            
-            // Добавляем на карточку
-            card.appendChild(statsDiv);
             
             // Ставим огонек самому популярному
             if (id === mostPopularId) {
@@ -164,7 +216,7 @@ const tests = {
     }
 }
 
-// Склонение слова "прохождение" (если нужно отдельно)
+// Склонение слова "прохождение"
 function getWord(count) {
     if (count % 10 === 1 && count % 100 !== 11) return 'прохождение';
     if ([2,3,4].includes(count % 10) && ![12,13,14].includes(count % 100)) return 'прохождения';
@@ -175,14 +227,12 @@ function getWord(count) {
 (function() {
     const themeToggle = document.getElementById('themeToggle');
     
-    // Загружаем сохраненную тему
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-theme');
         themeToggle.textContent = '☀️';
     }
     
-    // Переключение темы
     themeToggle.addEventListener('click', function() {
         document.body.classList.toggle('dark-theme');
         
@@ -196,47 +246,12 @@ function getWord(count) {
     });
 })();
 
-// Делаем функции глобальными
 window.updateTestCounters = updateTestCounters;
-
-// Обновляем при загрузке страницы
 document.addEventListener('DOMContentLoaded', updateTestCounters);
-
-// Обновляем каждые 5 секунд
 setInterval(updateTestCounters, 5000);
 </script>
-<script src="test-helper.js"></script>
 
-<script>
-    (function() {
-        function forceFixBorder() {
-            // Находим все популярные карточки
-            document.querySelectorAll('.test-card.most-popular').forEach(card => {
-                // Создаем и добавляем стили прямо в head
-                const styleId = 'popular-fix-style';
-                if (!document.getElementById(styleId)) {
-                    const style = document.createElement('style');
-                    style.id = styleId;
-                    style.innerHTML = `
-                        .test-card.most-popular::before {
-                            border: 2px solid #ffaa00 !important;
-                            border-color: #ffaa00 !important;
-                        }
-                    `;
-                    document.head.appendChild(style);
-                }
-                
-                // Принудительно перерисовываем
-                card.style.transform = 'scale(1)';
-            });
-        }
-        
-        // Запускаем несколько раз для надежности
-        forceFixBorder();
-        setTimeout(forceFixBorder, 500);
-        setTimeout(forceFixBorder, 1000);
-        setTimeout(forceFixBorder, 2000);
-    })();
-</script>
+<!-- УБИРАЕМ forceFixBorder - ОН БОЛЬШЕ НЕ НУЖЕН -->
+<script src="test-helper.js"></script>
 </body>
 </html>
