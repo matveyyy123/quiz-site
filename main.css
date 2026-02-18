@@ -7,14 +7,24 @@
     box-sizing: border-box;
 }
 
+/* Растягиваем фон на весь экран */
+html {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
 /* Стили для всего тела страницы */
 body {
     min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: transparent; /* прозрачный, фон берется из html */
+    margin: 0;
+    padding: 0;
 }
 
 /* ========== КОНТЕЙНЕР ========== */
@@ -26,7 +36,7 @@ body {
     padding: 40px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     backdrop-filter: blur(10px);
-    margin-top: 50px;
+    margin: 50px auto;
 }
 
 /* ========== ШАПКА ========== */
@@ -118,12 +128,12 @@ body {
 
 .test-card.drink::after {
     content: "🔥";
-    background: #ff9a9e;;
+    background: #ff9a9e;
     color: white;
     box-shadow: 0 2px 10px rgba(255,107,107,0.5);
 }
 
-/* КАРТОЧКА 2: Персонаж */
+/* КАРТОЧКА 2: Супергерой */
 .test-card.hero {
     background: linear-gradient(135deg, #cfcfff, #ffffff);
     border: 2px solid #a0a7fe;
@@ -133,7 +143,7 @@ body {
     content: "⏳";
     background: #a0a7fe;
     color: #333;
-    box-shadow: 0 2px 10px rgba(255,217,61,0.5);
+    box-shadow: 0 2px 10px rgba(161,140,209,0.5);
 }
 
 /* КАРТОЧКА 3: Животное */
@@ -195,7 +205,7 @@ body {
     padding: 40px 20px;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     border-radius: 20px;
-    width: 100%;  /* растягиваем на всю ширину контейнера */
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -361,9 +371,6 @@ body {
     border-color: #667eea;
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-}
-
-.emoji-btn.selected {
     color: white;
 }
 
@@ -481,7 +488,6 @@ body {
     50% { transform: scale(1.1); opacity: 0.9; }
 }
 
-
 /* ========== СТАТИСТИКА НА КАРТОЧКЕ ========== */
 .test-stats {
     margin-top: 15px;
@@ -565,7 +571,7 @@ body {
 
 /* Темная тема */
 body.dark-theme {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    background: transparent;
 }
 
 body.dark-theme .container {
@@ -688,10 +694,15 @@ body.dark-theme .textarea-char-counter {
     border-color: #3a3a4a;
 }
 
-
 /* ========== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ========== */
 @media (max-width: 768px) {
+    html {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
     .container {
+        width: 94%;
+        margin: 15px auto;
         padding: 25px;
     }
     
@@ -701,10 +712,15 @@ body.dark-theme .textarea-char-counter {
     
     .tests-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .test-emoji {
         font-size: 3.5em;
+    }
+    
+    .test-title {
+        font-size: 1.4em;
     }
     
     .contact-section {
@@ -749,10 +765,16 @@ body.dark-theme .textarea-char-counter {
         font-size: 0.85em;
     }
     
-    /* ✅ ДОБАВЬ СЮДА */
     .test-card.most-popular::before {
         font-size: 0.65em;
         padding: 3px 10px;
         top: -8px;
+    }
+}
+
+/* Темная тема для телефонов */
+@media (max-width: 768px) {
+    html.dark-theme {
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
     }
 }
