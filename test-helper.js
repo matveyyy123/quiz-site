@@ -149,7 +149,12 @@ async function loadCloudData() {
     }
 }
 // Сохранение данных в облако
+let isSaving = false; // Добавь эту переменную вверху файла
+
 async function saveCloudData() {
+    if (isSaving) return; // Если уже сохраняем - выходим
+    isSaving = true;
+    
     const stats = JSON.parse(localStorage.getItem('quizStats')) || {};
     const ratings = JSON.parse(localStorage.getItem('testRatings')) || {};
     
@@ -168,6 +173,8 @@ async function saveCloudData() {
         }
     } catch (e) {
         console.log('⚠️ Не удалось сохранить в облако');
+    } finally {
+        setTimeout(() => { isSaving = false; }, 1000); // Разблокируем через секунду
     }
 }
 
