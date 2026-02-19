@@ -92,25 +92,62 @@ async function loadCloudData() {
         const data = await response.json();
         const cloudData = data.record;
         
-        // Сохраняем в localStorage
+        // ПОЛУЧАЕМ ЛОКАЛЬНЫЕ ДАННЫЕ
+        const localStats = JSON.parse(localStorage.getItem('quizStats')) || {};
+        const localRatings = JSON.parse(localStorage.getItem('testRatings')) || {};
+        
+        // ОБЪЕДИНЯЕМ: берем максимальные значения из облака и локальных
         if (cloudData.stats) {
-            localStorage.setItem('quizStats', JSON.stringify(cloudData.stats));
-        }
-        if (cloudData.ratings) {
-            localStorage.setItem('testRatings', JSON.stringify(cloudData.ratings));
+            const mergedStats = { ...cloudData.stats };
+            
+            // Добавляем локальные, если их нет в облаке или они больше
+            for (let key in localStats) {
+                if (!mergedStats[key] || localStats[key] > mergedStats[key]) {
+                    mergedStats[key] = localStats[key];
+                }
+            }
+            
+            localStorage.setItem('quizStats', JSON.stringify(mergedStats));
+            console.log('📊 Статистика объединена:', mergedStats);
+        } else {
+            // Если в облаке нет статистики, сохраняем локальную
+            localStorage.setItem('quizStats', JSON.stringify(localStats));
         }
         
-        console.log('✅ Данные загружены из облака');
+        // Объединяем рейтинги
+        if (cloudData.ratings) {
+            const mergedRatings = { ...cloudData.ratings };
+            
+            for (let key in localRatings) {
+                if (!mergedRatings[key]) {
+                    mergedRatings[key] = localRatings[key];
+                } else {
+                    // Если есть и там и там - берем с большим количеством оценок
+                    if (localRatings[key].count > mergedRatings[key].count) {
+                        mergedRatings[key] = localRatings[key];
+                    }
+                }
+            }
+            
+            localStorage.setItem('testRatings', JSON.stringify(mergedRatings));
+        } else {
+            localStorage.setItem('testRatings', JSON.stringify(localRatings));
+        }
+        
+        console.log('✅ Данные загружены из облака и объединены');
         
         // Обновляем счетчики на главной
         if (window.updateTestCounters) {
             window.updateTestCounters();
         }
+        
+        // Сохраняем объединенные данные обратно в облако
+        setTimeout(saveCloudData, 1000);
+        
     } catch (e) {
         console.log('⚠️ Не удалось загрузить из облака, используем локальные данные');
     }
 }
-
 // Сохранение данных в облако
 async function saveCloudData() {
     const stats = JSON.parse(localStorage.getItem('quizStats')) || {};
