@@ -136,12 +136,18 @@ async function saveCloudData() {
 
 // Перехватываем сохранение в localStorage
 const originalSetItem = localStorage.setItem;
+let lastSave = 0; // Добавить эту переменную
+
 localStorage.setItem = function(key, value) {
     originalSetItem.call(this, key, value);
     
     // Если меняются наши данные - сохраняем в облако
     if (key === 'quizStats' || key === 'testRatings') {
-        setTimeout(saveCloudData, 500);
+        const now = Date.now();
+        if (now - lastSave > 60000) { // Не чаще раза в минуту
+            lastSave = now;
+            setTimeout(saveCloudData, 500);
+        }
     }
 };
 
