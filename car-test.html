@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какая ты машина?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🏎️ Какая ты машина?</h1>
+            <p class="subtitle">Узнай какое авто отражает твой характер!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Твой стиль вождения?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sportscar">🏁 Быстро и дерзко</button>
+                    <button class="answer-btn" data-value="suv">⛰️ Уверенно и мощно</button>
+                    <button class="answer-btn" data-value="sedan">🚘 Спокойно и плавно</button>
+                    <button class="answer-btn" data-value="minivan">👨‍👩‍👧‍👦 Семейно и безопасно</button>
+                    <button class="answer-btn" data-value="pickup">🚚 Гружу и тащу</button>
+                </div>
+            </div>
+
+<!-- Вопрос 2 -->
+<div class="question-card" id="question2">
+    <br>
+    <h2 class="question-title">Какой твой стиль в одежде?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 2/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="retro">🎞️ Винтаж и ретро</button>
+        <button class="answer-btn" data-value="ev">🌿 Эко-стиль и минимализм</button>
+        <button class="answer-btn" data-value="convertible">👕 Свободный и casual</button>
+        <button class="answer-btn" data-value="coupe">🔥 Спортивный и яркий</button>
+        <button class="answer-btn" data-value="hatchback">🏙️ Удобный и практичный</button>
+    </div>
+</div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Что важно в поездке?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sportscar">💨 Скорость</button>
+                    <button class="answer-btn" data-value="suv">🛣️ Проходимость</button>
+                    <button class="answer-btn" data-value="sedan">🛋️ Комфорт</button>
+                    <button class="answer-btn" data-value="minivan">🧳 Вместительность</button>
+                    <button class="answer-btn" data-value="pickup">📦 Грузоподъемность</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Твой идеальный отпуск?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="retro">🏛️ В старом городе</button>
+                    <button class="answer-btn" data-value="ev">🌿 Эко-курорт</button>
+                    <button class="answer-btn" data-value="convertible">🏖️ Пляж и ветер</button>
+                    <button class="answer-btn" data-value="coupe">🎢 Экстрим и адреналин</button>
+                    <button class="answer-btn" data-value="hatchback">🏕️ Пикник за городом</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Твой цвет?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sportscar">❤️ Красный</button>
+                    <button class="answer-btn" data-value="suv">💚 Зеленый</button>
+                    <button class="answer-btn" data-value="sedan">🤍 Белый</button>
+                    <button class="answer-btn" data-value="minivan">💙 Синий</button>
+                    <button class="answer-btn" data-value="pickup">🖤 Черный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Что слушаешь в дороге?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="retro">📻 Ретро-хиты</button>
+                    <button class="answer-btn" data-value="ev">🎧 Подкасты</button>
+                    <button class="answer-btn" data-value="convertible">🎸 Рок</button>
+                    <button class="answer-btn" data-value="coupe">🎹 Электронику</button>
+                    <button class="answer-btn" data-value="hatchback">🎤 Поп-музыку</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Твой девиз?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sportscar">⚡ Быстрее ветра</button>
+                    <button class="answer-btn" data-value="suv">⛰️ Где хочу — там еду</button>
+                    <button class="answer-btn" data-value="sedan">😌 Главное — комфорт</button>
+                    <button class="answer-btn" data-value="minivan">👪 Семья превыше всего</button>
+                    <button class="answer-btn" data-value="pickup">💪 Дело надо делать</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Твой враг на дороге?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="retro">🚗 Современные авто</button>
+                    <button class="answer-btn" data-value="ev">⛽ Бензин</button>
+                    <button class="answer-btn" data-value="convertible">🌧️ Дождь</button>
+                    <button class="answer-btn" data-value="coupe">🚦 Пробки</button>
+                    <button class="answer-btn" data-value="hatchback">💰 Цены на парковку</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Твой тип топлива?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sportscar">⛽ Премиум 98</button>
+                    <button class="answer-btn" data-value="suv">⛽ Дизель</button>
+                    <button class="answer-btn" data-value="sedan">⛽ 95-й обычный</button>
+                    <button class="answer-btn" data-value="minivan">⚡ Электричество</button>
+                    <button class="answer-btn" data-value="pickup">⛽ Газ</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Что для тебя машина?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="retro">🖼️ Предмет искусства</button>
+                    <button class="answer-btn" data-value="ev">🌱 Будущее</button>
+                    <button class="answer-btn" data-value="convertible">😎 Свобода</button>
+                    <button class="answer-btn" data-value="coupe">❤️ Страсть</button>
+                    <button class="answer-btn" data-value="hatchback">🛠️ Инструмент</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2 class="question-title">🚘 Твоя машина:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const carResults = {
+            sportscar: {
+                title: "⚡ Спортивный автомобиль",
+                desc: "Ты — спортивный автомобиль! Быстрый, яркий и дерзкий. Ты любишь быть в центре внимания, не терпишь ограничений и всегда жмешь на газ. Ты — лидер, который приходит первым к любой цели. С тобой весело, но не каждый выдержит твой темп!",
+                emoji: "🏎️",
+                color: "#B22222"
+            },
+            suv: {
+                title: "🚙 Внедорожник",
+                desc: "Ты — внедорожник! Мощный, надежный и непробиваемый. Тебе нипочем бездорожье и трудности. Ты всегда готов прийти на помощь и вытащить друга из любой передряги. На тебя можно положиться в любой ситуации. Ты — скала!",
+                emoji: "⛰️",
+                color: "#2E5A2E"
+            },
+            sedan: {
+                title: "🚘 Седан",
+                desc: "Ты — седан! Классический, элегантный и уравновешенный. Ты ценишь комфорт и статус, но без лишней вычурности. Ты — золотая середина: достаточно быстрый, достаточно комфортный, достаточно надежный. Ты — опора общества!",
+                emoji: "✨",
+                color: "#2F4F4F"
+            },
+            minivan: {
+                title: "🚐 Минивэн",
+                desc: "Ты — минивэн! Ты — душа компании и сердце семьи. Для тебя важны близкие, комфорт и безопасность. Ты всегда готов всех разместить, всех довезти и за всеми присмотреть. Ты — настоящий заботливый друг и родитель!",
+                emoji: "👪",
+                color: "#4682B4"
+            },
+            pickup: {
+                title: "🚚 Пикап",
+                desc: "Ты — пикап! Ты практичный, работящий и всегда готов к труду. Тебя не волнует внешний лоск, главное — функциональность. Ты можешь и доски привезти, и друзей покатать, и на рыбалку съездить. Ты — человек дела!",
+                emoji: "🔨",
+                color: "#8B4513"
+            },
+            retro: {
+                title: "🚘 Ретро-автомобиль",
+                desc: "Ты — ретро-автомобиль! Ты ценишь стиль, историю и качество. Ты не гонишься за модой, у тебя свой вкус. Ты элегантный, немного старомодный, но в этом твоя изюминка. Ты — хранитель традиций и настоящая легенда!",
+                emoji: "🎞️",
+                color: "#5D3A1A"
+            },
+            ev: {
+                title: "🔋 Электромобиль",
+                desc: "Ты — электромобиль! Ты современный, технологичный и думаешь о будущем. Ты тихий, но мощный. Ты за экологию и прогресс. Ты всегда в курсе новых трендов и не боишься перемен. Ты — человек будущего!",
+                emoji: "🌱",
+                color: "#1E8F8F"
+            },
+            convertible: {
+                title: "🌤️ Кабриолет",
+                desc: "Ты — кабриолет! Свободный, легкий и открытый миру. Ты любишь ветер в волосах и солнце на коже. Ты — душа компании, всегда за любой движ. С тобой хочется жить на полную катушку и наслаждаться каждым моментом!",
+                emoji: "🕶️",
+                color: "#FF8C00"
+            },
+            coupe: {
+                title: "🔥 Купе",
+                desc: "Ты — купе! Стильный, дерзкий и немного эгоистичный. Ты знаешь себе цену и не возишь лишних пассажиров. Ты создан для драйва и удовольствия. Ты — тот, кто берет от жизни всё и прямо сейчас!",
+                emoji: "🎸",
+                color: "#4A2C2C"
+            },
+            hatchback: {
+                title: "🚗 Хэтчбек",
+                desc: "Ты — хэтчбек! Ты компактный, но вместительный, простой, но стильный. Ты городской житель — маневренный, экономичный и практичный. Ты отлично чувствуешь себя в ритме мегаполиса и всегда паркуешься в самые узкие места!",
+                emoji: "🏙️",
+                color: "#6B8E23"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, carResults, backgroundColors, 'car');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

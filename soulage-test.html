@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой твой возраст?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🧿 Какой твой возраст?</h1>
+            <p class="subtitle">Узнай сколько лет твоей душе!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Что делаешь в свободное время?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="child">🎮 Играю в игры</button>
+                    <button class="answer-btn" data-value="teen">👯 Тусуюсь с друзьями</button>
+                    <button class="answer-btn" data-value="youth">🚀 Путешествую</button>
+                    <button class="answer-btn" data-value="adult">📚 Читаю/учусь</button>
+                    <button class="answer-btn" data-value="old">🌿 Сижу дома с чаем</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что ты думаешь о любви?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sage">🤔 Это иллюзия</button>
+                    <button class="answer-btn" data-value="mature">❤️ Это ответственность</button>
+                    <button class="answer-btn" data-value="eternal">♾️ Это вечность</button>
+                    <button class="answer-btn" data-value="wounded">💔 Это больно</button>
+                    <button class="answer-btn" data-value="innocent">🌈 Это счастье</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Как реагируешь на проблемы?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="child">😭 Плачу/обижаюсь</button>
+                    <button class="answer-btn" data-value="teen">🤬 Злюсь и бунтую</button>
+                    <button class="answer-btn" data-value="youth">💪 Решаю сразу</button>
+                    <button class="answer-btn" data-value="adult">🧘 Принимаю и думаю</button>
+                    <button class="answer-btn" data-value="old">⌛ Пережидаю</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Твоя любимая музыка?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sage">🎵 Классика</button>
+                    <button class="answer-btn" data-value="mature">🎸 Рок/джаз</button>
+                    <button class="answer-btn" data-value="eternal">🌌 Эмбиент/инструментал</button>
+                    <button class="answer-btn" data-value="wounded">🎻 Грустная</button>
+                    <button class="answer-btn" data-value="innocent">🎤 Попса</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Что для тебя счастье?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="child">🍭 Мороженое и игрушки</button>
+                    <button class="answer-btn" data-value="teen">🎉 Тусовки и драйв</button>
+                    <button class="answer-btn" data-value="youth">✈️ Новые места</button>
+                    <button class="answer-btn" data-value="adult">🏡 Семья и уют</button>
+                    <button class="answer-btn" data-value="old">🧘 Покой и гармония</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Как часто ты грустишь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sage">📿 Это часть пути</button>
+                    <button class="answer-btn" data-value="mature">🌧️ Иногда</button>
+                    <button class="answer-btn" data-value="eternal">🌫️ Часто</button>
+                    <button class="answer-btn" data-value="wounded">💧 Почти всегда</button>
+                    <button class="answer-btn" data-value="innocent">☀️ Почти никогда</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Что ты думаешь о смерти?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sage">🌀 Это переход</button>
+                    <button class="answer-btn" data-value="mature">💭 Не хочу думать</button>
+                    <button class="answer-btn" data-value="eternal">🌌 Я это помню</button>
+                    <button class="answer-btn" data-value="wounded">😨 Боюсь</button>
+                    <button class="answer-btn" data-value="innocent">❓ А что это?</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Твой идеальный вечер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sage">📖 С книгой</button>
+                    <button class="answer-btn" data-value="mature">🍷 С вином и фильмом</button>
+                    <button class="answer-btn" data-value="eternal">✨ Созерцать звезды</button>
+                    <button class="answer-btn" data-value="wounded">🕯️ В одиночестве</button>
+                    <button class="answer-btn" data-value="innocent">🎮 С друзьями</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Как ты относишься к людям?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sage">👁️ Наблюдаю</button>
+                    <button class="answer-btn" data-value="mature">🤝 Помогаю</button>
+                    <button class="answer-btn" data-value="eternal">💞 Чувствую их</button>
+                    <button class="answer-btn" data-value="wounded">🚫 Доверяю с трудом</button>
+                    <button class="answer-btn" data-value="innocent">😍 Люблю всех</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Твоя главная мудрость?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="sage">🕉️ Всё есть иллюзия</button>
+                    <button class="answer-btn" data-value="mature">💪 Всё в твоих руках</button>
+                    <button class="answer-btn" data-value="eternal">🔄 Всё возвращается</button>
+                    <button class="answer-btn" data-value="wounded">⚠️ Никому не верь</button>
+                    <button class="answer-btn" data-value="innocent">🌈 Живи и радуйся</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2 class="question-title">🧿 Твой возраст души:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const soulAgeResults = {
+            child: {
+                title: "👶 Ребенок (0-7 лет)",
+                desc: "Твоя душа — чистый ребенок! Ты смотришь на мир с восторгом и удивлением. Ты непосредственный(ая), искренний(яя) и веришь в чудеса. Люди кажутся тебе добрыми, а мир — огромной игровой площадкой. Сохрани это как можно дольше!",
+                emoji: "🍭",
+                color: "#F48FB1"
+            },
+            teen: {
+                title: "🧑 Подросток (8-16 лет)",
+                desc: "Твоя душа — подросток! Ты бунтуешь, ищешь себя и проверяешь границы. Тебе все интересно, но многое бесит. Ты хочешь изменить мир и не понимаешь, почему другие такие скучные. Энергия бьет ключом, даже если это энергия протеста!",
+                emoji: "🔥",
+                color: "#FF8A65"
+            },
+            youth: {
+                title: "👨‍🎓 Молодая душа (17-25 лет)",
+                desc: "Твоя душа молода и полна амбиций! Ты строишь планы, влюбляешься, путешествуешь и хочешь всё успеть. Ты уже не ребенок, но еще не взрослый. Перед тобой открыты все дороги, и ты готов(а) рисковать. Лови момент!",
+                emoji: "🚀",
+                color: "#80CBC4"
+            },
+            adult: {
+                title: "👨‍💼 Зрелая душа (26-45 лет)",
+                desc: "Твоя душа зрелая и ответственная. Ты уже многое понял(а), создал(а) и достиг(ла). Ты ценишь стабильность, заботишься о близких и знаешь цену вещам. Ты — опора для многих. Но не забывай иногда баловать внутреннего ребенка!",
+                emoji: "🏡",
+                color: "#AED581"
+            },
+            old: {
+                title: "👵 Старая душа (46-70 лет)",
+                desc: "Твоя душа старая и мудрая. Ты не суетишься, не гонишься за трендами. Ты ценишь покой, тишину и простые радости. Ты многое видел(а) и многое знаешь. К тебе приходят за советом, потому что ты умеешь слушать и понимать.",
+                emoji: "🕯️",
+                color: "#BCAAA4"
+            },
+            sage: {
+                title: "🧙 Мудрец (70+ лет)",
+                desc: "Твоя душа — древний мудрец! Ты прожил(а) уже сотни жизней. Ты смотришь на мир отстраненно и философски. Суета тебя не волнует, ты ищешь истину и смысл. Ты чувствуешь энергию, видишь знаки и знаешь что-то, чего не знают другие.",
+                emoji: "📿",
+                color: "#9E9E9E"
+            },
+            mature: {
+                title: "🌾 Зрелая душа (25-35 лет)",
+                desc: "Твоя душа в самом расцвете! Ты уже нашел(ла) себя, но еще полон(на) сил. Ты сочетаешь мудрость и энергию, опыт и амбиции. Ты знаешь, чего хочешь, и идешь к этому. Ты — золотая середина между молодостью и зрелостью.",
+                emoji: "🌿",
+                color: "#A5D6A7"
+            },
+            eternal: {
+                title: "♾️ Вечная душа",
+                desc: "Твоя душа вечна и помнит прошлые жизни. Ты часто ловишь себя на мыслях «это уже было» или чувствуешь связь с другими эпохами. Ты глубже и старше, чем кажешься. Ты пришел(а) в этот мир с багажом опыта и миссией.",
+                emoji: "🔄",
+                color: "#B39DDB"
+            },
+            wounded: {
+                title: "🩹 Раненая душа",
+                desc: "Твоя душа ранена. Ты много страдал(а) и теперь бережешь себя. Ты не доверяешь миру, ждешь подвоха и боишься открываться. Но твоя рана делает тебя глубже и чувствительнее. Тебе нужно исцеление и любовь.",
+                emoji: "💔",
+                color: "#EF9A9A"
+            },
+            innocent: {
+                title: "😇 Невинная душа",
+                desc: "Твоя душа невинна и чиста. Ты не знаешь зла и не хочешь его знать. Ты веришь в добро, людей и справедливость. Ты — как ангел, который пришел напоминать нам о простоте и свете. Береги свою чистоту, но будь осторожен(на)!",
+                emoji: "👼",
+                color: "#FFE082"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, soulAgeResults, backgroundColors, 'soulage');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

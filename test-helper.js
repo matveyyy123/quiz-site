@@ -1,9 +1,6 @@
 // ========== ПРОВЕРКА, ЧТОБЫ НЕ ПОДКЛЮЧАТЬ ДВАЖДЫ ==========
 if (typeof window.QuizTest === 'undefined') {
 
-// ========== ЗВУК С ЗАДЕРЖКОЙ ПЕРЕХОДА ==========
-if (typeof window.QuizTest === 'undefined') {
-
 console.log('🎵 Скрипт загружен');
 
 // Создаем звук
@@ -77,8 +74,79 @@ document.addEventListener('DOMContentLoaded', function() {
 
 console.log('👂 Обработчик кликов установлен');
 
-// ... остальной код класса QuizTest ...
+// ========== ОБЛАЧНАЯ СИНХРОНИЗАЦИЯ ==========
+const BIN_ID = '69973f9243b1c97be98c0147';
+const API_KEY = '$2a$10$3VBTO7IC6S078pmAh4WZHeFeAWJV8.6zZY/AlSTRdSRgdGBBRniie';
+
+// Загрузка данных из облака
+async function loadCloudData() {
+    try {
+        const response = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+            headers: {
+                'X-Master-Key': API_KEY
+            }
+        });
+        
+        if (!response.ok) throw new Error('Ошибка загрузки');
+        
+        const data = await response.json();
+        const cloudData = data.record;
+        
+        // Сохраняем в localStorage
+        if (cloudData.stats) {
+            localStorage.setItem('quizStats', JSON.stringify(cloudData.stats));
+        }
+        if (cloudData.ratings) {
+            localStorage.setItem('testRatings', JSON.stringify(cloudData.ratings));
+        }
+        
+        console.log('✅ Данные загружены из облака');
+        
+        // Обновляем счетчики на главной
+        if (window.updateTestCounters) {
+            window.updateTestCounters();
+        }
+    } catch (e) {
+        console.log('⚠️ Не удалось загрузить из облака, используем локальные данные');
+    }
 }
+
+// Сохранение данных в облако
+async function saveCloudData() {
+    const stats = JSON.parse(localStorage.getItem('quizStats')) || {};
+    const ratings = JSON.parse(localStorage.getItem('testRatings')) || {};
+    
+    try {
+        const response = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Master-Key': API_KEY
+            },
+            body: JSON.stringify({ stats, ratings })
+        });
+        
+        if (response.ok) {
+            console.log('✅ Данные сохранены в облако');
+        }
+    } catch (e) {
+        console.log('⚠️ Не удалось сохранить в облако');
+    }
+}
+
+// Перехватываем сохранение в localStorage
+const originalSetItem = localStorage.setItem;
+localStorage.setItem = function(key, value) {
+    originalSetItem.call(this, key, value);
+    
+    // Если меняются наши данные - сохраняем в облако
+    if (key === 'quizStats' || key === 'testRatings') {
+        setTimeout(saveCloudData, 500);
+    }
+};
+
+// Загружаем данные при старте
+setTimeout(loadCloudData, 500);
 
 // Класс для создания теста
 class QuizTest {
@@ -94,21 +162,19 @@ class QuizTest {
 
     // Добавить метод для сохранения оценки
     saveRating(rating) {
-        let ratings = JSON.parse(localStorage.getItem('testRatings')) || {};
-        
+        const ratings = JSON.parse(localStorage.getItem('testRatings')) || {};
         if (!ratings[this.testId]) {
-            ratings[this.testId] = {
-                total: 0,
-                count: 0,
-                average: 0
-            };
+            ratings[this.testId] = { sum: 0, count: 0, average: 0 };
         }
         
-        ratings[this.testId].total += rating;
+        ratings[this.testId].sum += rating;
         ratings[this.testId].count += 1;
-        ratings[this.testId].average = ratings[this.testId].total / ratings[this.testId].count;
+        ratings[this.testId].average = ratings[this.testId].sum / ratings[this.testId].count;
         
         localStorage.setItem('testRatings', JSON.stringify(ratings));
+        
+        // Сохраняем в облако (перехватчик сам сработает, но на всякий случай)
+        console.log('⭐ Оценка сохранена');
     }
 
     // Обновление прогресс-бара
@@ -125,6 +191,7 @@ class QuizTest {
         let stats = JSON.parse(localStorage.getItem('quizStats')) || {};
         stats[this.testId] = (stats[this.testId] || 0) + 1;
         localStorage.setItem('quizStats', JSON.stringify(stats));
+        console.log(`📊 Статистика теста "${this.testId}" обновлена`);
     }
 
     // Смена фона
@@ -268,6 +335,7 @@ class QuizTest {
 window.QuizTest = QuizTest;
 
 } // Конец проверки if (typeof window.QuizTest === 'undefined')
+
 // ========== ПРИМЕНЕНИЕ ТЕМЫ ПРИ ЗАГРУЗКЕ ==========
 (function() {
     const savedTheme = localStorage.getItem('theme');

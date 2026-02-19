@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты рыцарь?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🏰 Какой ты рыцарь?</h1>
+            <p class="subtitle">Узнай кем бы ты был в эпоху рыцарей и замков!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Что для тебя важнее всего?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="knight">⚔️ Честь и справедливость</button>
+                    <button class="answer-btn" data-value="monk">🙏 Вера и знания</button>
+                    <button class="answer-btn" data-value="merchant">💰 Богатство и торговля</button>
+                    <button class="answer-btn" data-value="jester">🎭 Веселье и свобода</button>
+                    <button class="answer-btn" data-value="king">👑 Власть и порядок</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Твое любимое занятие?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="blacksmith">🔨 Работать руками</button>
+                    <button class="answer-btn" data-value="minstrel">🎵 Петь и сочинять</button>
+                    <button class="answer-btn" data-value="alchemist">⚗️ Изучать новое</button>
+                    <button class="answer-btn" data-value="hunter">🏹 Охотиться</button>
+                    <button class="answer-btn" data-value="farmer">🌾 Работать на земле</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Что делаешь в свободное время?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="knight">🏇 Тренируюсь с мечом</button>
+                    <button class="answer-btn" data-value="monk">📖 Читаю манускрипты</button>
+                    <button class="answer-btn" data-value="merchant">📊 Считаю прибыль</button>
+                    <button class="answer-btn" data-value="jester">🤹 Дурачусь с народом</button>
+                    <button class="answer-btn" data-value="king">👑 Планирую стратегии</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Твой идеальный дом?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="blacksmith">🏠 Мастерская в городе</button>
+                    <button class="answer-btn" data-value="minstrel">🏕️ Дорога и приключения</button>
+                    <button class="answer-btn" data-value="alchemist">🧪 Башня с лабораторией</button>
+                    <button class="answer-btn" data-value="hunter">🌲 Дом в лесу</button>
+                    <button class="answer-btn" data-value="farmer">🏡 Деревенская усадьба</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Что тебе не нравится?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="knight">😤 Предательство и ложь</button>
+                    <button class="answer-btn" data-value="monk">😠 Жадность и глупость</button>
+                    <button class="answer-btn" data-value="merchant">😒 Лень и бедность</button>
+                    <button class="answer-btn" data-value="jester">😩 Скука и уныние</button>
+                    <button class="answer-btn" data-value="king">😡 Хаос и беспорядок</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Твой лучший друг?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="blacksmith">🔧 Мой инструмент</button>
+                    <button class="answer-btn" data-value="minstrel">🎸 Моя лютня</button>
+                    <button class="answer-btn" data-value="alchemist">📜 Мои книги</button>
+                    <button class="answer-btn" data-value="hunter">🐕 Мой пес</button>
+                    <button class="answer-btn" data-value="farmer">🐄 Моя корова</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Чем ты гордишься?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="knight">⚜️ Своими подвигами</button>
+                    <button class="answer-btn" data-value="monk">🕯️ Своей мудростью</button>
+                    <button class="answer-btn" data-value="merchant">💰 Своим состоянием</button>
+                    <button class="answer-btn" data-value="jester">🎪 Своими шутками</button>
+                    <button class="answer-btn" data-value="king">🏰 Своим королевством</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Что ты ешь на завтрак?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="blacksmith">🍖 Мясо с хлебом</button>
+                    <button class="answer-btn" data-value="minstrel">🍎 Яблоко и сыр</button>
+                    <button class="answer-btn" data-value="alchemist">🥣 Похлебка с травами</button>
+                    <button class="answer-btn" data-value="hunter">🍗 Дичь</button>
+                    <button class="answer-btn" data-value="farmer">🧀 Хлеб с молоком</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Твой главный страх?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="knight">😨 Позор и бесчестие</button>
+                    <button class="answer-btn" data-value="monk">😨 Потерять веру</button>
+                    <button class="answer-btn" data-value="merchant">😨 Разориться</button>
+                    <button class="answer-btn" data-value="jester">😨 Остаться в тени</button>
+                    <button class="answer-btn" data-value="king">😨 Потерять трон</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Какую фразу ты чаще говоришь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="knight">⚔️ За честь и отвагу!</button>
+                    <button class="answer-btn" data-value="monk">🙏 Да будет так</button>
+                    <button class="answer-btn" data-value="merchant">💰 Золото решает всё</button>
+                    <button class="answer-btn" data-value="jester">🤡 Жизнь - игра</button>
+                    <button class="answer-btn" data-value="king">👑 Я так решил</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2 class="question-title">🏆 Твой персонаж средневековья:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        // Результаты для теста "Средневековье"
+        const medievalResults = {
+            knight: {
+                title: "🛡️ Рыцарь",
+                desc: "Ты — благородный рыцарь! Честь, отвага и верность — твои главные качества. Ты всегда защищаешь слабых и стоишь на страже справедливости. Твоё слово — закон, а меч всегда готов к бою. Друзья знают, что на тебя можно положиться в любой битве.",
+                emoji: "⚔️",
+                color: "#8B4513"
+            },
+            monk: {
+                title: "🙏 Монах",
+                desc: "Ты — мудрый монах. Ты ценишь знания, тишину и духовное развитие. Часто проводишь время в размышлениях и записях важных событий. К тебе приходят за советом, а ты умеешь видеть суть вещей. Твоя мудрость старше многих королей.",
+                emoji: "📜",
+                color: "#2E4A2E"
+            },
+            merchant: {
+                title: "💰 Купец",
+                desc: "Ты — предприимчивый купец! Твоя стихия — рынок, сделки и путешествия. Ты умеешь договориться с кем угодно и продать что угодно. Благодаря твоей смекалке и обаянию товары попадают из дальних стран в местные лавки. Кошельку можно только позавидовать!",
+                emoji: "💎",
+                color: "#B8860B"
+            },
+            jester: {
+                title: "🤹 Шут",
+                desc: "Ты — королевский шут! Но не думай, что это просто клоун. Ты — единственный, кто может говорить правду королю под видом шутки. Твой острый ум и чувство юмора спасают в самых сложных ситуациях. Ты видишь мир иначе и делаешь его лучше смехом.",
+                emoji: "🎭",
+                color: "#DAA520"
+            },
+            king: {
+                title: "🤴 Король",
+                desc: "Ты — настоящий король! Ты рождён управлять и вести за собой. Ответственность, власть и стратегическое мышление — твои инструменты. Ты умеешь принимать сложные решения и держать удар. Подданные уважают тебя, а враги боятся.",
+                emoji: "👑",
+                color: "#4A2C1A"
+            },
+            blacksmith: {
+                title: "🔨 Кузнец",
+                desc: "Ты — кузнец, мастер своего дела! Ты создаёшь то, без чего не может обойтись ни рыцарь, ни крестьянин. Твои руки — золотые, а характер — крепкий, как закалённая сталь. Ты — опора любого поселения, без тебя жизнь остановится.",
+                emoji: "⚒️",
+                color: "#5A4A3A"
+            },
+            minstrel: {
+                title: "🎵 Менестрель",
+                desc: "Ты — странствующий менестрель! Твоя музыка и песни разносят новости и поднимают настроение. Тебя ждут в каждом замке и деревне. Ты свободен как ветер, а твой талант открывает любые двери. Там, где появляешься ты, начинается праздник.",
+                emoji: "🎶",
+                color: "#8B5A2B"
+            },
+            alchemist: {
+                title: "⚗️ Алхимик",
+                desc: "Ты — загадочный алхимик! Ты ищешь философский камень и эликсир бессмертия. Для тебя нет ничего невозможного, ты пытаесь превратить свинец в золото и найти истину. Ты учёный, философ и маг в одном лице. Твоя лаборатория — самое интересное место.",
+                emoji: "🧪",
+                color: "#2C5F5F"
+            },
+            hunter: {
+                title: "🏹 Охотник",
+                desc: "Ты — искусный охотник! Ты знаешь лес как свои пять пальцев, читаешь следы и всегда возвращаешься с добычей. Ты независим, смел и терпелив. В городе тебе душно, твой дом — лесные тропы. Ты кормишь не только себя, но и всю деревню.",
+                emoji: "🌲",
+                color: "#2C4A2C"
+            },
+            farmer: {
+                title: "🌾 Крестьянин",
+                desc: "Ты — простой крестьянин, но именно на тебе держится мир! Ты пашешь землю, растишь хлеб и заботишься о скоте. Ты ближе всех к земле и понимаешь циклы природы. Без твоего труда не было бы пиров у королей. Ты — основа всего средневекового мира.",
+                emoji: "🚜",
+                color: "#8B5E3C"
+            }
+        };
+
+        // Цвета фона для вопросов
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        // Создаем и запускаем тест
+        const quiz = new QuizTest(10, medievalResults, backgroundColors, 'medieval');
+        
+        // Функция для оценки теста
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            
+            for (let i = 0; i < rating; i++) {
+                stars[i].classList.add('selected');
+            }
+            
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        // Подсветка звезд при наведении
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const stars = document.querySelectorAll('.star-btn');
+                if (stars.length === 0) return;
+                
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        
+                        stars.forEach(s => {
+                            s.classList.remove('hover');
+                        });
+                        
+                        for (let i = 0; i <= index; i++) {
+                            stars[i].classList.add('hover');
+                        }
+                    });
+                    
+                    star.addEventListener('mouseleave', function() {
+                        stars.forEach(s => {
+                            s.classList.remove('hover');
+                        });
+                    });
+                });
+            }, 200);
+        });
+
+        // Запускаем тест
+        document.addEventListener('DOMContentLoaded', () => {
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

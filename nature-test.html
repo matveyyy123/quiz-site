@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какая ты стихия?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🌪️ Какая ты стихия?</h1>
+            <p class="subtitle">Узнай какая стихия живет у тебя внутри!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какой у тебя темперамент?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="thunder">💥 Взрывной и страстный</button>
+                    <button class="answer-btn" data-value="rain">💧 Спокойный и меланхоличный</button>
+                    <button class="answer-btn" data-value="wind">🌬️ Легкий и переменчивый</button>
+                    <button class="answer-btn" data-value="sun">☀️ Теплый и жизнерадостный</button>
+                    <button class="answer-btn" data-value="snow">❄️ Холодный и сдержанный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что тебе ближе в людях?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="rainbow">🌈 Яркость и многогранность</button>
+                    <button class="answer-btn" data-value="fog">🌫️ Загадочность</button>
+                    <button class="answer-btn" data-value="aurora">✨ Необычность</button>
+                    <button class="answer-btn" data-value="tsunami">🌊 Сила характера</button>
+                    <button class="answer-btn" data-value="calm">🍃 Умиротворенность</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Твоя реакция на стресс?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="thunder">⛈️ Взрываюсь как гром</button>
+                    <button class="answer-btn" data-value="rain">🌧️ Плачу как дождь</button>
+                    <button class="answer-btn" data-value="wind">🍃 Становлюсь нестабильным</button>
+                    <button class="answer-btn" data-value="sun">☀️ Пережидаю и согреваюсь</button>
+                    <button class="answer-btn" data-value="snow">❄️ Замерзаю и ухожу в себя</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Любимое время года?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="rainbow">🌸 Весна</button>
+                    <button class="answer-btn" data-value="fog">🍂 Осень</button>
+                    <button class="answer-btn" data-value="aurora">❄️ Зима</button>
+                    <button class="answer-btn" data-value="tsunami">☀️ Лето</button>
+                    <button class="answer-btn" data-value="calm">🌿 Все одинаково</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Как ты отдыхаешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="thunder">🎸 На концерте, громко</button>
+                    <button class="answer-btn" data-value="rain">📚 С книгой под пледом</button>
+                    <button class="answer-btn" data-value="wind">🚗 В поездке, в движении</button>
+                    <button class="answer-btn" data-value="sun">🏖️ На пляже</button>
+                    <button class="answer-btn" data-value="snow">🏔️ В горах, в тишине</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Что тебя вдохновляет?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="rainbow">🎨 Краски и искусство</button>
+                    <button class="answer-btn" data-value="fog">📖 Тайны и загадки</button>
+                    <button class="answer-btn" data-value="aurora">🚀 Космос и неизведанное</button>
+                    <button class="answer-btn" data-value="tsunami">💪 Преодоление трудностей</button>
+                    <button class="answer-btn" data-value="calm">🧘 Гармония и покой</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Твой стиль в одежде?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="thunder">🔥 Яркий, дерзкий</button>
+                    <button class="answer-btn" data-value="rain">👔 Классический</button>
+                    <button class="answer-btn" data-value="wind">👕 Повседневный</button>
+                    <button class="answer-btn" data-value="sun">🌈 Легкий, летний</button>
+                    <button class="answer-btn" data-value="snow">🖤 Минимализм</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Что лучше: горы или море?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="thunder">⛰️ Горы — там грозы!</button>
+                    <button class="answer-btn" data-value="rain">🌊 Море — там дожди!</button>
+                    <button class="answer-btn" data-value="wind">🏝️ И то, и другое</button>
+                    <button class="answer-btn" data-value="sun">🏖️ Море, солнце, пляж</button>
+                    <button class="answer-btn" data-value="snow">🗻 Горы, снег, тишина</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Твоя сверхспособность?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="rainbow">🖍️ Раскрашивать мир</button>
+                    <button class="answer-btn" data-value="fog">👻 Становиться невидимым</button>
+                    <button class="answer-btn" data-value="aurora">✨ Зажигать огни</button>
+                    <button class="answer-btn" data-value="tsunami">💧 Управлять водой</button>
+                    <button class="answer-btn" data-value="calm">🍃 Успокаивать всех</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Какой подарок тебе нужен?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="thunder">🎸 Новые эмоции</button>
+                    <button class="answer-btn" data-value="rain">📖 Уютный плед</button>
+                    <button class="answer-btn" data-value="wind">✈️ Путешествие</button>
+                    <button class="answer-btn" data-value="sun">🕶️ Отдых</button>
+                    <button class="answer-btn" data-value="snow">🔥 Тепло и забота</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2 class="question-title">🌀 Твое природное явление:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        // Результаты для теста "Природные явления"
+        const natureResults = {
+            thunder: {
+                title: "⚡ Гроза",
+                desc: "Ты — Гроза! Мощная, страстная и неудержимая. Ты появляешься внезапно и заявляешь о себе громко. Твоя энергия заряжает всех вокруг, а твой гнев лучше не испытывать. Но после бури ты приносишь свежесть и ясность. С тобой никогда не бывает скучно.",
+                emoji: "⛈️",
+                color: "#2F4F4F"
+            },
+            rain: {
+                title: "💧 Дождь",
+                desc: "Ты — Дождь. Меланхоличный, глубокий и чувствительный. Ты умеешь грустить, но именно ты делаешь мир чище и ярче. После тебя всё расцветает. Людям рядом с тобой уютно, они доверяют тебе свои секреты под шум твоих капель.",
+                emoji: "🌧️",
+                color: "#4682B4"
+            },
+            wind: {
+                title: "🌬️ Ветер",
+                desc: "Ты — Ветер. Свободный, легкий и непредсказуемый. Ты не сидишь на месте, всегда в движении и поиске. Ты приносишь перемены и новые запахи. Тебя невозможно удержать, но за тобой интересно наблюдать. Сегодня ты ласковый бриз, завтра — ураган идей.",
+                emoji: "🪁",
+                color: "#7B68EE"
+            },
+            sun: {
+                title: "🌟 Солнце",
+                desc: "Ты — Солнце! Ты согреваешь всех вокруг своим теплом. Твой оптимизм и энергия поднимают настроение. Рядом с тобой тепло и безопасно. Ты — центр притяжения для друзей, ты даришь свет даже в самые пасмурные дни. Без тебя мир был бы серым.",
+                emoji: "☀️",
+                color: "#FF8C00"
+            },
+            snow: {
+                title: "❄️ Снегопад",
+                desc: "Ты — Снегопад. Спокойный, холодный снаружи, но мягкий внутри. Ты укрываешь мир тишиной и покоем. Ты не любишь суету, ценишь порядок и чистоту. Ты умеешь ждать и терпеть. Но когда приходит время, ты можешь устроить настоящую метель чувств.",
+                emoji: "🌨️",
+                color: "#B0C4DE"
+            },
+            rainbow: {
+                title: "🔥 Радуга",
+                desc: "Ты — Радуга! Яркая, многогранная и позитивная. Ты появляешься после трудностей и напоминаешь, что жизнь прекрасна. Ты объединяешь в себе много цветов и талантов. Ты умеешь радоваться мелочам и даришь надежду другим. С тобой мир становится красочнее.",
+                emoji: "🌈",
+                color: "#9370DB"
+            },
+            fog: {
+                title: "🌫️ Туман",
+                desc: "Ты — Туман. Загадочный, таинственный и недосказанный. Тебя сложно разгадать, ты всегда оставляешь пространство для фантазии. Ты умеешь скрывать эмоции и хранить секреты. В тебе есть глубина, которую хочется исследовать. Ты интригуешь и притягиваешь.",
+                emoji: "🌁",
+                color: "#A9A9A9"
+            },
+            aurora: {
+                title: "✨ Северное сияние",
+                desc: "Ты — Северное сияние! Уникальный, магический и завораживающий. Ты не похож на других, ты явление редкое и драгоценное. Ты умеешь удивлять и вдохновлять. Твоя красота неброская, но стоит увидеть тебя раз — запомнишь на всю жизнь.",
+                emoji: "✨",
+                color: "#4B0082"
+            },
+            tsunami: {
+                title: "🏄 Цунами",
+                desc: "Ты — Цунами! Ты спокоен, пока не придет час. Но когда ты решаешь действовать, ты сметаешь все преграды. В тебе скрыта колоссальная сила. Ты можешь долго копить энергию, чтобы потом выплеснуть её в нужный момент. Ты — сила, с которой считаются.",
+                emoji: "🌊",
+                color: "#1E90FF"
+            },
+            calm: {
+                title: "🍃 Штиль",
+                desc: "Ты — Штиль. Полное спокойствие и гармония. Ты уравновешенный, мирный и стабильный. Рядом с тобой хочется замедлиться и подышать. Ты не создаёшь бурь, ты их успокаиваешь. Твоя сила — в покое. Ты — то убежище, куда приходят отдохнуть.",
+                emoji: "🌅",
+                color: "#20B2AA"
+            }
+        };
+
+        // Цвета фона для вопросов
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        // Создаем и запускаем тест
+        const quiz = new QuizTest(10, natureResults, backgroundColors, 'nature');
+        
+        // Функция для оценки теста
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            
+            for (let i = 0; i < rating; i++) {
+                stars[i].classList.add('selected');
+            }
+            
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        // Подсветка звезд при наведении
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const stars = document.querySelectorAll('.star-btn');
+                if (stars.length === 0) return;
+                
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        
+                        stars.forEach(s => {
+                            s.classList.remove('hover');
+                        });
+                        
+                        for (let i = 0; i <= index; i++) {
+                            stars[i].classList.add('hover');
+                        }
+                    });
+                    
+                    star.addEventListener('mouseleave', function() {
+                        stars.forEach(s => {
+                            s.classList.remove('hover');
+                        });
+                    });
+                });
+            }, 200);
+        });
+
+        // Запускаем тест
+        document.addEventListener('DOMContentLoaded', () => {
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

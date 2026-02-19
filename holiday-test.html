@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты праздник?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🎉 Какой ты праздник?</h1>
+            <p class="subtitle">Узнай свой лучший день!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Как ты любишь отмечать?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">🎄 С семьей, по-домашнему</button>
+                    <button class="answer-btn" data-value="birthday">🎂 Чтобы я был в центре</button>
+                    <button class="answer-btn" data-value="halloween">🎃 Страшно и весело</button>
+                    <button class="answer-btn" data-value="march8">🌷 Красиво и нежно</button>
+                    <button class="answer-btn" data-value="feb23">💪 Мужественно и солидно</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Твой любимый цвет?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="paskha">💛 Жёлтый</button>
+                    <button class="answer-btn" data-value="ivana">💚 Зеленый</button>
+                    <button class="answer-btn" data-value="april1">🤡 Разноцветный</button>
+                    <button class="answer-btn" data-value="victory">🧡 Оранжевый</button>
+                    <button class="answer-btn" data-value="wedding">🤍 Белый</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Что главное в празднике?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">🎁 Подарки</button>
+                    <button class="answer-btn" data-value="birthday">🍰 Торт</button>
+                    <button class="answer-btn" data-value="halloween">👻 Костюмы</button>
+                    <button class="answer-btn" data-value="march8">🌹 Цветы</button>
+                    <button class="answer-btn" data-value="feb23">🏆 Награды</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Твое любимое блюдо?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="paskha">🍞 Кулич</button>
+                    <button class="answer-btn" data-value="ivana">🔥 Шашлык</button>
+                    <button class="answer-btn" data-value="april1">🍔 Фастфуд</button>
+                    <button class="answer-btn" data-value="victory">🍲 Солдатская каша</button>
+                    <button class="answer-btn" data-value="wedding">🥂 Шампанское</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Твой идеальный наряд?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">🎅 Карнавальный костюм</button>
+                    <button class="answer-btn" data-value="birthday">👗 Вечернее платье/костюм</button>
+                    <button class="answer-btn" data-value="halloween">🧛 Страшный костюм</button>
+                    <button class="answer-btn" data-value="march8">🌼 Легкое весеннее</button>
+                    <button class="answer-btn" data-value="feb23">🎖️ Парадная форма</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Какую музыку включишь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="paskha">🔔 Колокольный звон</button>
+                    <button class="answer-btn" data-value="ivana">🎼 Народные песни</button>
+                    <button class="answer-btn" data-value="april1">🤡 Задорные приколы</button>
+                    <button class="answer-btn" data-value="victory">🎺 Военные марши</button>
+                    <button class="answer-btn" data-value="wedding">💞 Романсы</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Где хочешь встречать?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">🏠 Дома</button>
+                    <button class="answer-btn" data-value="birthday">🍽️ В ресторане</button>
+                    <button class="answer-btn" data-value="halloween">🏚️ В заброшенном месте</button>
+                    <button class="answer-btn" data-value="march8">🌷 На природе</button>
+                    <button class="answer-btn" data-value="feb23">🏕️ В походе</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Твой любимый напиток?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="paskha">🧊 Вода</button>
+                    <button class="answer-btn" data-value="ivana">🍺 Пиво</button>
+                    <button class="answer-btn" data-value="april1">🥤 Кока-кола</button>
+                    <button class="answer-btn" data-value="victory">🥃 Водка</button>
+                    <button class="answer-btn" data-value="wedding">🥂 Игристое</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Что даришь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">🎁 Сюрпризы</button>
+                    <button class="answer-btn" data-value="birthday">💝 Что заказывали</button>
+                    <button class="answer-btn" data-value="halloween">🕷️ Странные вещи</button>
+                    <button class="answer-btn" data-value="march8">💐 Цветы и конфеты</button>
+                    <button class="answer-btn" data-value="feb23">🔪 Полезные подарки</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Твой девиз по жизни?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">🎄 Чудеса случаются</button>
+                    <button class="answer-btn" data-value="birthday">🎂 Сегодня мой день</button>
+                    <button class="answer-btn" data-value="halloween">🦇 Не бойся темноты</button>
+                    <button class="answer-btn" data-value="march8">🌺 Жизнь прекрасна</button>
+                    <button class="answer-btn" data-value="feb23">💪 Есть такая профессия</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2 class="question-title">🎊 Твой праздник:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const holidayResults = {
+            ny: {
+                title: "🎄 Новый год",
+                desc: "Ты — Новый год! Ты веришь в чудеса и любишь дарить подарки. Ты создаешь атмосферу праздника вокруг себя, даже в обычный день. Ты щедрый, добрый и ждешь, что мир станет лучше. С тобой уютно и тепло!",
+                emoji: "❄️",
+                color: "#0B3B2F"
+            },
+            birthday: {
+                title: "🎈 День рождения",
+                desc: "Ты — День рождения! Ты обожаешь быть в центре внимания. Твой день — особенный, и ты умеешь сделать праздник для себя и других. Ты щедрый, веселый и любишь, когда тебя балуют. Помни: каждый день может быть твоим!",
+                emoji: "🎂",
+                color: "#8B4513"
+            },
+            halloween: {
+                title: "🕸️ Хэллоуин",
+                desc: "Ты — Хэллоуин! Ты любишь мистику, тайны и острые ощущения. Ты не боится быть странным, пугать и удивлять. В тебе есть темная сторона, но она делает тебя интереснее. Жизнь без адреналина скучна!",
+                emoji: "🎃",
+                color: "#4A235A"
+            },
+            march8: {
+                title: "🌷 8 Марта",
+                desc: "Ты — 8 Марта! Ты нежный, заботливый и красивый. Ты ценишь весну, цветы и тепло. Ты даришь окружающим радость и уют. Ты — воплощение женственности и гармонии. С тобой хочется заботиться и оберегать!",
+                emoji: "🌸",
+                color: "#BA2B5D"
+            },
+            feb23: {
+                title: "🎖️ 23 Февраля",
+                desc: "Ты — 23 Февраля! Ты сильный, мужественный и надежный. Ты защитник по жизни, готов прийти на помощь. Ты ценишь долг, честь и дисциплину. На тебя можно положиться в любой ситуации. С тобой как за каменной стеной!",
+                emoji: "💪",
+                color: "#1B4D3E"
+            },
+            paskha: {
+                title: "🕯️ Пасха",
+                desc: "Ты — Пасха! Ты светлый, душевный и веришь в лучшее. Для тебя важны традиции, семья и вера. Ты умеешь прощать и начинать с чистого листа. Ты несешь в мир добро и надежду. С тобой хочется стать лучше!",
+                emoji: "🥚",
+                color: "#9B5E2E"
+            },
+            ivana: {
+                title: "🔥 Иван Купала",
+                desc: "Ты — Иван Купала! Ты любишь природу, свободу и мистику. Ты ищешь цветок папоротника и веришь в чудеса. Ты страстный, загадочный и связан с природой. С тобой хочется прыгать через костер и искать клады!",
+                emoji: "🌿",
+                color: "#2E7D32"
+            },
+            april1: {
+                title: "🤪 1 Апреля",
+                desc: "Ты — День смеха! Ты — душа компании, любишь шутки и розыгрыши. Ты не даешь скучать ни себе, ни другим. Твой оптимизм заразителен, а чувство юмора спасает в любой ситуации. Жизнь — это игра!",
+                emoji: "🃏",
+                color: "#F57C00"
+            },
+            victory: {
+                title: "🎗️ День Победы",
+                desc: "Ты — День Победы! Ты помнишь историю, чтишь подвиги и уважаешь старших. Ты патриот, для которого важны честь и память. Ты умеешь радоваться победам и помнить уроки прошлого. С тобой хочется быть сильнее!",
+                emoji: "🏅",
+                color: "#B71C1C"
+            },
+            wedding: {
+                title: "💍 Свадьба",
+                desc: "Ты — Свадьба! Ты романтичный, нежный и веришь в любовь. Для тебя важны союзы, обещания и красивые церемонии. Ты соединяешь людей и создаешь семьи. С тобой хочется любить и быть любимым!",
+                emoji: "💞",
+                color: "#880E4F"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, holidayResults, backgroundColors, 'holiday');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

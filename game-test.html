@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какая ты игра?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🎮 Какая ты игра?</h1>
+            <p class="subtitle">Узнай какой жанр игр отражает твою душу!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Как ты проводишь выходные?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="strategy">📊 Планирую и организую</button>
+                    <button class="answer-btn" data-value="action">🏃 В движении и беготне</button>
+                    <button class="answer-btn" data-value="puzzle">🧩 Разгадываю головоломки</button>
+                    <button class="answer-btn" data-value="rpg">📖 Изучаю новые миры</button>
+                    <button class="answer-btn" data-value="racing">🏎️ Гоняю и соревнуюсь</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что тебе ближе в кино?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="horror">😱 Ужасы и напряжение</button>
+                    <button class="answer-btn" data-value="dressup">👗 Красивые наряды</button>
+                    <button class="answer-btn" data-value="arcade">👾 Простые и веселые</button>
+                    <button class="answer-btn" data-value="shooter">🔫 Перестрелки и экшн</button>
+                    <button class="answer-btn" data-value="simulator">🌱 Жизненные истории</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Твой главный талант?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="strategy">🧠 Стратегическое мышление</button>
+                    <button class="answer-btn" data-value="action">⚡ Быстрая реакция</button>
+                    <button class="answer-btn" data-value="puzzle">🔍 Внимание к деталям</button>
+                    <button class="answer-btn" data-value="rpg">🎭 Перевоплощение</button>
+                    <button class="answer-btn" data-value="racing">🏁 Скорость и адреналин</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Чего боишься?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="horror">👻 Темноты и монстров</button>
+                    <button class="answer-btn" data-value="dressup">👚 Выглядеть плохо</button>
+                    <button class="answer-btn" data-value="arcade">😴 Скуки и однообразия</button>
+                    <button class="answer-btn" data-value="shooter">🎯 Остаться без защиты</button>
+                    <button class="answer-btn" data-value="simulator">🌪️ Хаоса и беспорядка</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Твой любимый цвет?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="strategy">🔵 Синий</button>
+                    <button class="answer-btn" data-value="action">🔴 Красный</button>
+                    <button class="answer-btn" data-value="puzzle">🟡 Желтый</button>
+                    <button class="answer-btn" data-value="rpg">🟣 Фиолетовый</button>
+                    <button class="answer-btn" data-value="racing">⚫ Черный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Какой подарок хочешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="horror">🎫 Билет в квест-комнату</button>
+                    <button class="answer-btn" data-value="dressup">👗 Красивое платье</button>
+                    <button class="answer-btn" data-value="arcade">🕹️ Игровую приставку</button>
+                    <button class="answer-btn" data-value="shooter">🔫 Пейнтбол</button>
+                    <button class="answer-btn" data-value="simulator">🌱 Комнатное растение</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Твой девиз?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="strategy">🎯 Побеждает умнейший</button>
+                    <button class="answer-btn" data-value="action">💨 Быстрее, выше, сильнее</button>
+                    <button class="answer-btn" data-value="puzzle">🧩 Всё сложится</button>
+                    <button class="answer-btn" data-value="rpg">🌟 Жизнь - приключение</button>
+                    <button class="answer-btn" data-value="racing">🏁 Скорость - моя жизнь</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Твой любимый праздник?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="horror">🎃 Хэллоуин</button>
+                    <button class="answer-btn" data-value="dressup">💃 День рождения</button>
+                    <button class="answer-btn" data-value="arcade">🎪 Ярмарка</button>
+                    <button class="answer-btn" data-value="shooter">🎆 День Победы</button>
+                    <button class="answer-btn" data-value="simulator">🌲 Новый год</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Что ешь в стрессе?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="strategy">🍫 Планирую диету</button>
+                    <button class="answer-btn" data-value="action">🍔 Фастфуд</button>
+                    <button class="answer-btn" data-value="puzzle">🍬 Конфеты</button>
+                    <button class="answer-btn" data-value="rpg">🍲 Что-то новое</button>
+                    <button class="answer-btn" data-value="racing">☕ Кофе на бегу</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Какая суперсила тебе нужна?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="horror">👻 Пугать людей</button>
+                    <button class="answer-btn" data-value="dressup">✨ Менять внешность</button>
+                    <button class="answer-btn" data-value="arcade">🎮 Управлять реальностью</button>
+                    <button class="answer-btn" data-value="shooter">🎯 Точно стрелять</button>
+                    <button class="answer-btn" data-value="simulator">🌱 Управлять природой</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2 class="question-title">🎲 Твоя игра:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const gameResults = {
+            strategy: {
+                title: "🎮 Стратегия",
+                desc: "Ты — Стратегия! Ты любишь планировать, просчитывать ходы наперед и управлять ресурсами. В любой ситуации ты ищешь оптимальное решение. Ты — прирожденный лидер и организатор. С тобой можно идти в бой и строить империи!",
+                emoji: "📊",
+                color: "#1E3A5F"
+            },
+            action: {
+                title: "🏃 Экшн",
+                desc: "Ты — Экшн! Ты не можешь сидеть на месте, тебе нужен драйв и адреналин. Ты быстрый, решительный и всегда готов к неожиданностям. Ты первый врываешься в приключения и никогда не сдаешься. Жизнь — это движ!",
+                emoji: "⚡",
+                color: "#B22222"
+            },
+            puzzle: {
+                title: "🧩 Головоломка",
+                desc: "Ты — Головоломка! Ты любишь загадки, детали и сложные задачи. Ты видишь то, что не замечают другие, и находишь выход там, где, кажется, его нет. Твой ум — главное оружие. С тобой интересно и никогда не скучно!",
+                emoji: "🧠",
+                color: "#DAA520"
+            },
+            rpg: {
+                title: "🌟 RPG",
+                desc: "Ты — RPG! Ты глубокий, многогранный и любишь примерять разные роли. Тебе важно развиваться, прокачивать навыки и исследовать новые миры. Ты — искатель приключений и хранитель историй. В тебе скрыто много персонажей!",
+                emoji: "🎲",
+                color: "#4B0082"
+            },
+            racing: {
+                title: "🏎️ Гонки",
+                desc: "Ты — Гонки! Скорость — твоя страсть. Ты любишь соревноваться, рисковать и приходить к финишу первым. Ты азартный, быстрый и всегда в поиске острых ощущений. Жми на газ!",
+                emoji: "🏁",
+                color: "#2F4F4F"
+            },
+            horror: {
+                title: "🕸️ Хоррор",
+                desc: "Ты — Хоррор! Ты любишь пощекотать нервы себе и другим. Ты загадочный, мрачный и притягательный. Ты не боишься темноты и знаешь, что самое страшное — внутри нас. С тобой всегда напряженно и интересно!",
+                emoji: "👻",
+                color: "#2C2C2C"
+            },
+            dressup: {
+                title: "👗 Стилизация",
+                desc: "Ты — Стилизация! Ты любишь красивое, эстетичное и уютное. Ты создаешь гармонию вокруг себя, следишь за трендами и всегда выглядишь на все сто. Ты — художник своей жизни, раскрашиваешь мир в яркие цвета!",
+                emoji: "💄",
+                color: "#FF69B4"
+            },
+            arcade: {
+                title: "🕹️ Аркада",
+                desc: "Ты — Аркада! Ты простой, веселый и неунывающий. Любишь классику, понятные правила и быстрые победы. Ты не заморачиваешься по пустякам и умеешь радоваться мелочам. С тобой легко и задорно!",
+                emoji: "👾",
+                color: "#FF8C00"
+            },
+            shooter: {
+                title: "🔫 Шутер",
+                desc: "Ты — Шутер! Ты прямой, честный и не боишься конфликтов. Ты всегда на линии огня, защищаешь своих и метко попадаешь в цель. Ты — командный игрок, на которого можно положиться в переделке!",
+                emoji: "🎯",
+                color: "#556B2F"
+            },
+            simulator: {
+                title: "🌱 Симулятор",
+                desc: "Ты — Симулятор! Ты любишь жизнь во всех ее проявлениях. Тебе нравится создавать уют, заботиться о других и наблюдать, как всё растет и развивается. Ты — настоящий реалист, ценишь простые радости и гармонию!",
+                emoji: "🏡",
+                color: "#2E8B57"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, gameResults, backgroundColors, 'game');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

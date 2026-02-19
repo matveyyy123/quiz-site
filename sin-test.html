@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты грех?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>😈 Какой ты грех?</h1>
+            <p class="subtitle">Узнай свой главный порок!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Что ты любишь есть?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="pride">🍽️ В дорогих ресторанах</button>
+                    <button class="answer-btn" data-value="greed">💰 Всё подряд и побольше</button>
+                    <button class="answer-btn" data-value="lust">🍓 Что-то запретное</button>
+                    <button class="answer-btn" data-value="envy">🍲 То, что у соседа</button>
+                    <button class="answer-btn" data-value="gluttony">🍔 Всё! И сразу!</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Твое отношение к деньгам?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="wrath">🔥 Трачу, когда злюсь</button>
+                    <button class="answer-btn" data-value="sloth">😴 Лень зарабатывать</button>
+                    <button class="answer-btn" data-value="vanity">💅 Трачу на внешность</button>
+                    <button class="answer-btn" data-value="betrayal">🗡️ Готов украсть</button>
+                    <button class="answer-btn" data-value="manipulation">🎭 Трачу чужие</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Как реагируешь на критику?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="pride">😤 Меня критиковать?!</button>
+                    <button class="answer-btn" data-value="greed">💰 А сколько заплатят?</button>
+                    <button class="answer-btn" data-value="lust">😏 Тебе я нравлюсь?</button>
+                    <button class="answer-btn" data-value="envy">😒 Сам(а) посмотри на себя</button>
+                    <button class="answer-btn" data-value="gluttony">🍪 Пойду поем</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Твой любимый день недели?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="wrath">💥 Понедельник (всех построю)</button>
+                    <button class="answer-btn" data-value="sloth">🛌 Воскресенье (лежать)</button>
+                    <button class="answer-btn" data-value="vanity">📸 Пятница (тусоваться)</button>
+                    <button class="answer-btn" data-value="betrayal">🤔 Среда (подлянку сделать)</button>
+                    <button class="answer-btn" data-value="manipulation">🎪 Любой, где есть люди</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Что выберешь в магазине?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="pride">👔 Самый дорогой бренд</button>
+                    <button class="answer-btn" data-value="greed">💎 Всё, что в корзину влезет</button>
+                    <button class="answer-btn" data-value="lust">👙 Что-то сексуальное</button>
+                    <button class="answer-btn" data-value="envy">👜 Как у подруги/друга</button>
+                    <button class="answer-btn" data-value="gluttony">🍩 Сладкое</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Что бесит больше всего?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="wrath">😤 Когда перечат</button>
+                    <button class="answer-btn" data-value="sloth">😫 Когда заставляют работать</button>
+                    <button class="answer-btn" data-value="vanity">🤢 Когда плохо выглядят</button>
+                    <button class="answer-btn" data-value="betrayal">🔪 Когда доверяю не тем</button>
+                    <button class="answer-btn" data-value="manipulation">🎯 Когда мной манипулируют</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Твое хобби?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="pride">🏆 Побеждать в соревнованиях</button>
+                    <button class="answer-btn" data-value="greed">💸 Коллекционировать</button>
+                    <button class="answer-btn" data-value="lust">💃 Соблазнять</button>
+                    <button class="answer-btn" data-value="envy">📱 Следить за другими</button>
+                    <button class="answer-btn" data-value="gluttony">🍳 Готовить и есть</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Как проводишь выходные?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="wrath">🤼‍♂️ Спортом</button>
+                    <button class="answer-btn" data-value="sloth">🛋️ На диване</button>
+                    <button class="answer-btn" data-value="vanity">💇 В салоне красоты</button>
+                    <button class="answer-btn" data-value="betrayal">👥 Интриги плету</button>
+                    <button class="answer-btn" data-value="manipulation">🎭 Людьми управляю</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Что скажешь о друзьях?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="pride">👑 Они моя свита</button>
+                    <button class="answer-btn" data-value="greed">🤝 Полезные связи</button>
+                    <button class="answer-btn" data-value="lust">💋 Объекты внимания</button>
+                    <button class="answer-btn" data-value="envy">😒 У них всё лучше</button>
+                    <button class="answer-btn" data-value="gluttony">🍻 Собутыльники</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Твоя суперсила?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="wrath">💪 Ярость</button>
+                    <button class="answer-btn" data-value="sloth">😴 Лень</button>
+                    <button class="answer-btn" data-value="vanity">✨ Обаяние</button>
+                    <button class="answer-btn" data-value="betrayal">🎯 Удар в спину</button>
+                    <button class="answer-btn" data-value="manipulation">🧠 Управление людьми</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2 class="question-title">🔥 Твой грех:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const sinResults = {
+            pride: {
+                title: "👸 Гордыня",
+                desc: "Ты — Гордыня! Ты считаешь себя лучше других и не терпишь, когда твое величие ставят под сомнение. Ты уверен в своей исключительности и требуешь признания. Помни: гордыня — мать всех пороков. Иногда полезно спуститься с небес на землю.",
+                emoji: "👑",
+                color: "#4A235A"
+            },
+            greed: {
+                title: "💰 Алчность",
+                desc: "Ты — Алчность! Тебе всегда мало. Денег, вещей, возможностей — всего должно быть много и побольше. Ты умеешь копить, но не умеешь делиться. Мир не измеряется в деньгах, иногда лучшее в жизни бесплатно.",
+                emoji: "💸",
+                color: "#B7950B"
+            },
+            lust: {
+                title: "🍷 Похоть",
+                desc: "Ты — Похоть! Для тебя важны страсть, желание и привлекательность. Ты обожаешь флирт и внимание противоположного пола. Твоя энергия притягивает людей, но иногда ты забываешь про душевную близость.",
+                emoji: "💋",
+                color: "#C0392B"
+            },
+            envy: {
+                title: "💘 Зависть",
+                desc: "Ты — Зависть! Ты постоянно сравниваешь себя с другими и чаще всего не в свою пользу. Чужие успехи вызывают у тебя жгучее чувство несправедливости. Сфокусируйся на своей жизни — в ней тоже много хорошего!",
+                emoji: "👀",
+                color: "#196F3D"
+            },
+            gluttony: {
+                title: "🍔 Чревоугодие",
+                desc: "Ты — Чревоугодие! Ты любишь вкусно поесть и в больших количествах. Еда — твой главный источник радости и утешения. Нет ничего плохого в гастрономических удовольствиях, но жизнь многогранна — ищи радость и в другом.",
+                emoji: "🍕",
+                color: "#B45F06"
+            },
+            wrath: {
+                title: "⚡ Гнев",
+                desc: "Ты — Гнев! Ты вспыльчив и горяч. Любая мелочь может вывести тебя из себя. Твоя ярость пугает окружающих, но внутри ты часто просто нуждаешься в понимании. Учись выпускать пар безопасно для всех.",
+                emoji: "🔥",
+                color: "#922B21"
+            },
+            sloth: {
+                title: "😴 Лень",
+                desc: "Ты — Лень! Твой девиз: «Сделаю завтра, точнее послезавтра...» Ты избегаешь работы и ответственности, предпочитая ничегонеделание. Иногда отдых полезен, но жизнь проходит мимо, пока ты лежишь на диване.",
+                emoji: "🦥",
+                color: "#5D6D7E"
+            },
+            vanity: {
+                title: "💄 Тщеславие",
+                desc: "Ты — Тщеславие! Для тебя важно, что о тебе думают другие. Ты следишь за внешностью, статусом и мнением окружающих. Соцсети — твоя стихия. Помни: настоящая красота внутри, а не в количестве лайков.",
+                emoji: "💅",
+                color: "#AF7AC5"
+            },
+            betrayal: {
+                title: "🗡️ Предательство",
+                desc: "Ты — Предательство! Ты легко меняешь союзников, если это выгодно. Ты не чувствуешь вины за удар в спину. Люди для тебя — инструменты. Но рано или поздно все остаются одни...",
+                emoji: "🔪",
+                color: "#17202A"
+            },
+            manipulation: {
+                title: "🙊 Манипуляция",
+                desc: "Ты — Манипуляция! Ты умеешь управлять людьми, заставляя их делать то, что нужно тебе. Ты тонкий психолог и актер. Но задумайся: хотят ли люди быть пешками в твоей игре?",
+                emoji: "🎭",
+                color: "#7D3C98"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, sinResults, backgroundColors, 'sin');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

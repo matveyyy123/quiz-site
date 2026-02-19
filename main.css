@@ -27,24 +27,67 @@ body {
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     backdrop-filter: blur(10px);
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
+/* ========== ШАПКА ========== */
 /* ========== ШАПКА ========== */
 .header {
     text-align: center;
     margin-bottom: 40px;
+    position: relative;
+}
+
+.header > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
 }
 
 .header h1 {
     font-size: 3em;
     color: #333;
-    margin-bottom: 10px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 
 .subtitle {
     color: #666;
     font-size: 1.2em;
+    margin-top: 10px; /* Отступ после заголовка */
+    position: relative;
+    clear: both;
 }
+/* ========== ОТЗЫВ ========== */
+
+.feedback-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.feedback-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    background: #5a6fd8;
+}
+
 
 /* ========== СЕТКА С ТЕСТАМИ ========== */
 .tests-grid {
@@ -167,25 +210,73 @@ body {
 /* КАРТОЧКА 10: Жанры кино */
 .test-card.genre {
     background: linear-gradient(135deg, #e0e1ff, #ffffff);
-    border: 2px solid #5c43e8;
+    border: 2px solid #a494ff;
 }
 
 /* КАРТОЧКА 11: Вредные привычки */
 .test-card.habits {
     background: linear-gradient(135deg, #ffe0e0, #ffffff);
-    border: 2px solid #c0392b;
+    border: 2px solid #ff9387;
 }
 
 /* КАРТОЧКА 12: Страхи/Фобии */
 .test-card.fears {
-    background: linear-gradient(135deg, #e0e0e0, #ffffff);
-    border: 2px solid #2c3e50;
+    background: linear-gradient(135deg, #d2fff3, #ffffff);
+    border: 2px solid #9dceff;
 }
 
 /* КАРТОЧКА 13: Динозавры */
 .test-card.dinosaurs {
     background: linear-gradient(135deg, #d4f0d4, #ffffff);
-    border: 2px solid #27ae60;
+    border: 2px solid #64c88e;
+}
+
+/* КАРТОЧКА 14: Персонаж средневековья */
+.test-card.medieval {
+    background: linear-gradient(135deg, #ffe9d4, #ffffff);
+    border: 2px solid #dd9e72;
+}
+
+/* КАРТОЧКА 15: Природное явление */
+.test-card.nature {
+    background: linear-gradient(135deg, #c3e1ff, #ffffff);
+    border: 2px solid #6abfca;
+}
+
+/* КАРТОЧКА 16: Игра */
+.test-card.game {
+    background: linear-gradient(135deg, #f2d2ff, #ffffff);
+    border: 2px solid #c48adb;
+}
+
+/* КАРТОЧКА 17: Машина */
+.test-card.car {
+    background: linear-gradient(135deg, #ffe2c8, #ffffff);
+    border: 2px solid #cfa487;
+}
+
+/* КАРТОЧКА 18: Грех */
+.test-card.sin {
+    background: linear-gradient(135deg, #ffcdc7, #ffffff);
+    border: 2px solid #e1958d;
+}
+
+/* КАРТОЧКА 19: Праздник */
+.test-card.holiday {
+    background: linear-gradient(135deg, #fff4c8, #ffffff);
+    border: 2px solid #d1b588;
+}
+
+/* КАРТОЧКА 20: Возраст души */
+.test-card.soulage {
+    background: linear-gradient(135deg, #cefff5, #ffffff);
+    border: 2px solid #84c7bb;
+}
+
+/* КАРТОЧКА 21: Суперзлодей */
+.test-card.supervillain {
+    background: linear-gradient(135deg, #d0e7ff, #ffffff);
+    border: 2px solid #9292d2;
 }
 
 /* ========== СЕКЦИЯ СВЯЗИ ========== */
@@ -597,6 +688,16 @@ body.dark-theme .theme-toggle:hover {
     color: #1a1a2e;
 }
 
+/* Для темной темы ОТЗЫВ */
+body.dark-theme .feedback-btn {
+    background: #6a5acd;
+    border-color: #6354c4;
+}
+
+body.dark-theme .feedback-btn:hover {
+    background: #594dab;
+}
+
 /* ========== ТЕМНАЯ ТЕМА ДЛЯ КОНТАКТОВ ========== */
 body.dark-theme .contact-form {
     background: #2a2a3a;
@@ -666,6 +767,41 @@ body.dark-theme .textarea-char-counter {
     background: rgba(0,0,0,0.3);
     color: #aaa;
     border-color: #3a3a4a;
+}
+
+/* ========== СПЕЦИАЛЬНО ДЛЯ СТРАНИЦЫ КОНТАКТОВ ========== */
+.contact-container .header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    min-height: auto;
+}
+
+.contact-container .header h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    left: auto;
+    transform: none;
+    white-space: normal;
+}
+
+.contact-container .header .subtitle {
+    color: #666;
+    font-size: 1.1em;
+    margin-top: 0;
+    position: relative;
+    top: auto;
+}
+
+/* Темная тема для контактов */
+body.dark-theme .contact-container .header h1 {
+    color: #e0e0e0;
+}
+
+body.dark-theme .contact-container .header .subtitle {
+    color: #aaa;
 }
 
 

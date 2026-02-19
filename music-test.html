@@ -2,19 +2,18 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Какой ты жанр музыки?</title>
+    <title>Какой твой жанр?</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-                                        <script>
-        // ТЕМНАЯ ТЕМА - ДО ЗАГРУЗКИ СТРАНИЦЫ
+        <script>
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark-theme');
         }
     </script>
-            <h1>🎵 Какой ты жанр музыки?</h1>
+            <h1>🎵 Какой твой жанр?</h1>
             <p class="subtitle">Пройди тест и узнай какая музыка отражает твою душу!</p>
         </header>
 
@@ -22,7 +21,7 @@
     <!-- Вопрос 1: Место отдыха (первые 5 жанров) -->
     <div class="question-card active" id="question1">
         <br>
-        <h2 class="question-title">Какое место для отдыха выбираешь?</h2>
+        <h2 class="question-title">Где бы отдохнул?</h2>
         <div class="question-header">
             <h4 class="question-number">Вопрос 1/10</h4>
             <a href="main.html" class="back-small-btn">Назад к тестам</a>
@@ -80,7 +79,7 @@
         </div>
         <div class="answers">
             <button class="answer-btn" data-value="rap">👟 Спорт-шик, кеды</button>
-            <button class="answer-btn" data-value="reggae">🩴 Шорты, футболки, расслабленный стиль</button>
+            <button class="answer-btn" data-value="reggae">🩳 Шорты, футболки, расслабленный стиль</button>
             <button class="answer-btn" data-value="metal">🖤 Черное, цепи, банданы</button>
             <button class="answer-btn" data-value="indie">🧣 Винтаж, свитера, очки</button>
             <button class="answer-btn" data-value="blues">🧥 Джинса, клетчатые рубашки</button>
@@ -131,7 +130,7 @@
         </div>
         <div class="answers">
             <button class="answer-btn" data-value="rock">🤘 Концерт любимой группы</button>
-            <button class="answer-btn" data-value="pop">🪩 Караоке с друзьями</button>
+            <button class="answer-btn" data-value="pop">🎤 Караоке с друзьями</button>
             <button class="answer-btn" data-value="jazz">🥃 Бар с живой музыкой</button>
             <button class="answer-btn" data-value="classical">🎫 Поход в оперу</button>
             <button class="answer-btn" data-value="electronic">💃 Фестиваль/вечеринка</button>
@@ -192,7 +191,7 @@
     <!-- Результат -->
     <div class="result-card" id="result">
         <br>
-        <h2>🎵 Твой жанр музыки:</h2>
+        <h2 class="question-title">🎵 Твой жанр музыки:</h2>
         <div id="result-content"></div>
         <!-- Оценка теста -->
         <div class="rating-section">
