@@ -16,6 +16,15 @@
     <p class="subtitle">Выбери тест и узнай что-то новое о себе!</p>
 </header>
 
+<!-- Статистика сайта -->
+<div class="stats-container">
+    <div class="stats-row">
+        <span class="stats-item">📊 Всего тестов: <span id="total-tests">21</span></span>
+        <span class="stats-separator">|</span>
+        <span class="stats-item">👥 Всего прохождений: <span id="total-played">0</span></span>
+    </div>
+</div>
+
         <main>
 <div class="tests-grid">
     <!-- Тест 1: Напитки (готов) -->
@@ -375,6 +384,35 @@ document.addEventListener('DOMContentLoaded', function() {
         loadCloudData();
     }
 });
+</script>
+
+<script>
+// Функция для обновления общей статистики
+function updateGlobalStats() {
+    const stats = JSON.parse(localStorage.getItem('quizStats')) || {};
+    
+    // Считаем общее количество прохождений
+    let totalPlayed = 0;
+    for (let key in stats) {
+        totalPlayed += stats[key];
+    }
+    
+    // Обновляем на странице
+    const totalPlayedEl = document.getElementById('total-played');
+    if (totalPlayedEl) {
+        totalPlayedEl.textContent = totalPlayed;
+    }
+}
+
+// Запускаем при загрузке и при каждом обновлении статистики
+document.addEventListener('DOMContentLoaded', updateGlobalStats);
+
+// Перехватываем обновление счетчиков
+const originalUpdateCounters = window.updateTestCounters;
+window.updateTestCounters = function() {
+    if (originalUpdateCounters) originalUpdateCounters();
+    updateGlobalStats();
+};
 </script>
 </body>
 </html>

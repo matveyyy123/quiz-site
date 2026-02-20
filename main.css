@@ -31,7 +31,6 @@ body {
 }
 
 /* ========== ШАПКА ========== */
-/* ========== ШАПКА ========== */
 .header {
     text-align: center;
     margin-bottom: 40px;
@@ -60,13 +59,14 @@ body {
     color: #666;
     font-size: 1.2em;
     margin-top: 10px; /* Отступ после заголовка */
+    margin-bottom: 0px;
     position: relative;
     clear: both;
 }
 /* ========== ОТЗЫВ ========== */
 
 .feedback-btn {
-    background: #667eea;
+    background: rgba(91, 111, 220, 0.5);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -86,6 +86,46 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
     background: #5a6fd8;
+}
+
+/* ========== СТАТИСТИКА в шапке ========== */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    margin: 0px auto 30px;
+    margin-top: -2px;
+    padding: 8px 25px;
+    background: rgba(154, 158, 255, 0.2);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    max-width: 450px;
+}
+
+.stats-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1em;
+    color: #2a2a2a;
+}
+
+.stats-item {
+    white-space: nowrap;
+}
+
+.stats-item span {
+    font-weight: bold;
+    color: #667eea;
+}
+
+.stats-separator {
+    color: #999;
+    font-weight: 300;
+}
+
+/* Темная тема */
+body.dark-theme .stats-row {
+    color: #e0e0e0;
 }
 
 
@@ -613,7 +653,7 @@ body {
 /* ========== КНОПКА ПЕРЕКЛЮЧЕНИЯ ТЕМЫ ========== */
 .theme-toggle {
     background: transparent;
-    border: 2px solid #667eea;
+    border: 2px solid #667eea5a;
     color: #667eea;
     font-size: 1.8em;
     width: 50px;
@@ -679,7 +719,7 @@ body.dark-theme .contact-text {
 }
 
 body.dark-theme .theme-toggle {
-    border-color: #ffd700;
+    border-color: #ffd90066;
     color: #ffd700;
 }
 
@@ -690,7 +730,7 @@ body.dark-theme .theme-toggle:hover {
 
 /* Для темной темы ОТЗЫВ */
 body.dark-theme .feedback-btn {
-    background: #6a5acd;
+    background: rgba(138, 91, 220, 0.3);
     border-color: #6354c4;
 }
 
@@ -805,6 +845,7 @@ body.dark-theme .contact-container .header .subtitle {
 }
 
 
+
 /* ========== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ========== */
 @media (max-width: 768px) {
     .container {
@@ -865,10 +906,18 @@ body.dark-theme .contact-container .header .subtitle {
         font-size: 0.85em;
     }
     
-    /* ✅ ДОБАВЬ СЮДА */
     .test-card.most-popular::before {
         font-size: 0.65em;
         padding: 3px 10px;
         top: -8px;
+    }
+
+    .stats-row {
+        font-size: 0.9em;
+        gap: 8px;
+    }
+    
+    .stats-container {
+        padding: 6px 15px;
     }
 }
