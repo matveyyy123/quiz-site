@@ -1,3 +1,15 @@
+// ========== ПОДКЛЮЧАЕМ КОНФЕТТИ ==========
+(function() {
+    // Проверяем, не загружено ли уже
+    if (typeof window.confetti !== 'function') {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1';
+        script.async = true;
+        document.head.appendChild(script);
+        console.log('🎉 Конфетти загружается...');
+    }
+})();
+
 // ========== ПРОВЕРКА, ЧТОБЫ НЕ ПОДКЛЮЧАТЬ ДВАЖДЫ ==========
 if (typeof window.QuizTest === 'undefined') {
 
@@ -148,11 +160,12 @@ async function loadCloudData() {
         console.log('⚠️ Не удалось загрузить из облака, используем локальные данные');
     }
 }
+
 // Сохранение данных в облако
-let isSaving = false; // Добавь эту переменную вверху файла
+let isSaving = false;
 
 async function saveCloudData() {
-    if (isSaving) return; // Если уже сохраняем - выходим
+    if (isSaving) return;
     isSaving = true;
     
     const stats = JSON.parse(localStorage.getItem('quizStats')) || {};
@@ -174,7 +187,7 @@ async function saveCloudData() {
     } catch (e) {
         console.log('⚠️ Не удалось сохранить в облако');
     } finally {
-        setTimeout(() => { isSaving = false; }, 1000); // Разблокируем через секунду
+        setTimeout(() => { isSaving = false; }, 1000);
     }
 }
 
@@ -183,7 +196,6 @@ const originalSetItem = localStorage.setItem;
 localStorage.setItem = function(key, value) {
     originalSetItem.call(this, key, value);
     
-    // Если меняются наши данные - сохраняем в облако
     if (key === 'quizStats' || key === 'testRatings') {
         setTimeout(saveCloudData, 500);
     }
@@ -201,7 +213,7 @@ class QuizTest {
         this.results = results;
         this.backgroundColors = backgroundColors;
         this.testId = testId;
-        this.isTransitioning = false; // Защита от двойных переходов
+        this.isTransitioning = false;
     }
 
     // Добавить метод для сохранения оценки
@@ -217,7 +229,6 @@ class QuizTest {
         
         localStorage.setItem('testRatings', JSON.stringify(ratings));
         
-        // Сохраняем в облако (перехватчик сам сработает, но на всякий случай)
         console.log('⭐ Оценка сохранена');
     }
 
@@ -257,7 +268,7 @@ class QuizTest {
         return colors[num-1] || '#ff6b6b';
     }
 
-    // Показать следующий вопрос (исправлено от множественных переходов)
+    // Показать следующий вопрос
     showNextQuestion() {
         if (this.isTransitioning) return;
         this.isTransitioning = true;
@@ -301,8 +312,48 @@ class QuizTest {
         return resultKey;
     }
 
+    // Функция для запуска конфетти
+    runConfetti() {
+        if (typeof confetti === 'function') {
+            // Основная волна
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#667eea', '#764ba2', '#ff6b6b', '#4CAF50', '#ffd700']
+            });
+            
+            // Вторая волна через 200мс
+            setTimeout(() => {
+                confetti({
+                    particleCount: 50,
+                    spread: 100,
+                    origin: { y: 0.5, x: 0.2 },
+                    colors: ['#ff6b6b', '#ffd700']
+                });
+            }, 200);
+            
+            // Третья волна через 400мс
+            setTimeout(() => {
+                confetti({
+                    particleCount: 50,
+                    spread: 100,
+                    origin: { y: 0.5, x: 0.8 },
+                    colors: ['#4CAF50', '#667eea']
+                });
+            }, 400);
+        } else {
+            console.log('⏳ Ждем загрузку конфетти...');
+            // Пробуем через 500мс
+            setTimeout(() => this.runConfetti(), 500);
+        }
+    }
+
     // Показать результат
     showResult() {
+        // ЗАПУСКАЕМ КОНФЕТТИ
+        this.runConfetti();
+        
         this.updateTestStats();
         
         for (let i = 1; i <= this.totalQuestions; i++) {
@@ -346,7 +397,6 @@ class QuizTest {
         this.changeBackground(1);
         document.getElementById('progress').style.width = '0%';
         
-        // Разблокируем звезды
         document.querySelectorAll('.star-btn').forEach(btn => {
             btn.disabled = false;
             btn.style.opacity = '1';

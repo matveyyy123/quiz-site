@@ -16,13 +16,24 @@
     <p class="subtitle">Выбери тест и узнай что-то новое о себе!</p>
 </header>
 
-<!-- Статистика сайта -->
-<div class="stats-container">
-    <div class="stats-row">
-        <span class="stats-item">📊 Всего тестов: <span id="total-tests">21</span></span>
-        <span class="stats-separator">|</span>
-        <span class="stats-item">👥 Всего прохождений: <span id="total-played">0</span></span>
+<!-- Статистика и поиск в одной строке -->
+<div class="stats-search-row">
+    <!-- Статистика сайта -->
+    <div class="stats-container">
+        <div class="stats-row">
+            <span class="stats-item">📊 Всего тестов: <span id="total-tests">21</span></span>
+            <span class="stats-separator">|</span>
+            <span class="stats-item">👥 Всего прохождений: <span id="total-played">0</span></span>
+        </div>
     </div>
+
+<!-- Поиск по тестам -->
+<div class="search-container">
+    <div class="search-wrapper">
+        <input type="text" id="search-input" class="search-input" placeholder="Найти тест...">
+        <button id="search-clear" class="search-clear" title="Очистить">✕</button>
+    </div>
+</div>
 </div>
 
         <main>
@@ -212,15 +223,20 @@ function updateTestCounters() {
         supervillain: { selector: '.test-card.supervillain', name: 'Суперзлодей' }
     };
     
-    // Находим самый популярный тест
+    // Находим самый популярный тест (первый по порядку при одинаковых значениях)
     let mostPopularId = null;
     let maxCount = 0;
     
-    for (let [id, count] of Object.entries(stats)) {
+    // Проходим по тестам в том порядке, в котором они должны отображаться
+    for (let [id, test] of Object.entries(tests)) {
+        const count = stats[id] || 0;
+        
+        // Если count больше maxCount ИЛИ (равно и это первый встретившийся)
         if (count > maxCount) {
             maxCount = count;
             mostPopularId = id;
         }
+        // Если равны - оставляем первого встретившегося (ничего не делаем)
     }
     
     // Убираем класс most-popular у всех
@@ -354,6 +370,11 @@ function sortTestsByPopularity() {
         const countA = stats[idA] || 0;
         const countB = stats[idB] || 0;
         
+        // Если равны, сохраняем исходный порядок (оставляем как есть)
+        if (countB === countA) {
+            return 0; // 0 означает, что порядок не меняется
+        }
+        
         return countB - countA; // По убыванию
     });
     
@@ -413,6 +434,81 @@ window.updateTestCounters = function() {
     if (originalUpdateCounters) originalUpdateCounters();
     updateGlobalStats();
 };
+</script>
+
+<script>
+// Поиск по тестам с анимацией
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const searchClear = document.getElementById('search-clear');
+    
+    if (!searchInput) return;
+    
+    // Функция поиска
+    function performSearch() {
+        const searchText = searchInput.value.toLowerCase().trim();
+        const testCards = document.querySelectorAll('.test-card');
+        let visibleCount = 0;
+        
+        // Показываем/скрываем кнопку очистки
+        if (searchText.length > 0) {
+            searchClear.classList.add('visible');
+        } else {
+            searchClear.classList.remove('visible');
+        }
+        
+        // Удаляем старое сообщение "ничего не найдено"
+        const oldNoResults = document.querySelector('.no-results');
+        if (oldNoResults) oldNoResults.remove();
+        
+        // Фильтруем карточки
+        testCards.forEach(card => {
+            const title = card.querySelector('.test-title')?.textContent.toLowerCase() || '';
+            const desc = card.querySelector('.test-desc')?.textContent.toLowerCase() || '';
+            
+            if (title.includes(searchText) || desc.includes(searchText) || searchText === '') {
+                card.classList.remove('hidden');
+                visibleCount++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        
+        // Показываем сообщение, если ничего не найдено
+        if (visibleCount === 0 && searchText !== '') {
+            const testsGrid = document.querySelector('.tests-grid');
+            const noResults = document.createElement('div');
+            noResults.className = 'no-results';
+            noResults.innerHTML = `
+                <span>🔍</span>
+                Ничего не найдено<br>
+                <small style="font-size: 0.7em;">Попробуй другой запрос</small>
+            `;
+            testsGrid.appendChild(noResults);
+        }
+    }
+    
+    // Поиск при вводе
+    searchInput.addEventListener('input', performSearch);
+    
+    // Очистка поиска
+    searchClear.addEventListener('click', function() {
+        searchInput.value = '';
+        performSearch();
+        searchInput.focus();
+    });
+    
+    // Очистка по клавише Escape
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            searchInput.value = '';
+            performSearch();
+        }
+    });
+    
+    // Запускаем при загрузке
+    performSearch();
+});
 </script>
 </body>
 </html>
