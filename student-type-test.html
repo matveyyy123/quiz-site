@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты студент?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🎓 Какой ты студент?</h1>
+            <p class="subtitle">Узнай какой тип студента живёт внутри тебя!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Как ты готовишься к экзамену?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="otlichnik">📚 За месяц, по плану</button>
+                    <button class="answer-btn" data-value="troechnik">😅 За пару дней</button>
+                    <button class="answer-btn" data-value="aktiv">👥 В группе с друзьями</button>
+                    <button class="answer-btn" data-value="spal">😴 Вообще не готовлюсь</button>
+                    <button class="answer-btn" data-value="shpora">📝 Пишу шпаргалки</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что ты ешь в столовой?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="komp">💻 Бутерброд за компом</button>
+                    <button class="answer-btn" data-value="semeyniy">🍱 Домашнюю еду</button>
+                    <button class="answer-btn" data-value="foodlove">🍕 Пиццу/бургер</button>
+                    <button class="answer-btn" data-value="econom">🍞 Хлеб и чай (до стипендии)</button>
+                    <button class="answer-btn" data-value="propusk">🚫 Пропускаю обед</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Какую пару ты любишь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="otlichnik">📖 Лекции интересные</button>
+                    <button class="answer-btn" data-value="troechnik">🏃 Физру</button>
+                    <button class="answer-btn" data-value="aktiv">🗣️ Семинары (где можно говорить)</button>
+                    <button class="answer-btn" data-value="spal">😴 Никакую</button>
+                    <button class="answer-btn" data-value="shpora">📝 Ту, где можно списать</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Твой средний балл?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="komp">💻 4.5-5.0</button>
+                    <button class="answer-btn" data-value="semeyniy">📈 4.0-4.5</button>
+                    <button class="answer-btn" data-value="foodlove">📊 3.5-4.0</button>
+                    <button class="answer-btn" data-value="econom">📉 3.0-3.5</button>
+                    <button class="answer-btn" data-value="propusk">🎯 Всё сдал(а), главное</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Что ты делаешь на первой паре?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="otlichnik">✍️ Пишу конспект</button>
+                    <button class="answer-btn" data-value="troechnik">📱 Сижу в телефоне</button>
+                    <button class="answer-btn" data-value="aktiv">🗣️ Общаюсь с соседом</button>
+                    <button class="answer-btn" data-value="spal">😴 Сплю</button>
+                    <button class="answer-btn" data-value="shpora">📝 Готовлю шпоры</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Как ты добираешься до универа?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="komp">🚗 На машине/такси</button>
+                    <button class="answer-btn" data-value="semeyniy">🚍 На автобусе</button>
+                    <button class="answer-btn" data-value="foodlove">🚶 Пешком</button>
+                    <button class="answer-btn" data-value="econom">🚇 На метро</button>
+                    <button class="answer-btn" data-value="propusk">🏠 Живу в общаге рядом</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Что у тебя в рюкзаке?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="otlichnik">📚 Все учебники и тетради</button>
+                    <button class="answer-btn" data-value="troechnik">📒 Одна тетрадка</button>
+                    <button class="answer-btn" data-value="aktiv">🍎 Перекус и вода</button>
+                    <button class="answer-btn" data-value="spal">🛏️ Плед/подушка</button>
+                    <button class="answer-btn" data-value="shpora">📝 Много хлама</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Твоё отношение к стипендии?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="komp">💰 Коплю на что-то</button>
+                    <button class="answer-btn" data-value="semeyniy">🍝 Трачу на еду</button>
+                    <button class="answer-btn" data-value="foodlove">🎉 Прожигаю за неделю</button>
+                    <button class="answer-btn" data-value="econom">📉 Не получаю</button>
+                    <button class="answer-btn" data-value="propusk">💸 Родители дают</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Что делаешь в конце семестра?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="otlichnik">🏆 Сдаю досрочно</button>
+                    <button class="answer-btn" data-value="troechnik">😰 Бегаю сдавать долги</button>
+                    <button class="answer-btn" data-value="aktiv">🤝 Договариваюсь с преподами</button>
+                    <button class="answer-btn" data-value="spal">😴 Отдыхаю (мне всё равно)</button>
+                    <button class="answer-btn" data-value="shpora">📝 Надеюсь на шпоры</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Как ты выглядишь в универе?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="komp">👔 Прилично/офисный стиль</button>
+                    <button class="answer-btn" data-value="semeyniy">👕 Удобно и просто</button>
+                    <button class="answer-btn" data-value="foodlove">🔥 Модно/стильно</button>
+                    <button class="answer-btn" data-value="econom">🧥 Вообще без разницы</button>
+                    <button class="answer-btn" data-value="propusk">🧣 Худи с капюшоном</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🎓 Твой тип студента:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const studentResults = {
+            otlichnik: {
+                title: "📚 Отличник",
+                desc: "Ты — гордость группы! Всё сдаёшь вовремя, ходишь на все пары и знаешь ответы на все вопросы. Преподаватели тебя обожают, а одногруппники просят конспекты. Твоя стипендия в безопасности!",
+                emoji: "🏆",
+                color: "#2c3e50"
+            },
+            troechnik: {
+                title: "🎓 Троечник",
+                desc: "Ты — классический троечник. Учишься без фанатизма, но диплом как-нибудь получишь. Главное — не вылететь. Ты весёлый, не паришься по пустякам и живёшь в своём ритме. Главное — сдал и ладно!",
+                emoji: "😅",
+                color: "#8e44ad"
+            },
+            aktiv: {
+                title: "👥 Активист",
+                desc: "Ты — душа университета! Организуешь мероприятия, состоишь в студсовете и знаешь всех преподавателей лично. Учёба для тебя не главное, но связи решают всё. Ты будешь тем, кто всех соберёт на выпускном!",
+                emoji: "🎉",
+                color: "#27ae60"
+            },
+            spal: {
+                title: "😴 Сонный студент",
+                desc: "Ты — тот, кто всегда спит на первой паре. Универ для тебя — место, где можно подремать между сном дома и сном в метро. Ты приходишь к третьей паре и уходишь после обеда. Главное — не разбудить!",
+                emoji: "🛏️",
+                color: "#e67e22"
+            },
+            shpora: {
+                title: "📝 Король шпор",
+                desc: "Ты — мастер шпаргалок! У тебя есть заготовки на все случаи жизни. Ты умеешь писать микроскопическим почерком и прятать бумажки в самых неожиданных местах. Экзамены ты проходишь на хитрости!",
+                emoji: "👑",
+                color: "#3498db"
+            },
+            komp: {
+                title: "💻 Компьютерщик",
+                desc: "Ты — типичный айтишник. Весь день за компом, код, курсовые по программированию. Ты знаешь, как обойти любую систему, но на физру ходить забываешь. Твоё будущее — в IT, и ты это знаешь!",
+                emoji: "🖥️",
+                color: "#34495e"
+            },
+            semeyniy: {
+                title: "🍱 Домашний студент",
+                desc: "Ты — тот, кто приносит еду из дома. У тебя всегда есть контейнер с котлетками и термос с чаем. Ты скучаешь по дому, но учишься далеко. Родители тобой гордятся и присылают посылки!",
+                emoji: "🏠",
+                color: "#d35400"
+            },
+            foodlove: {
+                title: "🍕 Любитель поесть",
+                desc: "Ты — студент, который знает все столовые и бургерные в округе. Половина стипендии уходит на еду. Ты готов есть всегда и везде. Перерывы между парами — святое время для перекуса!",
+                emoji: "🍔",
+                color: "#16a085"
+            },
+            econom: {
+                title: "💰 Экономный",
+                desc: "Ты — мастер экономии. Доедаешь дошик неделями, ходишь пешком вместо транспорта и считаешь каждую копейку до стипендии. Ты знаешь, где самые дешёвые продукты и как растянуть деньги на месяц!",
+                emoji: "💸",
+                color: "#f1c40f"
+            },
+            propusk: {
+                title: "🚫 Прогульщик",
+                desc: "Ты — легенда по пропускам. Тебя редко видят в универе, но каким-то чудом ты всё сдаёшь. Ты появляешься только на зачётах и экзаменах. Как ты это делаешь — загадка для всех!",
+                emoji: "👻",
+                color: "#1abc9c"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, studentResults, backgroundColors, 'student');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

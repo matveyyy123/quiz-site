@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты предмет?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>📚 Какой ты предмет?</h1>
+            <p class="subtitle">Узнай какой школьный предмет отражает твой характер!</p>
+        </header>
+
+        <main class="quiz">
+<!-- Вопрос 1 -->
+<div class="question-card active" id="question1">
+    <br>
+    <h2 class="question-title">Любимые дела в выходной?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 1/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="math">🧮 Решать головоломки</button>
+        <button class="answer-btn" data-value="lit">📖 Читать книги</button>
+        <button class="answer-btn" data-value="pe">🏃 Заниматься спортом</button>
+        <button class="answer-btn" data-value="art">🎨 Рисовать или фоткать</button>
+        <button class="answer-btn" data-value="physics">🔧 Что-то мастерить</button>
+    </div>
+</div>
+
+<!-- Вопрос 2 -->
+<div class="question-card" id="question2">
+    <br>
+    <h2 class="question-title">Какой фильм выберешь?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 2/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="history">🏛️ Исторический</button>
+        <button class="answer-btn" data-value="bio">🌿 Документальный о природе</button>
+        <button class="answer-btn" data-value="chem">🧪 Научную фантастику</button>
+        <button class="answer-btn" data-value="eng">🌎 Зарубежный с субтитрами</button>
+        <button class="answer-btn" data-value="comp">🤖 Про технологии</button>
+    </div>
+</div>
+
+<!-- Вопрос 3 -->
+<div class="question-card" id="question3">
+    <br>
+    <h2 class="question-title">Что ты ищешь в людях?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 3/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="math">🔍 Логику и рассудительность</button>
+        <button class="answer-btn" data-value="lit">💬 Глубину и интересные мысли</button>
+        <button class="answer-btn" data-value="pe">⚡ Энергию и активность</button>
+        <button class="answer-btn" data-value="art">✨ Креативность и вкус</button>
+        <button class="answer-btn" data-value="physics">🔬 Пытливый ум</button>
+    </div>
+</div>
+
+<!-- Вопрос 4 -->
+<div class="question-card" id="question4">
+    <br>
+    <h2 class="question-title">Что тебе легче всего запоминать?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 4/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="history">📅 Даты и события</button>
+        <button class="answer-btn" data-value="bio">🐘 Названия животных/растений</button>
+        <button class="answer-btn" data-value="chem">🧪 Формулы и элементы</button>
+        <button class="answer-btn" data-value="eng">🗣️ Иностранные слова</button>
+        <button class="answer-btn" data-value="comp">⌨️ Компьютерные термины</button>
+    </div>
+</div>
+
+<!-- Вопрос 5 -->
+<div class="question-card" id="question5">
+    <br>
+    <h2 class="question-title">Какой у тебя тип мышления?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 5/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="math">🔢 Логический</button>
+        <button class="answer-btn" data-value="lit">💭 Ассоциативный</button>
+        <button class="answer-btn" data-value="pe">🤸 Практический</button>
+        <button class="answer-btn" data-value="art">🌈 Образный</button>
+        <button class="answer-btn" data-value="physics">🔬 Аналитический</button>
+    </div>
+</div>
+
+<!-- Вопрос 6 -->
+<div class="question-card" id="question6">
+    <br>
+    <h2 class="question-title">Какую музыку любишь?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 6/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="history">🎻 Классику</button>
+        <button class="answer-btn" data-value="bio">🌿 Природные звуки</button>
+        <button class="answer-btn" data-value="chem">🎧 Электронику</button>
+        <button class="answer-btn" data-value="eng">🎸 Зарубежный рок</button>
+        <button class="answer-btn" data-value="comp">🎼 Саундтреки из игр</button>
+    </div>
+</div>
+
+<!-- Вопрос 7 -->
+<div class="question-card" id="question7">
+    <br>
+    <h2 class="question-title">Что тебе ближе?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 7/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="math">📊 Графики и таблицы</button>
+        <button class="answer-btn" data-value="lit">📝 Тексты и стихи</button>
+        <button class="answer-btn" data-value="pe">🏆 Соревнования</button>
+        <button class="answer-btn" data-value="art">🖼️ Красивые картинки</button>
+        <button class="answer-btn" data-value="physics">📐 Чертежи и схемы</button>
+    </div>
+</div>
+
+<!-- Вопрос 8 -->
+<div class="question-card" id="question8">
+    <br>
+    <h2 class="question-title">Что тебя успокаивает?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 8/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="history">🎞️ Старые фотографии</button>
+        <button class="answer-btn" data-value="bio">🌳 Прогулка в парке</button>
+        <button class="answer-btn" data-value="chem">🧪 Смотреть на реакцию</button>
+        <button class="answer-btn" data-value="eng">🎧 Музыка на английском</button>
+        <button class="answer-btn" data-value="comp">🖱️ Кликать мышкой</button>
+    </div>
+</div>
+
+<!-- Вопрос 9 -->
+<div class="question-card" id="question9">
+    <br>
+    <h2 class="question-title">Что тебе важнее в работе?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 9/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="math">📊 Четкая структура</button>
+        <button class="answer-btn" data-value="lit">📝 Возможность выражать мысли</button>
+        <button class="answer-btn" data-value="pe">🏃 Движение и активность</button>
+        <button class="answer-btn" data-value="art">🎨 Творческая свобода</button>
+        <button class="answer-btn" data-value="physics">💡 Исследования и открытия</button>
+    </div>
+</div>
+
+<!-- Вопрос 10 -->
+<div class="question-card" id="question10">
+    <br>
+    <h2 class="question-title">Какая у тебя мечта?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 10/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="history">🏛️ Посетить древние города</button>
+        <button class="answer-btn" data-value="bio">🦁 Увидеть дикую природу</button>
+        <button class="answer-btn" data-value="chem">🔬 Сделать научное открытие</button>
+        <button class="answer-btn" data-value="eng">🌎 Объехать весь мир</button>
+        <button class="answer-btn" data-value="comp">🚀 Создать что-то гениальное</button>
+    </div>
+</div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>📖 Твой предмет:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const subjectResults = {
+            math: {
+                title: "📐 Математика",
+                desc: "Ты — Математика! Логичный, рациональный и любишь порядок. Ты видишь закономерности там, где другие видят хаос. Ты — король формул и уравнений. В любой проблеме ищешь решение, а не виноватых. Твой девиз: «Всё сходится!»",
+                emoji: "🧮",
+                color: "#2c3e50"
+            },
+            lit: {
+                title: "✍️ Литература",
+                desc: "Ты — Литература! Ты глубокий, эмоциональный и любишь красивые истории. Ты понимаешь души людей и умеешь выражать мысли. С тобой интересно говорить, ты цитируешь классиков и пишешь как бог. Ты — хранитель слов и смыслов.",
+                emoji: "📚",
+                color: "#8e44ad"
+            },
+            pe: {
+                title: "🤸 Физкультура",
+                desc: "Ты — Физкультура! Ты не можешь сидеть на месте, тебе нужно движение. Ты энергичный, активный и всегда в тонусе. Ты — душа компании и заводила. С тобой весело, ты заряжаешь всех своей энергией. Жизнь — это движение!",
+                emoji: "💪",
+                color: "#27ae60"
+            },
+            art: {
+                title: "🎨 ИЗО",
+                desc: "Ты — Искусство! Ты видишь мир в красках, формах и образах. Ты креативный, нестандартный и творческий. Всё, что ты делаешь, превращается в искусство. Ты смотришь на мир под другим углом и делаешь его красивее!",
+                emoji: "🖼️",
+                color: "#e67e22"
+            },
+            physics: {
+                title: "🔭 Физика",
+                desc: "Ты — Физика! Тебе интересно, как устроен мир. Ты любишь эксперименты, теории и открытия. Ты — пытливый ум, который хочет докопаться до сути. Ты задаешь вопросы и ищешь ответы. Мир для тебя — большая лаборатория!",
+                emoji: "⚡",
+                color: "#3498db"
+            },
+            history: {
+                title: "🏛️ История",
+                desc: "Ты — История! Ты помнишь прошлое и уважаешь традиции. Ты знаешь, что всё повторяется, и умеешь делать выводы. Ты — мудрый, рассудительный и любишь рассказывать. С тобой интересно, как в хорошем музее!",
+                emoji: "📜",
+                color: "#d35400"
+            },
+            bio: {
+                title: "🌿 Биология",
+                desc: "Ты — Биология! Ты любишь природу, животных и всё живое. Ты заботливый, внимательный и наблюдательный. Ты видишь красоту в мелочах и понимаешь, как всё взаимосвязано. Ты — часть этого мира и бережешь его!",
+                emoji: "🌱",
+                color: "#16a085"
+            },
+            chem: {
+                title: "⚗️ Химия",
+                desc: "Ты — Химия! Ты любишь смешивать, экспериментировать и удивлять. Ты знаешь, что из простых вещей можно создать сложные. Ты — алхимик жизни, который ищет свои формулы успеха. Осторожно, взрывоопасно!",
+                emoji: "🧪",
+                color: "#f1c40f"
+            },
+            eng: {
+                title: "🌎 Английский",
+                desc: "Ты — Английский! Ты открыт миру, любишь путешествовать и общаться. Ты — душа компании, легко находишь общий язык с людьми. Ты следишь за трендами и всегда в курсе мировых новостей. Your English is perfect!",
+                emoji: "🗺️",
+                color: "#1abc9c"
+            },
+            comp: {
+                title: "💻 Информатика",
+                desc: "Ты — Информатика! Ты живёшь в мире технологий и кода. Ты — логичный, современный и всегда в курсе новинок. Ты умеешь решать сложные задачи простыми способами. Ты — человек будущего, которое уже наступило!",
+                emoji: "🖥️",
+                color: "#34495e"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, subjectResults, backgroundColors, 'schoolsubject');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

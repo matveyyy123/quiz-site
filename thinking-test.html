@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Как ты мыслишь?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🧠 Как ты мыслишь?</h1>
+            <p class="subtitle">Узнай как работает твой мозг!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Как ты решаешь проблемы?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="logic">🔍 Анализирую и ищу причину</button>
+                    <button class="answer-btn" data-value="creative">💡 Придумываю нестандартное решение</button>
+                    <button class="answer-btn" data-value="critical">⚖️ Взвешиваю все за и против</button>
+                    <button class="answer-btn" data-value="visual">👁️ Представляю картинку</button>
+                    <button class="answer-btn" data-value="system">🔄 Раскладываю по полочкам</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что тебе легче запоминать?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="abstract">📚 Теории и концепции</button>
+                    <button class="answer-btn" data-value="practical">🔧 Инструкции и алгоритмы</button>
+                    <button class="answer-btn" data-value="emotional">💭 Эмоции и впечатления</button>
+                    <button class="answer-btn" data-value="spatial">🗺️ Карты и схемы</button>
+                    <button class="answer-btn" data-value="verbal">🔤 Слова и тексты</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Какую игру предпочтешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="logic">♟️ Шахматы</button>
+                    <button class="answer-btn" data-value="creative">🎨 Рисование</button>
+                    <button class="answer-btn" data-value="critical">🔎 Квесты</button>
+                    <button class="answer-btn" data-value="visual">🧩 Пазлы</button>
+                    <button class="answer-btn" data-value="system">🏗️ Стратегии</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Что ты читаешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="abstract">📖 Научную фантастику</button>
+                    <button class="answer-btn" data-value="practical">🛠️ Самоучители</button>
+                    <button class="answer-btn" data-value="emotional">💔 Романы</button>
+                    <button class="answer-btn" data-value="spatial">🗺️ Атласы и энциклопедии</button>
+                    <button class="answer-btn" data-value="verbal">📰 Статьи в интернете</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Как ты принимаешь решения?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="logic">📊 На основе фактов</button>
+                    <button class="answer-btn" data-value="creative">✨ По интуиции</button>
+                    <button class="answer-btn" data-value="critical">🤔 Долго сомневаюсь</button>
+                    <button class="answer-btn" data-value="visual">🖼️ Представляю результат</button>
+                    <button class="answer-btn" data-value="system">📋 По инструкции</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Какой фильм выберешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="abstract">🌀 Артхаус</button>
+                    <button class="answer-btn" data-value="practical">🎬 Документальный</button>
+                    <button class="answer-btn" data-value="emotional">😭 Мелодраму</button>
+                    <button class="answer-btn" data-value="spatial">🌍 Приключения</button>
+                    <button class="answer-btn" data-value="verbal">💬 Разговорный жанр</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Что ты делаешь в споре?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="logic">🔬 Привожу аргументы</button>
+                    <button class="answer-btn" data-value="creative">🎭 Ищу неожиданный выход</button>
+                    <button class="answer-btn" data-value="critical">⚔️ Спорю до победы</button>
+                    <button class="answer-btn" data-value="visual">🎨 Рисую схему</button>
+                    <button class="answer-btn" data-value="system">📐 Структурирую факты</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Как ты учишь новое?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="abstract">📚 Читаю теорию</button>
+                    <button class="answer-btn" data-value="practical">🔨 Пробую на практике</button>
+                    <button class="answer-btn" data-value="emotional">👂 Слушаю лекции</button>
+                    <button class="answer-btn" data-value="spatial">📊 Смотрю схемы</button>
+                    <button class="answer-btn" data-value="verbal">✍️ Записываю</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Что тебя вдохновляет?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="logic">🔢 Четкие алгоритмы</button>
+                    <button class="answer-btn" data-value="creative">🌈 Красота и искусство</button>
+                    <button class="answer-btn" data-value="critical">🏆 Интеллектуальные задачи</button>
+                    <button class="answer-btn" data-value="visual">🖼️ Яркие образы</button>
+                    <button class="answer-btn" data-value="system">🧩 Сложные системы</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Что ты видишь во сне?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="abstract">🌀 Странные образы</button>
+                    <button class="answer-btn" data-value="practical">🔧 Конкретные действия</button>
+                    <button class="answer-btn" data-value="emotional">💞 Яркие эмоции</button>
+                    <button class="answer-btn" data-value="spatial">🗺️ Путешествия</button>
+                    <button class="answer-btn" data-value="verbal">💬 Разговоры</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🧠 Твой тип мышления:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const thinkingResults = {
+            logic: {
+                title: "🔍 Логическое мышление",
+                desc: "Ты — человек логики! Ты любишь порядок, факты и доказательства. Твои решения всегда обоснованы, а аргументы неопровержимы. Ты отличный аналитик, программист или учёный. С тобой не поспоришь!",
+                emoji: "🧮",
+                color: "#2c3e50"
+            },
+            creative: {
+                title: "💡 Творческое мышление",
+                desc: "Ты — творец! Ты видишь мир нестандартно, придумываешь новые идеи и находишь оригинальные решения. Ты художник, музыкант или изобретатель. Там, где другие видят проблему, ты видишь возможность!",
+                emoji: "🎨",
+                color: "#e67e22"
+            },
+            critical: {
+                title: "⚖️ Критическое мышление",
+                desc: "Ты — скептик и аналитик в одном лице. Ты не веришь на слово, проверяешь факты и ищешь ошибки. Ты отличный юрист, детектив или журналист. Тебя сложно обмануть!",
+                emoji: "🔎",
+                color: "#3498db"
+            },
+            visual: {
+                title: "👁️ Визуальное мышление",
+                desc: "Ты мыслишь образами и картинками. Тебе легче один раз увидеть, чем сто раз услышать. Ты отличный дизайнер, архитектор или фотограф. Ты замечаешь красоту там, где другие проходят мимо!",
+                emoji: "🖼️",
+                color: "#9b59b6"
+            },
+            system: {
+                title: "🔄 Системное мышление",
+                desc: "Ты видишь картину целиком и понимаешь, как всё взаимосвязано. Ты умеешь строить сложные системы и прогнозировать последствия. Ты прирожденный стратег, менеджер или инженер!",
+                emoji: "⚙️",
+                color: "#16a085"
+            },
+            abstract: {
+                title: "🌀 Абстрактное мышление",
+                desc: "Ты мыслишь категориями и теориями. Тебе легко даются философия, математика и сложные концепции. Ты видишь суть вещей и умеешь оперировать абстракциями. Твой ум не знает границ!",
+                emoji: "🌌",
+                color: "#8e44ad"
+            },
+            practical: {
+                title: "🔧 Практическое мышление",
+                desc: "Ты — человек дела! Теория без практики для тебя пуста. Ты любишь работать руками, чинить, строить и создавать. Ты незаменимый мастер, инженер или строитель. Ты умеешь решать реальные задачи!",
+                emoji: "🛠️",
+                color: "#d35400"
+            },
+            emotional: {
+                title: "💭 Эмоциональное мышление",
+                desc: "Ты мыслишь сердцем. Ты чувствуешь людей, понимаешь эмоции и умеешь сопереживать. Ты отличный психолог, учитель или врач. Твоя эмпатия — твоя суперсила!",
+                emoji: "❤️",
+                color: "#e74c3c"
+            },
+            spatial: {
+                title: "🗺️ Пространственное мышление",
+                desc: "Ты отлично ориентируешься в пространстве. Ты легко читаешь карты, собираешь мебель без инструкции и паркуешься в узких местах. Ты прирожденный архитектор, пилот или штурман!",
+                emoji: "🧭",
+                color: "#1abc9c"
+            },
+            verbal: {
+                title: "🔤 Вербальное мышление",
+                desc: "Ты — мастер слова! Ты легко подбираешь выражения, любишь говорить и писать. Ты отличный писатель, журналист или оратор. Твоя речь — твоё оружие и твой дар!",
+                emoji: "📝",
+                color: "#f39c12"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, thinkingResults, backgroundColors, 'thinking');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

@@ -237,7 +237,6 @@ body.dark-theme .stats-row {
 }
 
 /* Анимация для карточек */
-/* Анимация для карточек - без пустот */
 .tests-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -323,6 +322,158 @@ body.dark-theme .no-results {
     background: rgba(0,0,0,0.2);
 }
 
+/* ========== КАТЕГОРИИ ТЕСТОВ ========== */
+.categories-section {
+    margin: 20px 0 30px 0;
+    position: relative;
+}
+
+.categories-wrapper {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 5px 30px 15px 30px;
+    scrollbar-width: thin;
+    scrollbar-color: #667eea #e0e0e0;
+    -webkit-overflow-scrolling: touch;
+    
+    /* Длинный градиент с обеих сторон */
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+}
+
+/* Скроллбар */
+.categories-wrapper::-webkit-scrollbar {
+    height: 6px;
+    background: transparent;
+}
+
+/* Дорожка скролла */
+.categories-wrapper::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, transparent, #e0e0e0 10%, #e0e0e0 90%, transparent);
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+/* Ползунок */
+.categories-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.category-btn {
+    background: #f0f0f0;
+    color: #666;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.category-btn:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.category-btn.active {
+    background: #667eea;
+    color: white;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* ========== ТЕМНАЯ ТЕМА ========== */
+body.dark-theme .categories-section::before {
+    background: linear-gradient(to right, #1a1a2e, rgba(26,26,46,0));
+}
+
+body.dark-theme .categories-section::after {
+    background: linear-gradient(to left, #1a1a2e, rgba(26,26,46,0));
+}
+
+body.dark-theme .category-btn {
+    background: #2a2a3a;
+    color: #e0e0e0;
+    border-color: #3a3a4a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .category-btn:hover {
+    background: #32324a;
+    box-shadow: 0 12px 24px rgba(102, 126, 234, 0.3);
+}
+
+/* ВЫБРАННАЯ КАТЕГОРИЯ В НОЧНОМ РЕЖИМЕ */
+body.dark-theme .category-btn.active {
+    background: linear-gradient(135deg, #8a6de9, #9d7be9);
+    color: #ffffff;
+    border-color: #9d7be9;
+    box-shadow: 0 8px 20px rgba(138, 109, 233, 0.5);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ========== ТЕМНАЯ ТЕМА ДЛЯ СКРОЛЛА ========== */
+body.dark-theme .categories-wrapper {
+    scrollbar-color: #8a6de9 #2a2a3a; /* Цвет ползунка и дорожки */
+}
+
+body.dark-theme .categories-wrapper::-webkit-scrollbar {
+    height: 6px;
+    background: transparent;
+}
+
+body.dark-theme .categories-wrapper::-webkit-scrollbar-track {
+    background: linear-gradient(90deg, transparent, #2a2a3a 10%, #2a2a3a 90%, transparent);
+    border-radius: 10px;
+}
+
+body.dark-theme .categories-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #8a6de9, #9d7be9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(138, 109, 233, 0.5);
+}
+
+body.dark-theme .categories-wrapper::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #9d7be9, #8a6de9);
+}
+
+/* Маска для градиента в темной теме */
+body.dark-theme .categories-wrapper {
+    /* Такой же длинный градиент для темной темы */
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+}
 
 /* ========== СЕТКА С ТЕСТАМИ ========== */
 .tests-grid {
@@ -512,6 +663,30 @@ body.dark-theme .no-results {
 .test-card.supervillain {
     background: linear-gradient(135deg, #d0e7ff, #ffffff);
     border: 2px solid #9292d2;
+}
+
+/* КАРТОЧКА 22: Предмет */
+.test-card.schoolsubject {
+    background: linear-gradient(135deg, #fff0d4, #ffffff);
+    border: 2px solid #d4a373;
+}
+
+/* КАРТОЧКА 23: Студент */
+.test-card.student {
+    background: linear-gradient(135deg, #d4e6f1, #ffffff);
+    border: 2px solid #5d8aa8;
+}
+
+/* КАРТОЧКА 24: Богатство */
+.test-card.rich {
+    background: linear-gradient(135deg, #fff1b7, #ffffff);
+    border: 2px solid #d4ac0d;
+}
+
+/* КАРТОЧКА 25: Тип мышления */
+.test-card.thinking {
+    background: linear-gradient(135deg, #dcd3ff, #ffffff);
+    border: 2px solid #8a6de9;
 }
 
 /* ========== СЕКЦИЯ СВЯЗИ ========== */

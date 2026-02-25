@@ -21,7 +21,7 @@
     <!-- Статистика сайта -->
     <div class="stats-container">
         <div class="stats-row">
-            <span class="stats-item">📊 Всего тестов: <span id="total-tests">21</span></span>
+            <span class="stats-item">📊 Всего тестов: <span id="total-tests">25</span></span>
             <span class="stats-separator">|</span>
             <span class="stats-item">👥 Всего прохождений: <span id="total-played">0</span></span>
         </div>
@@ -34,6 +34,24 @@
         <button id="search-clear" class="search-clear" title="Очистить">✕</button>
     </div>
 </div>
+</div>
+
+<!-- КАТЕГОРИИ ТЕСТОВ -->
+<div class="categories-section">
+    <div class="categories-wrapper">
+        <button class="category-btn active" data-category="all">🏠 Все</button>
+        <button class="category-btn" data-category="professions">💼 Учеба</button>
+        <button class="category-btn" data-category="food">🍕 Еда</button>
+        <button class="category-btn" data-category="characters">🎭 Персонажи</button>
+        <button class="category-btn" data-category="animals">🐾 Животные</button>
+        <button class="category-btn" data-category="music">🎨 Творчество</button>
+        <button class="category-btn" data-category="travel">✈️ Путешествия</button>
+        <button class="category-btn" data-category="holiday">🎉 Праздники</button>
+        <button class="category-btn" data-category="fantasy">🌌 Фэнтези</button>
+        <button class="category-btn" data-category="sins">😈 Грехи</button>
+        <button class="category-btn" data-category="games">🤖 Технологии</button>
+        <button class="category-btn" data-category="nature">🌿 Природа</button>
+    </div>
 </div>
 
         <main>
@@ -182,6 +200,35 @@
     <div class="test-title">Какой ты суперзлодей?</div>
     <div class="test-desc">Какая твоя темная сторона</div>
 </div>
+
+<!-- Тест 22: Предмет -->
+<div class="test-card schoolsubject" onclick="location.href='school-subject-test.html'">
+    <div class="test-emoji">📚</div>
+    <div class="test-title">Какой ты предмет?</div>
+    <div class="test-desc">Узнай какой ты школьный предмет</div>
+</div>
+
+<!-- Тест 23: Студент -->
+<div class="test-card student" onclick="location.href='student-type-test.html'">
+    <div class="test-emoji">🎓</div>
+    <div class="test-title">Какой ты студент?</div>
+    <div class="test-desc">Узнай свой тип студента</div>
+</div>
+
+<!-- Тест 24: Богатство -->
+<div class="test-card rich" onclick="location.href='rich-test.html'">
+    <div class="test-emoji">💰</div>
+    <div class="test-title">Как ты разбогатеешь?</div>
+    <div class="test-desc">Узнай свой путь к миллионам</div>
+</div>
+
+<!-- Тест 25: Тип мышления -->
+<div class="test-card thinking" onclick="location.href='thinking-test.html'">
+    <div class="test-emoji">🧠</div>
+    <div class="test-title">Как ты мыслишь?</div>
+    <div class="test-desc">Узнай как работает твой мозг</div>
+</div>
+
 </div>
 
             <!-- СВЯЗЬ С НАМИ -->
@@ -220,7 +267,11 @@ function updateTestCounters() {
         sin: { selector: '.test-card.sin', name: 'Грех' },
         holiday: { selector: '.test-card.holiday', name: 'Праздник' },
         soulage: { selector: '.test-card.soulage', name: 'Возраст души' },
-        supervillain: { selector: '.test-card.supervillain', name: 'Суперзлодей' }
+        supervillain: { selector: '.test-card.supervillain', name: 'Суперзлодей' },
+        schoolsubject: { selector: '.test-card.schoolsubject', name: 'Предмет' },
+        student: { selector: '.test-card.student', name: 'Студент' },
+        rich: { selector: '.test-card.rich', name: 'Богатство' },
+        thinking: { selector: '.test-card.thinking', name: 'Тип мышления' }
     };
     
     // Находим самый популярный тест (первый по порядку при одинаковых значениях)
@@ -508,6 +559,133 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Запускаем при загрузке
     performSearch();
+});
+</script>
+
+<script>
+// Фильтрация тестов по категориям
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    
+// Словарь категорий для каждого теста (по классу карточки)
+const testCategories = {
+    // 🍕 ЕДА (food)
+    'drink': 'food',        // Какой ты напиток?
+    'pizza': 'food',        // Какая ты пицца?
+    
+    // 🎭 ПЕРСОНАЖИ (characters)
+    'hero': 'characters',           // Какой ты супергерой?
+    'medieval': 'characters',       // Какой ты рыцарь?
+    'supervillain': 'characters',   // Какой ты суперзлодей?
+    
+    // 🐾 ЖИВОТНЫЕ (animals)
+    'animal': 'animals',        // Какое ты животное?
+    'dinosaurs': 'animals',     // Какой ты динозавр?
+    
+    // 🎨 ТВОРЧЕСТВО (music)
+    'music': 'music',           // Какой ты жанр музыки?
+    'genre': 'music',         // Какой ты жанр кино?
+    
+    // ✈️ ПУТЕШЕСТВИЯ (travel)
+    'travel': 'travel',         // Куда поехать в отпуск?
+    
+    // 💼 ПРОФЕССИИ (professions)
+    'job': 'professions',       // Какая ты профессия?
+    'schoolsubject': 'professions',
+    'student': 'professions',
+    'rich': 'professions',
+    'thinking': 'professions',
+    
+    // 🌌 ФЭНТЕЗИ (fantasy)
+    'planet': 'fantasy',        // Какая ты планета?
+    
+    // 😈 ГРЕХИ И СТРАХИ (sins)
+    'sin': 'sins',              // Какой ты грех?
+    'habits': 'sins',           // Какая твоя слабость?
+    'fears': 'sins',            // Какой у тебя страх?
+    
+    // 🤖 ТЕХНОЛОГИИ (games)
+    'game': 'games',            // Какая ты игра?
+    'car': 'games',            // Какая ты машина?
+    
+    // 🌿 ПРИРОДА (nature)
+    'nature': 'nature',         // Какая ты стихия?
+    'soulage': 'nature',        // Какой твой возраст души?
+    
+    // 🎉 ПРАЗДНИКИ (holiday) - НОВАЯ КАТЕГОРИЯ
+    'holiday': 'holiday',        // Какой ты праздник?
+    'weekday': 'holiday',        // Какой ты день недели?
+};
+    
+    function filterTests(category) {
+        const testCards = document.querySelectorAll('.test-card');
+        
+        testCards.forEach(card => {
+            // Определяем класс теста (drink, pizza, hero и т.д.)
+            let testClass = '';
+            const classList = card.className.split(' ');
+            for (let cls of classList) {
+                if (cls !== 'test-card' && cls !== 'most-popular' && cls !== 'hidden') {
+                    testClass = cls;
+                    break;
+                }
+            }
+            
+            const cardCategory = testCategories[testClass] || 'other';
+            
+            if (category === 'all' || cardCategory === category) {
+                card.style.display = '';
+                setTimeout(() => card.classList.remove('hidden'), 10);
+            } else {
+                card.classList.add('hidden');
+                setTimeout(() => {
+                    if (card.classList.contains('hidden')) {
+                        card.style.display = 'none';
+                    }
+                }, 300);
+            }
+        });
+        
+        // Обновляем активную кнопку
+        categoryButtons.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.category === category) {
+                btn.classList.add('active');
+            }
+        });
+        
+        // Показываем/скрываем сообщение "ничего не найдено"
+        setTimeout(updateNoResultsMessage, 350);
+    }
+    
+    // Функция для обновления сообщения о пустых результатах
+    function updateNoResultsMessage() {
+        const visibleCards = document.querySelectorAll('.test-card:not(.hidden)');
+        const oldNoResults = document.querySelector('.no-results-category');
+        if (oldNoResults) oldNoResults.remove();
+        
+        if (visibleCards.length === 0) {
+            const testsGrid = document.querySelector('.tests-grid');
+            const noResults = document.createElement('div');
+            noResults.className = 'no-results no-results-category';
+            noResults.innerHTML = `
+                <span>🏷️</span>
+                В этой категории пока нет тестов<br>
+                <small style="font-size: 0.7em;">Но они скоро появятся!</small>
+            `;
+            testsGrid.appendChild(noResults);
+        }
+    }
+    
+    // Назначаем обработчики на кнопки
+    categoryButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterTests(this.dataset.category);
+        });
+    });
+    
+    // По умолчанию показываем все
+    filterTests('all');
 });
 </script>
 </body>
