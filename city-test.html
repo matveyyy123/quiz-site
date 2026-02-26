@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты город?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🏙️ Какой ты город?</h1>
+            <p class="subtitle">Узнай какой город отражает твой характер!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какой ритм жизни тебе ближе?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">🗽 Быстрый, не спит никогда</button>
+                    <button class="answer-btn" data-value="paris">🥐 Размеренный, романтичный</button>
+                    <button class="answer-btn" data-value="tokyo">🗼 Технологичный, суетливый</button>
+                    <button class="answer-btn" data-value="rome">🏛️ Спокойный, исторический</button>
+                    <button class="answer-btn" data-value="rio">🎉 Танцевальный, шумный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что ты любишь есть?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="london">☕ Английский завтрак</button>
+                    <button class="answer-btn" data-value="berlin">🍺 Немецкие сосиски</button>
+                    <button class="answer-btn" data-value="barcelona">🥘 Паэлью</button>
+                    <button class="answer-btn" data-value="moscow">🥟 Пельмени/блины</button>
+                    <button class="answer-btn" data-value="istanbul">🌯 Кебаб/сладости</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Как ты одеваешься?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">👔 Деловой стиль</button>
+                    <button class="answer-btn" data-value="paris">🧣 Стильно, с шарфиком</button>
+                    <button class="answer-btn" data-value="tokyo">👕 Уличная мода</button>
+                    <button class="answer-btn" data-value="rome">🧥 Классика</button>
+                    <button class="answer-btn" data-value="rio">🩳 Ярко, легко</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Твоя любимая погода?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="london">☁️ Туманно, дождливо</button>
+                    <button class="answer-btn" data-value="berlin">🌥️ Переменная облачность</button>
+                    <button class="answer-btn" data-value="barcelona">☀️ Солнечно, жарко</button>
+                    <button class="answer-btn" data-value="moscow">❄️ Морозно, снежно</button>
+                    <button class="answer-btn" data-value="istanbul">🌬️ Ветрено</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Как ты отдыхаешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">🍸 В баре/ресторане</button>
+                    <button class="answer-btn" data-value="paris">☕ В кафе за круассаном</button>
+                    <button class="answer-btn" data-value="tokyo">🎮 В игровом центре</button>
+                    <button class="answer-btn" data-value="rome">🏛️ В музее/на руинах</button>
+                    <button class="answer-btn" data-value="rio">💃 На карнавале</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Твой характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="london">🎩 Сдержанный</button>
+                    <button class="answer-btn" data-value="berlin">📏 Педантичный</button>
+                    <button class="answer-btn" data-value="barcelona">🎸 Зажигательный</button>
+                    <button class="answer-btn" data-value="moscow">💪 Суровый</button>
+                    <button class="answer-btn" data-value="istanbul">🧦 Гостеприимный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Что ты коллекционируешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">🏷️ Брендовые вещи</button>
+                    <button class="answer-btn" data-value="paris">🎨 Картины/сувениры</button>
+                    <button class="answer-btn" data-value="tokyo">🤖 Гаджеты</button>
+                    <button class="answer-btn" data-value="rome">📜 Монеты/артефакты</button>
+                    <button class="answer-btn" data-value="rio">🎵 Музыку</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Твой любимый напиток?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="london">☕ Чай с молоком</button>
+                    <button class="answer-btn" data-value="berlin">🍺 Пиво</button>
+                    <button class="answer-btn" data-value="barcelona">🍷 Сангрия</button>
+                    <button class="answer-btn" data-value="moscow">🍷 Водка/квас</button>
+                    <button class="answer-btn" data-value="istanbul">☕ Кофе по-турецки</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Как ты передвигаешься?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ny">🚕 На такси</button>
+                    <button class="answer-btn" data-value="paris">🚶 Пешком</button>
+                    <button class="answer-btn" data-value="tokyo">🚇 На метро</button>
+                    <button class="answer-btn" data-value="rome">🛵 На мопеде</button>
+                    <button class="answer-btn" data-value="rio">🚌 На автобусе</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Что для тебя счастье?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="london">🗞️ Утренняя газета</button>
+                    <button class="answer-btn" data-value="berlin">🍻 Пиво с друзьями</button>
+                    <button class="answer-btn" data-value="barcelona">🌊 Море и солнце</button>
+                    <button class="answer-btn" data-value="moscow">🏠 Домашний уют</button>
+                    <button class="answer-btn" data-value="istanbul">🧿 Глаз от сглаза</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🏙️ Твой город:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const cityResults = {
+            ny: {
+                title: "🗽 Нью-Йорк",
+                desc: "Ты — Нью-Йорк! Ты никогда не спишь, всегда в движении и стремишься к успеху. Ты амбициозный, деловой и любишь быть в центре событий. Ты — город возможностей, где каждый может добиться своего!",
+                emoji: "🗽",
+                color: "#2C3E50"
+            },
+            paris: {
+                title: "🗼 Париж",
+                desc: "Ты — Париж! Романтичный, стильный и влюблённый в жизнь. Ты ценишь красоту, искусство и хорошую еду. Ты — город влюблённых, где хочется гулять и наслаждаться каждым моментом!",
+                emoji: "🥐",
+                color: "#E6A8D7"
+            },
+            tokyo: {
+                title: "🗼 Токио",
+                desc: "Ты — Токио! Ты живёшь в будущем, любишь технологии и скорость. Ты современный, необычный и всегда в тренде. Ты смешиваешь традиции и инновации, создавая что-то удивительное!",
+                emoji: "🤖",
+                color: "#3498DB"
+            },
+            rome: {
+                title: "🏟️ Рим",
+                desc: "Ты — Рим! Ты мудрый, величественный и полный истории. Ты ценишь традиции, культуру и вечные ценности. Ты — город, который помнит всё, но при этом живёт настоящим!",
+                emoji: "🏛️",
+                color: "#8B5A2B"
+            },
+            rio: {
+                title: "🎉 Рио-де-Жанейро",
+                desc: "Ты — Рио! Ты весёлый, зажигательный и любишь праздники. Ты живёшь в ритме самбы, не унываешь и всегда готов танцевать. Ты — солнце, пляж и карнавал в одном флаконе!",
+                emoji: "🌴",
+                color: "#E67E22"
+            },
+            london: {
+                title: "☕ Лондон",
+                desc: "Ты — Лондон! Ты сдержанный, элегантный и с чувством юмора. Ты любишь традиции, но не прочь повеселиться. Ты — туман, королевская семья и панки одновременно. Правила созданы, чтобы их нарушать!",
+                emoji: "🎩",
+                color: "#A9A9A9"
+            },
+            berlin: {
+                title: "🍺 Берлин",
+                desc: "Ты — Берлин! Ты свободный, дерзкий и творческий. Ты любишь ночную жизнь, искусство и быть собой. Ты — город, который помнит историю, но строит будущее. Ты — стена и свобода!",
+                emoji: "🎨",
+                color: "#D44A4A"
+            },
+            barcelona: {
+                title: "🌇 Барселона",
+                desc: "Ты — Барселона! Ты яркий, архитектурный и страстный. Ты любишь Гауди, море и футбол. Ты — город, где смешались готика и модерн, горы и пляж. Ты — искусство во всём!",
+                emoji: "🏖️",
+                color: "#FFD700"
+            },
+            moscow: {
+                title: "❄️ Москва",
+                desc: "Ты — Москва! Ты деловой, энергичный и с размахом. Ты не останавливаешься, любишь роскошь и ночную жизнь. Ты — город огней, пробок и больших возможностей. Ты — сердце страны!",
+                emoji: "🏰",
+                color: "#8B4513"
+            },
+            istanbul: {
+                title: "🕌 Стамбул",
+                desc: "Ты — Стамбул! Ты загадочный, гостеприимный и соединяешь в себе два мира. Ты — мост между Европой и Азией, между прошлым и будущим. Ты — восточные сладости и западный ритм!",
+                emoji: "☕",
+                color: "#B22222"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, cityResults, backgroundColors, 'city');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

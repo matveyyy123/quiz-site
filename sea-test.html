@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какое ты море?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🌊 Какое ты море?</h1>
+            <p class="subtitle">Узнай какая морская стихия живёт в тебе!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какой у тебя характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="mediterranean">🌞 Тёплый и гостеприимный</button>
+                    <button class="answer-btn" data-value="caribbean">🏝️ Расслабленный и весёлый</button>
+                    <button class="answer-btn" data-value="north">❄️ Спокойный и суровый</button>
+                    <button class="answer-btn" data-value="dead">🧂 Загадочный и глубокий</button>
+                    <button class="answer-btn" data-value="black">⚡ Непредсказуемый и страстный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Твое любимое дело на отдыхе?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="red">🐠 Нырять с маской</button>
+                    <button class="answer-btn" data-value="baltic">🏖️ Гулять по пляжу</button>
+                    <button class="answer-btn" data-value="japanese">🎎 Изучать культуру</button>
+                    <button class="answer-btn" data-value="coral">🐚 Собирать ракушки</button>
+                    <button class="answer-btn" data-value="adriatic">⛵ Кататься на яхте</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Твой любимый цвет воды?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="mediterranean">💙 Бирюзовый</button>
+                    <button class="answer-btn" data-value="caribbean">💚 Изумрудный</button>
+                    <button class="answer-btn" data-value="north">🤍 Серо-синий</button>
+                    <button class="answer-btn" data-value="dead">🤍 Белесый</button>
+                    <button class="answer-btn" data-value="black">💙 Тёмно-синий</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Какая температура тебе по душе?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="red">🔥 Тёплая</button>
+                    <button class="answer-btn" data-value="baltic">❄️ Прохладная</button>
+                    <button class="answer-btn" data-value="japanese">🌊 Любая</button>
+                    <button class="answer-btn" data-value="coral">☀️ Горячая</button>
+                    <button class="answer-btn" data-value="adriatic">🌡️ Умеренная</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Что ты ищешь в море?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="mediterranean">🍋 Отдых и вкусную еду</button>
+                    <button class="answer-btn" data-value="caribbean">🎉 Вечеринки и веселье</button>
+                    <button class="answer-btn" data-value="north">🕯️ Покой и уединение</button>
+                    <button class="answer-btn" data-value="dead">🧘 Здоровье и спокойствие</button>
+                    <button class="answer-btn" data-value="black">🤩 Приключения</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Какой запах ты любишь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="red">🧂 Соли и водорослей</button>
+                    <button class="answer-btn" data-value="baltic">🌲 Сосновый</button>
+                    <button class="answer-btn" data-value="japanese">🍣 Рыбы и риса</button>
+                    <button class="answer-btn" data-value="coral">🌸 Цветочный</button>
+                    <button class="answer-btn" data-value="adriatic">🍇 Лаванды</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Какое животное тебе ближе?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="mediterranean">🐠 Рыбки</button>
+                    <button class="answer-btn" data-value="caribbean">🐢 Черепахи</button>
+                    <button class="answer-btn" data-value="north">🐋 Киты</button>
+                    <button class="answer-btn" data-value="dead">🦀 Крабы</button>
+                    <button class="answer-btn" data-value="black">🐬 Дельфины</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Что ты делаешь на пляже?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="red">🏊 Плаваю</button>
+                    <button class="answer-btn" data-value="baltic">📖 Читаю</button>
+                    <button class="answer-btn" data-value="japanese">📸 Фоткаю</button>
+                    <button class="answer-btn" data-value="coral">🗺️ Исследую</button>
+                    <button class="answer-btn" data-value="adriatic">🍷 Пью коктейли</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Твой идеальный пляж?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="mediterranean">🏖️ С шезлонгами</button>
+                    <button class="answer-btn" data-value="caribbean">🌴 С пальмами</button>
+                    <button class="answer-btn" data-value="north">🏔️ Со скалами</button>
+                    <button class="answer-btn" data-value="dead">🧂 С грязями</button>
+                    <button class="answer-btn" data-value="black">🌊 С волнами</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Что ты возьмёшь с собой?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="red">🤿 Маску и трубку</button>
+                    <button class="answer-btn" data-value="baltic">🧥 Тёплую кофту</button>
+                    <button class="answer-btn" data-value="japanese">📷 Камеру</button>
+                    <button class="answer-btn" data-value="coral">🧴 Крем от загара</button>
+                    <button class="answer-btn" data-value="adriatic">🍾 Бутылку вина</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🌊 Твоё море:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const seaResults = {
+            mediterranean: {
+                title: "🍋 Средиземное море",
+                desc: "Ты — Средиземное море! Тёплое, гостеприимное и солнечное. Ты любишь вкусную еду, отдых и компанию. Ты — курорт для души, где каждый чувствует себя как дома. С тобой легко и приятно!",
+                emoji: "🌊",
+                color: "#3498DB"
+            },
+            caribbean: {
+                title: "🏝️ Карибское море",
+                desc: "Ты — Карибское море! Яркое, весёлое и беззаботное. Ты любишь праздники, пиратов и пальмы. Ты — вечное лето, где хочется танцевать и наслаждаться жизнью!",
+                emoji: "🌴",
+                color: "#1ABC9C"
+            },
+            north: {
+                title: "⛰️ Северное море",
+                desc: "Ты — Северное море! Спокойный, суровый и загадочный. Ты не любишь суету, ценишь тишину и силу стихии. Ты — надёжный и глубокий, как северные фьорды!",
+                emoji: "❄️",
+                color: "#2C3E50"
+            },
+            dead: {
+                title: "🧂 Мёртвое море",
+                desc: "Ты — Мёртвое море! Загадочный, уникальный и целебный. Ты не похож на других, у тебя особые свойства. Ты помогаешь другим, но сам остаёшься загадкой. Ты — лекарь душ!",
+                emoji: "☠️",
+                color: "#8E44AD"
+            },
+            black: {
+                title: "⚡ Чёрное море",
+                desc: "Ты — Чёрное море! Непредсказуемый, страстный и родной. Ты можешь быть спокойным, а можешь бушевать. Ты любишь приключения и не боишься штормов. Ты — наша стихия!",
+                emoji: "🌊",
+                color: "#2C3E50"
+            },
+            red: {
+                title: "🐟 Красное море",
+                desc: "Ты — Красное море! Яркий, красочный и полный жизни. Ты любишь активный отдых, дайвинг и всё необычное. Ты — как коралловый риф: красивый, сложный и уникальный!",
+                emoji: "🐠",
+                color: "#E67E22"
+            },
+            baltic: {
+                title: "🌲 Балтийское море",
+                desc: "Ты — Балтийское море! Спокойный, задумчивый и немного меланхоличный. Ты любишь янтарь, сосны и тихие закаты. Ты — уют и умиротворение, как вечер на берегу!",
+                emoji: "💧",
+                color: "#7F8C8D"
+            },
+            japanese: {
+                title: "🎎 Японское море",
+                desc: "Ты — Японское море! Культурный, сдержанный и загадочный. Ты любишь порядок, традиции и красоту во всём. Ты — как японский сад: гармония и совершенство!",
+                emoji: "🗾",
+                color: "#D35400"
+            },
+            coral: {
+                title: "🐚 Коралловое море",
+                desc: "Ты — Коралловое море! Нежный, ранимый и прекрасный. Ты создаёшь вокруг себя красоту и уют. Ты — как кораллы: хрупкий, но бесценный. Береги себя!",
+                emoji: "🐚",
+                color: "#F06292"
+            },
+            adriatic: {
+                title: "⛵ Адриатическое море",
+                desc: "Ты — Адриатическое море! Романтичный, вдохновляющий и аристократичный. Ты любишь путешествия, красивые виды и хорошую компанию. Ты — как Венеция: вечный праздник!",
+                emoji: "🍷",
+                color: "#2980B9"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, seaResults, backgroundColors, 'sea');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты танец?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>💃 Какой ты танец?</h1>
+            <p class="subtitle">Узнай какой танец отражает твой ритм жизни!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какой у тебя темп жизни?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="waltz">🎵 Плавный и размеренный</button>
+                    <button class="answer-btn" data-value="hiphop">⚡ Быстрый и энергичный</button>
+                    <button class="answer-btn" data-value="tango">🔥 Страстный и импульсивный</button>
+                    <button class="answer-btn" data-value="breakdance">🌀 Ломаный и непредсказуемый</button>
+                    <button class="answer-btn" data-value="salsa">🌴 Лёгкий и весёлый</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Как ты отдыхаешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ballet">🩰 В тишине и покое</button>
+                    <button class="answer-btn" data-value="rocknroll">🎸 Под рок-музыку</button>
+                    <button class="answer-btn" data-value="folk">🌾 На природе</button>
+                    <button class="answer-btn" data-value="disco">🎶 В клубе с друзьями</button>
+                    <button class="answer-btn" data-value="latin">🌺 Танцуя дома</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Что для тебя главное в танце?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="waltz">💫 Грация и красота</button>
+                    <button class="answer-btn" data-value="hiphop">🤸 Свобода и драйв</button>
+                    <button class="answer-btn" data-value="tango">❤️ Страсть и эмоции</button>
+                    <button class="answer-btn" data-value="breakdance">🌀 Трюки и техника</button>
+                    <button class="answer-btn" data-value="salsa">🎉 Веселье и общение</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Твой идеальный наряд?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ballet">🩰 Пачка и пуанты</button>
+                    <button class="answer-btn" data-value="rocknroll">👕 Джинсы и косуха</button>
+                    <button class="answer-btn" data-value="folk">👗 Народный костюм</button>
+                    <button class="answer-btn" data-value="disco">🌟 Яркое и блестящее</button>
+                    <button class="answer-btn" data-value="latin">🌺 Платье в пол</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Какую музыку включишь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="waltz">🎻 Классику</button>
+                    <button class="answer-btn" data-value="hiphop">🎤 Хип-хоп</button>
+                    <button class="answer-btn" data-value="tango">🎸 Аргентинское танго</button>
+                    <button class="answer-btn" data-value="breakdance">🎧 Электронику</button>
+                    <button class="answer-btn" data-value="salsa">🥁 Латинские ритмы</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Твой характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ballet">🤫 Сдержанный и изящный</button>
+                    <button class="answer-btn" data-value="rocknroll">😜 Заводной и дерзкий</button>
+                    <button class="answer-btn" data-value="folk">🌾 Простой и душевный</button>
+                    <button class="answer-btn" data-value="disco">✨ Общительный и яркий</button>
+                    <button class="answer-btn" data-value="latin">💃 Эмоциональный и горячий</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Где ты любишь танцевать?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="waltz">🏛️ На балу</button>
+                    <button class="answer-btn" data-value="hiphop">🏙️ На улице/в клубе</button>
+                    <button class="answer-btn" data-value="tango">🌃 В ресторане</button>
+                    <button class="answer-btn" data-value="breakdance">🤸 На площадке</button>
+                    <button class="answer-btn" data-value="salsa">🏖️ На пляже</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Что ты ценишь в партнёре?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ballet">🤝 Поддержку и лёгкость</button>
+                    <button class="answer-btn" data-value="rocknroll">⚡ Энергию</button>
+                    <button class="answer-btn" data-value="folk">💞 Теплоту</button>
+                    <button class="answer-btn" data-value="disco">🎉 Зажигательность</button>
+                    <button class="answer-btn" data-value="latin">🔥 Страсть</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Как ты двигаешься?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="waltz">✨ Плавно и кружась</button>
+                    <button class="answer-btn" data-value="hiphop">🤘 Резко и ритмично</button>
+                    <button class="answer-btn" data-value="tango">👠 Чётко и страстно</button>
+                    <button class="answer-btn" data-value="breakdance">🌀 Ломано и технично</button>
+                    <button class="answer-btn" data-value="salsa">💃 Весело и свободно</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Твой любимый фильм?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ballet">🩰 "Чёрный лебедь"</button>
+                    <button class="answer-btn" data-value="rocknroll">🎸 "Грязные танцы"</button>
+                    <button class="answer-btn" data-value="folk">🌾 "Кавказская пленница"</button>
+                    <button class="answer-btn" data-value="disco">🌆 "Лихорадка субботнего вечера"</button>
+                    <button class="answer-btn" data-value="latin">🌺 "Давайте потанцуем"</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>💃 Твой танец:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const danceResults = {
+            waltz: {
+                title: "💫 Вальс",
+                desc: "Ты — вальс! Ты элегантный, грациозный и утончённый. Ты любишь порядок и красоту во всём. С тобой приятно быть рядом, ты создаёшь атмосферу праздника и лёгкости. Ты — танец любви и романтики!",
+                emoji: "🩰",
+                color: "#E6A8D7"
+            },
+            hiphop: {
+                title: "🎤 Хип-хоп",
+                desc: "Ты — хип-хоп! Ты энергичный, свободный и дерзкий. Ты не признаёшь рамок, ты идёшь против системы и живёшь в своём ритме. Ты уличный философ и душа компании. Твой девиз: «Будь собой!»",
+                emoji: "🤸",
+                color: "#5D3A9B"
+            },
+            tango: {
+                title: "🔥 Танго",
+                desc: "Ты — танго! Страстный, импульсивный и загадочный. Ты живёшь эмоциями, любишь риск и адреналин. Ты притягиваешь взгляды и не терпишь равнодушия. С тобой либо жарко, либо никак!",
+                emoji: "💃",
+                color: "#B22222"
+            },
+            breakdance: {
+                title: "🌀 Брейк-данс",
+                desc: "Ты — брейк-данс! Ты непредсказуемый, техничный и крутой. Ты умеешь делать невозможное и всегда удивляешь. Ты не боишься трудностей, ты их танцуешь! Ты — уличный акробат и чемпион по жизни!",
+                emoji: "🤸",
+                color: "#2C3E50"
+            },
+            salsa: {
+                title: "🌴 Сальса",
+                desc: "Ты — сальса! Ты лёгкий, весёлый и общительный. Ты любишь солнце, море и хорошую компанию. Ты зажигаешь вокруг себя, с тобой хочется двигаться и радоваться жизни. Ты — вечный праздник!",
+                emoji: "🌺",
+                color: "#E67E22"
+            },
+            ballet: {
+                title: "🩰 Балет",
+                desc: "Ты — балет! Ты изящный, дисциплинированный и возвышенный. Ты стремишься к совершенству, даже если это требует жертв. Ты умеешь парить над суетой и оставаться прекрасным в любой ситуации!",
+                emoji: "✨",
+                color: "#F4A460"
+            },
+            rocknroll: {
+                title: "🎸 Рок-н-ролл",
+                desc: "Ты — рок-н-ролл! Ты заводной, дерзкий и свободный. Ты любишь драйв, гитары и старую школу. Ты не представляешь жизни без движения и хорошей музыки. С тобой хочется отжигать!",
+                emoji: "🤘",
+                color: "#8B4513"
+            },
+            folk: {
+                title: "🌾 Народный танец",
+                desc: "Ты — народный танец! Ты простой, душевный и настоящий. Ты ценишь традиции, корни и тепло человеческого общения. С тобой уютно, как в деревне у бабушки. Ты — хранитель культуры!",
+                emoji: "🌻",
+                color: "#3D9970"
+            },
+            disco: {
+                title: "🎶 Диско",
+                desc: "Ты — диско! Ты яркий, блестящий и общительный. Ты любишь тусовки, друзей и хорошее настроение. Ты зажигаешь там, где появляешься. Твой девиз: «Танцуй, пока молодой!»",
+                emoji: "✨",
+                color: "#FF69B4"
+            },
+            latin: {
+                title: "🌺 Латина",
+                desc: "Ты — латина! Ты горячий, эмоциональный и страстный. Ты любишь жизнь во всех её проявлениях. Твоя энергия заражает, а улыбка согревает. С тобой хочется танцевать до утра!",
+                emoji: "💃",
+                color: "#DC143C"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, danceResults, backgroundColors, 'dance');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

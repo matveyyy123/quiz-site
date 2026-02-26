@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты бургер?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🍔 Какой ты бургер?</h1>
+            <p class="subtitle">Узнай какой бургер отражает твою начинку!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какой ты в компании?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="classic">😎 Классический и надёжный</button>
+                    <button class="answer-btn" data-value="cheese">🧀 Мягкий и дружелюбный</button>
+                    <button class="answer-btn" data-value="double">💪 Мощный и основательный</button>
+                    <button class="answer-btn" data-value="spicy">🔥 Острый на язык</button>
+                    <button class="answer-btn" data-value="veggie">🌱 Спокойный и лёгкий</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что ты заказываешь в кафе?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="bbq">🍖 Что-то с мясом</button>
+                    <button class="answer-btn" data-value="chicken">🍗 Курицу</button>
+                    <button class="answer-btn" data-value="fish">🐟 Рыбу</button>
+                    <button class="answer-btn" data-value="mushroom">🍄 С грибами</button>
+                    <button class="answer-btn" data-value="egg">🥚 С яйцом</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Твой любимый соус?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="classic">🍅 Кетчуп</button>
+                    <button class="answer-btn" data-value="cheese">🧀 Сырный</button>
+                    <button class="answer-btn" data-value="double">🥫 Майонез</button>
+                    <button class="answer-btn" data-value="spicy">🌶️ Острый</button>
+                    <button class="answer-btn" data-value="veggie">🌿 Чесночный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Что важнее в бургере?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="bbq">🥩 Мясо</button>
+                    <button class="answer-btn" data-value="chicken">🍞 Булочка</button>
+                    <button class="answer-btn" data-value="fish">🥬 Овощи</button>
+                    <button class="answer-btn" data-value="mushroom">🧀 Сыр</button>
+                    <button class="answer-btn" data-value="egg">🥚 Соус</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Какую булочку выберешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="classic">🍔 Классическую с кунжутом</button>
+                    <button class="answer-btn" data-value="cheese">🥐 Бриошь</button>
+                    <button class="answer-btn" data-value="double">🍞 Чёрную</button>
+                    <button class="answer-btn" data-value="spicy">🌶️ С перцем</button>
+                    <button class="answer-btn" data-value="veggie">🌾 Цельнозерновую</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Что возьмёшь в добавку?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="bbq">🍟 Картошку фри</button>
+                    <button class="answer-btn" data-value="chicken">🧅 Луковые кольца</button>
+                    <button class="answer-btn" data-value="fish">🥗 Салат</button>
+                    <button class="answer-btn" data-value="mushroom">🧀 Наггетсы</button>
+                    <button class="answer-btn" data-value="egg">🌽 Кукурузу</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Какой напиток выберешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="classic">🥤 Колу</button>
+                    <button class="answer-btn" data-value="cheese">🧃 Сок</button>
+                    <button class="answer-btn" data-value="double">☕ Кофе</button>
+                    <button class="answer-btn" data-value="spicy">🍋 Лимонад</button>
+                    <button class="answer-btn" data-value="veggie">💧 Воду</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Где ты любишь есть бургеры?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="bbq">🏠 Дома</button>
+                    <button class="answer-btn" data-value="chicken">🍽️ В ресторане</button>
+                    <button class="answer-btn" data-value="fish">🌳 На природе</button>
+                    <button class="answer-btn" data-value="mushroom">🚗 В машине</button>
+                    <button class="answer-btn" data-value="egg">🏃 На ходу</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Какой у тебя характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="classic">⚖️ Уравновешенный</button>
+                    <button class="answer-btn" data-value="cheese">🤗 Дружелюбный</button>
+                    <button class="answer-btn" data-value="double">💪 Напористый</button>
+                    <button class="answer-btn" data-value="spicy">😜 Задорный</button>
+                    <button class="answer-btn" data-value="veggie">😌 Спокойный</button>
+                </div>
+            </div>
+
+<!-- Вопрос 10 (вторые 5) -->
+<div class="question-card" id="question10">
+    <br>
+    <h2 class="question-title">Твой любимый фастфуд?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 10/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="bbq">🍔 Бургерные</button>
+        <button class="answer-btn" data-value="chicken">🍗 KFC</button>
+        <button class="answer-btn" data-value="fish">🍟 Макдональдс</button>
+        <button class="answer-btn" data-value="mushroom">🌭 Хот-доги</button>
+        <button class="answer-btn" data-value="egg">🥟 Чебуречные</button>
+    </div>
+</div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🍔 Твой бургер:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const burgerResults = {
+            classic: {
+                title: "🍔 Классический бургер",
+                desc: "Ты — классика! Надёжный, простой и всегда в теме. Ты не гонишься за модой, у тебя есть вкус. С тобой уютно и понятно. Ты — тот самый бургер, который любят все!",
+                emoji: "🍅",
+                color: "#8B4513"
+            },
+            cheese: {
+                title: "🧀 Чизбургер",
+                desc: "Ты — чизбургер! Мягкий, нежный и с изюминкой. Ты любишь, чтобы всё было с душой. С тобой тепло и уютно, как с плавленым сырком. Ты тот, кого хочется обнять!",
+                emoji: "🧀",
+                color: "#F4A460"
+            },
+            double: {
+                title: "💪 Дабл-бургер",
+                desc: "Ты — двойной бургер! Мощный, основательный и солидный. Ты не любишь полумер, берёшь всё по максимуму. С тобой не соскучишься — ты всегда знаешь, чего хочешь!",
+                emoji: "🥩",
+                color: "#5D3A1A"
+            },
+            spicy: {
+                title: "🌶️ Острый бургер",
+                desc: "Ты — острый бургер! Яркий, дерзкий и с перчинкой. Ты не дашь заскучать, у тебя всегда есть своё мнение. С тобой весело, но осторожно — можно обжечься!",
+                emoji: "🔥",
+                color: "#B22222"
+            },
+            veggie: {
+                title: "🌱 Вегетарианский",
+                desc: "Ты — лёгкий и свежий! Ты заботишься о себе и окружающих, любишь природу и гармонию. С тобой спокойно и приятно. Ты — тот, кто делает мир лучше!",
+                emoji: "🥬",
+                color: "#2E8B57"
+            },
+            bbq: {
+                title: "🍖 BBQ-бургер",
+                desc: "Ты — BBQ-бургер! Любишь всё с дымком, основательное и сочное. Ты ценишь мужскую еду и уютные посиделки. С тобой хочется есть руками и не париться!",
+                emoji: "🔥",
+                color: "#8B0000"
+            },
+            chicken: {
+                title: "🍗 Чикен-бургер",
+                desc: "Ты — куриный бургер! Нежный, диетический, но при этом сытный. Ты следишь за фигурой, но не отказываешь себе в удовольствиях. Ты — золотая середина!",
+                emoji: "🐔",
+                color: "#DEB887"
+            },
+            fish: {
+                title: "🐟 Фиш-бургер",
+                desc: "Ты — рыбный бургер! Необычный, интересный и с характером. Ты не боишься быть другим, у тебя свой путь. Ты тот, кто удивляет!",
+                emoji: "🐟",
+                color: "#4682B4"
+            },
+            mushroom: {
+                title: "🍄 Грибной бургер",
+                desc: "Ты — с грибами! Загадочный, лесной и уютный. Ты любишь природу и всё натуральное. С тобой интересно и по-домашнему тепло!",
+                emoji: "🍄",
+                color: "#8B7355"
+            },
+            egg: {
+                title: "🥚 Бургер с яйцом",
+                desc: "Ты — с яйцом! Непредсказуемый, яркий и сытный. Ты любишь, когда всё течёт и не хочешь скучной жизни. С тобой каждый день как новое блюдо!",
+                emoji: "🍳",
+                color: "#FFD700"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, burgerResults, backgroundColors, 'burger');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

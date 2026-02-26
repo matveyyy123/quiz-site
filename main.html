@@ -21,7 +21,7 @@
     <!-- Статистика сайта -->
     <div class="stats-container">
         <div class="stats-row">
-            <span class="stats-item">📊 Всего тестов: <span id="total-tests">25</span></span>
+            <span class="stats-item">📊 Всего тестов: <span id="total-tests">33</span></span>
             <span class="stats-separator">|</span>
             <span class="stats-item">👥 Всего прохождений: <span id="total-played">0</span></span>
         </div>
@@ -46,8 +46,7 @@
         <button class="category-btn" data-category="animals">🐾 Животные</button>
         <button class="category-btn" data-category="music">🎨 Творчество</button>
         <button class="category-btn" data-category="travel">✈️ Путешествия</button>
-        <button class="category-btn" data-category="holiday">🎉 Праздники</button>
-        <button class="category-btn" data-category="fantasy">🌌 Фэнтези</button>
+        <button class="category-btn" data-category="holiday">🎉 Праздники</button> 
         <button class="category-btn" data-category="sins">😈 Грехи</button>
         <button class="category-btn" data-category="games">🤖 Технологии</button>
         <button class="category-btn" data-category="nature">🌿 Природа</button>
@@ -229,6 +228,62 @@
     <div class="test-desc">Узнай как работает твой мозг</div>
 </div>
 
+<!-- Тест 26: Бургер -->
+<div class="test-card burger" onclick="location.href='burger-test.html'">
+    <div class="test-emoji">🍔</div>
+    <div class="test-title">Какой ты бургер?</div>
+    <div class="test-desc">Узнай свою начинку</div>
+</div>
+
+<!-- Тест 27: Птица -->
+<div class="test-card bird" onclick="location.href='bird-test.html'">
+    <div class="test-emoji">🦅</div>
+    <div class="test-title">Какая ты птица?</div>
+    <div class="test-desc">Узнай свою птичку</div>
+</div>
+
+<!-- Тест 28: Художник -->
+<div class="test-card artist" onclick="location.href='artist-test.html'">
+    <div class="test-emoji">🎨</div>
+    <div class="test-title">Какой ты художник?</div>
+    <div class="test-desc">Найди свой стиль</div>
+</div>
+
+<!-- Тест 29: Танец -->
+<div class="test-card dance" onclick="location.href='dance-test.html'">
+    <div class="test-emoji">💃</div>
+    <div class="test-title">Какой ты танец?</div>
+    <div class="test-desc">Узнай свой ритм</div>
+</div>
+
+<!-- Тест 30: Инструмент -->
+<div class="test-card instrument" onclick="location.href='instrument-test.html'">
+    <div class="test-emoji">🎸</div>
+    <div class="test-title">Какой ты инструмент?</div>
+    <div class="test-desc">Найди свой звук</div>
+</div>
+
+<!-- Тест 31: Жанр книги -->
+<div class="test-card bookgenre" onclick="location.href='book-genre-test.html'">
+    <div class="test-emoji">📖</div>
+    <div class="test-title">Какой ты жанр книги?</div>
+    <div class="test-desc">Какая история написана про тебя</div>
+</div>
+
+<!-- Тест 32: Город -->
+<div class="test-card city" onclick="location.href='city-test.html'">
+    <div class="test-emoji">🏙️</div>
+    <div class="test-title">Какой ты город?</div>
+    <div class="test-desc">Найди свой мегаполис</div>
+</div>
+
+<!-- Тест 33: Море -->
+<div class="test-card sea" onclick="location.href='sea-test.html'">
+    <div class="test-emoji">🌊</div>
+    <div class="test-title">Какое ты море?</div>
+    <div class="test-desc">Найди свою любимую лужу</div>
+</div>
+
 </div>
 
             <!-- СВЯЗЬ С НАМИ -->
@@ -271,7 +326,15 @@ function updateTestCounters() {
         schoolsubject: { selector: '.test-card.schoolsubject', name: 'Предмет' },
         student: { selector: '.test-card.student', name: 'Студент' },
         rich: { selector: '.test-card.rich', name: 'Богатство' },
-        thinking: { selector: '.test-card.thinking', name: 'Тип мышления' }
+        thinking: { selector: '.test-card.thinking', name: 'Тип мышления' },
+        burger: { selector: '.test-card.burger', name: 'Бургер' },
+        bird: { selector: '.test-card.bird', name: 'Птица' },
+        artist: { selector: '.test-card.artist', name: 'Художник' },
+        dance: { selector: '.test-card.dance', name: 'Танец' },
+        instrument: { selector: '.test-card.instrument', name: 'Инструмент' },
+        bookgenre: { selector: '.test-card.bookgenre', name: 'Жанр книги' },
+        city: { selector: '.test-card.city', name: 'Город' },
+        sea: { selector: '.test-card.sea', name: 'Море' }
     };
     
     // Находим самый популярный тест (первый по порядку при одинаковых значениях)
@@ -572,6 +635,7 @@ const testCategories = {
     // 🍕 ЕДА (food)
     'drink': 'food',        // Какой ты напиток?
     'pizza': 'food',        // Какая ты пицца?
+    'burger': 'food', 
     
     // 🎭 ПЕРСОНАЖИ (characters)
     'hero': 'characters',           // Какой ты супергерой?
@@ -581,13 +645,21 @@ const testCategories = {
     // 🐾 ЖИВОТНЫЕ (animals)
     'animal': 'animals',        // Какое ты животное?
     'dinosaurs': 'animals',     // Какой ты динозавр?
+    'bird': 'animals',
     
     // 🎨 ТВОРЧЕСТВО (music)
     'music': 'music',           // Какой ты жанр музыки?
     'genre': 'music',         // Какой ты жанр кино?
+    'artist': 'music',
+    'dance': 'music',
+    'instrument': 'music',
+    'bookgenre': 'music',
     
     // ✈️ ПУТЕШЕСТВИЯ (travel)
     'travel': 'travel',         // Куда поехать в отпуск?
+    'city': 'travel',
+    'sea': 'travel',
+    'planet': 'travel',        // Какая ты планета?
     
     // 💼 ПРОФЕССИИ (professions)
     'job': 'professions',       // Какая ты профессия?
@@ -595,9 +667,6 @@ const testCategories = {
     'student': 'professions',
     'rich': 'professions',
     'thinking': 'professions',
-    
-    // 🌌 ФЭНТЕЗИ (fantasy)
-    'planet': 'fantasy',        // Какая ты планета?
     
     // 😈 ГРЕХИ И СТРАХИ (sins)
     'sin': 'sins',              // Какой ты грех?
@@ -688,5 +757,47 @@ const testCategories = {
     filterTests('all');
 });
 </script>
+
+<!-- <div class="single-flower" style="top: 8%; left: 16%; font-size: 250px;" data-rotate="-30">🌸</div>
+<div class="single-flower" style="top: 40%; left: 19%; font-size: 200px;" data-rotate="-60">🌸</div>
+<div class="single-flower" style="top: 25%; left: 6%; font-size: 150px;" data-rotate="-90">🌸</div>
+<div class="single-flower" style="top: 60%; left: 8%; font-size: 300px;" data-rotate="-120">🌸</div>
+
+<div class="single-flower" style="top: 8%; right: 16%; font-size: 250px;" data-rotate="-30">🌸</div>
+<div class="single-flower" style="top: 40%; right: 19%; font-size: 200px;" data-rotate="-60">🌸</div>
+<div class="single-flower" style="top: 25%; right: 6%; font-size: 150px;" data-rotate="-90">🌸</div>
+<div class="single-flower" style="top: 60%; right: 8%; font-size: 300px;" data-rotate="-120">🌸</div>
+
+
+<style>
+.single-flower {
+    position: fixed;
+    font-size: 250px;
+    opacity: 1;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+    filter: drop-shadow(0 0 20px rgba(255, 150, 200, 0.5));
+    transform-origin: 50% 57%;
+}
+
+body.dark-theme .single-flower {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 20px rgba(255, 150, 200, 0.5));
+}
+</style>
+
+<script>
+window.addEventListener('scroll', function() {
+    const flowers = document.querySelectorAll('.single-flower');
+    const scrollY = window.scrollY;
+    
+    flowers.forEach((flower) => {
+        const baseRotate = parseFloat(flower.dataset.rotate) || 0;
+        flower.style.transform = `rotate(${baseRotate - scrollY * 0.1}deg)`;
+    });
+});
+</script> -->
+
 </body>
 </html>

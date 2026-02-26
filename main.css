@@ -689,6 +689,54 @@ body.dark-theme .categories-wrapper {
     border: 2px solid #8a6de9;
 }
 
+/* КАРТОЧКА 26: Бургер */
+.test-card.burger {
+    background: linear-gradient(135deg, #f5deb3, #ffffff);
+    border: 2px solid #cd853f;
+}
+
+/* КАРТОЧКА 27: Птица */
+.test-card.bird {
+    background: linear-gradient(135deg, #c2e0f0, #ffffff);
+    border: 2px solid #5d9bb3;
+}
+
+/* КАРТОЧКА 28: Художник */
+.test-card.artist {
+    background: linear-gradient(135deg, #ffdab9, #ffffff);
+    border: 2px solid #d4a373;
+}
+
+/* КАРТОЧКА 29: Танец */
+.test-card.dance {
+    background: linear-gradient(135deg, #ffd2d9, #ffffff);
+    border: 2px solid #d46b8b;
+}
+
+/* КАРТОЧКА 30: Инструмент */
+.test-card.instrument {
+    background: linear-gradient(135deg, #e6d5b8, #ffffff);
+    border: 2px solid #b88a3d;
+}
+
+/* КАРТОЧКА 31: Жанр книги */
+.test-card.bookgenre {
+    background: linear-gradient(135deg, #d3dcf5, #ffffff);
+    border: 2px solid #6d76b6;
+}
+
+/* КАРТОЧКА 32: Город */
+.test-card.city {
+    background: linear-gradient(135deg, #c0c0c0, #ffffff);
+    border: 2px solid #6d6d6d;
+}
+
+/* КАРТОЧКА 33: Море */
+.test-card.sea {
+    background: linear-gradient(135deg, #a7c7e7, #ffffff);
+    border: 2px solid #2e558b;
+}
+
 /* ========== СЕКЦИЯ СВЯЗИ ========== */
 .contact-section {
     text-align: center;

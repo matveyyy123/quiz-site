@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какая ты птица?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🦅 Какая ты птица?</h1>
+            <p class="subtitle">Узнай какая птица живёт у тебя в душе!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Как ты просыпаешься утром?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="eagle">🦅 Сразу бодрый и готов к полёту</button>
+                    <button class="answer-btn" data-value="owl">🦉 Только вечером просыпаюсь</button>
+                    <button class="answer-btn" data-value="sparrow">🐦 С чириканьем и суетой</button>
+                    <button class="answer-btn" data-value="peacock">🦚 Долго прихорашиваюсь</button>
+                    <button class="answer-btn" data-value="penguin">🐧 С трудом, но встаю</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Где ты любишь отдыхать?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="flamingo">🏖️ На море/курорте</button>
+                    <button class="answer-btn" data-value="crow">🏙️ В городе</button>
+                    <button class="answer-btn" data-value="swan">🌿 На тихом озере</button>
+                    <button class="answer-btn" data-value="woodpecker">🌳 В лесу</button>
+                    <button class="answer-btn" data-value="pigeon">🏛️ В парке/на площади</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Какой у тебя характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="eagle">👑 Гордый и независимый</button>
+                    <button class="answer-btn" data-value="owl">📚 Мудрый и спокойный</button>
+                    <button class="answer-btn" data-value="sparrow">🤹 Весёлый и суетливый</button>
+                    <button class="answer-btn" data-value="peacock">✨ Яркий и артистичный</button>
+                    <button class="answer-btn" data-value="penguin">🤵 Солидный и важный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Что ты ешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="flamingo">🦐 Креветки/морепродукты</button>
+                    <button class="answer-btn" data-value="crow">🍔 Всё подряд</button>
+                    <button class="answer-btn" data-value="swan">🌱 Растительную пищу</button>
+                    <button class="answer-btn" data-value="woodpecker">🐛 Жучков (мясо)</button>
+                    <button class="answer-btn" data-value="pigeon">🍞 Хлебушек</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Как ты общаешься с людьми?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="eagle">🗣️ Держу дистанцию</button>
+                    <button class="answer-btn" data-value="owl">🤫 Мало, но по делу</button>
+                    <button class="answer-btn" data-value="sparrow">🔊 Громко и много</button>
+                    <button class="answer-btn" data-value="peacock">💃 Люблю быть в центре</button>
+                    <button class="answer-btn" data-value="penguin">👥 В коллективе</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Что ты коллекционируешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="flamingo">🎀 Красивые вещи</button>
+                    <button class="answer-btn" data-value="crow">✨ Блестящее</button>
+                    <button class="answer-btn" data-value="swan">📸 Воспоминания</button>
+                    <button class="answer-btn" data-value="woodpecker">🔨 Инструменты</button>
+                    <button class="answer-btn" data-value="pigeon">🗳️ Всякую мелочь</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Твой стиль одежды?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="eagle">👔 Деловой/классика</button>
+                    <button class="answer-btn" data-value="owl">🧥 Удобный и тёплый</button>
+                    <button class="answer-btn" data-value="sparrow">👕 Повседневный</button>
+                    <button class="answer-btn" data-value="peacock">👗 Яркий и модный</button>
+                    <button class="answer-btn" data-value="penguin">🎩 Строгий/чёрно-белый</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Твоё любимое время года?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="flamingo">☀️ Лето</button>
+                    <button class="answer-btn" data-value="crow">🍂 Осень</button>
+                    <button class="answer-btn" data-value="swan">🌸 Весна</button>
+                    <button class="answer-btn" data-value="woodpecker">❄️ Зима</button>
+                    <button class="answer-btn" data-value="pigeon">🌤️ Любое</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Как ты реагируешь на опасность?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="eagle">🛡️ Защищаюсь</button>
+                    <button class="answer-btn" data-value="owl">🦉 Наблюдаю со стороны</button>
+                    <button class="answer-btn" data-value="sparrow">💨 Улетаю</button>
+                    <button class="answer-btn" data-value="peacock">🦚 Не обращаю внимания</button>
+                    <button class="answer-btn" data-value="penguin">👥 Вместе со всеми</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Какую музыку любишь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="flamingo">🎧 Попсу/танцевальную</button>
+                    <button class="answer-btn" data-value="crow">🎸 Рок</button>
+                    <button class="answer-btn" data-value="swan">🎻 Классику</button>
+                    <button class="answer-btn" data-value="woodpecker">🔨 Инструментальную</button>
+                    <button class="answer-btn" data-value="pigeon">📻 Всё подряд</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🦉 Твоя птица:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const birdResults = {
+            eagle: {
+                title: "🦅 Орёл",
+                desc: "Ты — орёл! Гордый, сильный и независимый. Ты паришь высоко над суетой, видишь всё сверху и знаешь, чего хочешь. Ты лидер по натуре, не терпишь конкуренции и всегда добиваешься своего!",
+                emoji: "🦅",
+                color: "#4A3B2A"
+            },
+            owl: {
+                title: "🦉 Сова",
+                desc: "Ты — сова! Мудрая, спокойная и наблюдательная. Ты любишь ночь и тишину, не терпишь суеты. К тебе приходят за советом, потому что ты умеешь слушать и видишь суть вещей. Твоя мудрость — твоя сила!",
+                emoji: "🦉",
+                color: "#5D4A36"
+            },
+            sparrow: {
+                title: "🐦 Воробей",
+                desc: "Ты — воробей! Маленький, но шустрый. Ты везде успеваешь, всё знаешь, со всеми дружишь. Ты не любишь одиночество, всегда в движении и в курсе всех новостей. Ты — душа компании и мастер выживания!",
+                emoji: "🐦",
+                color: "#8B7355"
+            },
+            peacock: {
+                title: "🦚 Павлин",
+                desc: "Ты — павлин! Яркий, красивый и обаятельный. Ты любишь быть в центре внимания, умеешь себя подать и обожаешь комплименты. Твоя внешность — твоё оружие, а харизма открывает любые двери!",
+                emoji: "🦚",
+                color: "#4A6B8A"
+            },
+            penguin: {
+                title: "🐧 Пингвин",
+                desc: "Ты — пингвин! Солидный, важный и семейный. Ты любишь порядок, коллектив и заботу о близких. Ты не боишься трудностей, всегда в смокинге и готов поддержать в трудную минуту. С тобой надёжно!",
+                emoji: "🐧",
+                color: "#2C3E50"
+            },
+            flamingo: {
+                title: "🦩 Фламинго",
+                desc: "Ты — фламинго! Нежный, романтичный и мечтательный. Ты любишь красивое, стремишься к гармонии и ценишь эстетику. Ты — тот, кто ищет свой райский уголок и умеет наслаждаться жизнью!",
+                emoji: "🦩",
+                color: "#E6A8D7"
+            },
+            crow: {
+                title: "🦇 Ворона",
+                desc: "Ты — ворона! Умная, хитрая и изобретательная. Ты всегда найдёшь выход из любой ситуации, даже если для этого придётся немного схитрить. Ты коллекционируешь знания и блестящие идеи!",
+                emoji: "🦇",
+                color: "#2C2C2C"
+            },
+            swan: {
+                title: "🦢 Лебедь",
+                desc: "Ты — лебедь! Верный, грациозный и преданный. Ты ищешь свою вторую половинку на всю жизнь, ценишь красоту и гармонию. Ты спокоен снаружи, но глубок внутри. Твоя верность — легендарна!",
+                emoji: "🦢",
+                color: "#E0E0E0"
+            },
+            woodpecker: {
+                title: "🌳 Дятел",
+                desc: "Ты — дятел! Настойчивый, трудолюбивый и целеустремлённый. Ты долбишь одну тему, пока не добьёшься результата. Ты мастер своего дела, упорный и выносливый. Твой девиз: «Всё приходит к тому, кто стучит!»",
+                emoji: "🌳",
+                color: "#8B4513"
+            },
+            pigeon: {
+                title: "🕊️ Голубь",
+                desc: "Ты — голубь! Мирный, дружелюбный и вездесущий. Ты любишь людей, парки и спокойную жизнь. Ты не конфликтуешь, живёшь в своём ритме и радуешься мелочам. Ты — символ мира и добра!",
+                emoji: "🕊️",
+                color: "#A9A9A9"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, birdResults, backgroundColors, 'bird');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты художник?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🎨 Какой ты художник?</h1>
+            <p class="subtitle">Узнай какой твой стиль живописи!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какие твои любимые цвета?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="impressionist">🌈 Яркие, солнечные</button>
+                    <button class="answer-btn" data-value="realist">🌲 Натуральные, природные</button>
+                    <button class="answer-btn" data-value="abstract">🌀 Непредсказуемые</button>
+                    <button class="answer-btn" data-value="graffiti">🔥 Кричащие, неоновые</button>
+                    <button class="answer-btn" data-value="classic">🏛️ Спокойные, тёплые</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что ты рисуешь в первым?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="portrait">👤 Людей/портреты</button>
+                    <button class="answer-btn" data-value="landscape">🏞️ Природу/пейзажи</button>
+                    <button class="answer-btn" data-value="stilllife">🍎 Натюрморты</button>
+                    <button class="answer-btn" data-value="fantasy">🐉 Фэнтези/выдуманное</button>
+                    <button class="answer-btn" data-value="abstractart">🌀 Абстракцию</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Какой инструмент ты выберешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="impressionist">🖌️ Кисти и краски</button>
+                    <button class="answer-btn" data-value="realist">✏️ Карандаш/уголь</button>
+                    <button class="answer-btn" data-value="abstract">🧴 Мазки и брызги</button>
+                    <button class="answer-btn" data-value="graffiti">🎨 Баллончик с краской</button>
+                    <button class="answer-btn" data-value="classic">🖼️ Масло/холст</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Что тебя вдохновляет?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="portrait">👀 Люди и эмоции</button>
+                    <button class="answer-btn" data-value="landscape">🌅 Закаты и рассветы</button>
+                    <button class="answer-btn" data-value="stilllife">🍊 Простые вещи</button>
+                    <button class="answer-btn" data-value="fantasy">📚 Книги и фильмы</button>
+                    <button class="answer-btn" data-value="abstractart">🌌 Сны и чувства</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Где бы выставил свою картину?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="impressionist">🏛️ В Лувре/музее</button>
+                    <button class="answer-btn" data-value="realist">🏠 В уютной галерее</button>
+                    <button class="answer-btn" data-value="abstract">🖼️ В современном центре</button>
+                    <button class="answer-btn" data-value="graffiti">🏙️ На стене города</button>
+                    <button class="answer-btn" data-value="classic">🏰 В старом замке</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Твой любимый художник?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="portrait">🎭 Леонардо да Винчи</button>
+                    <button class="answer-btn" data-value="landscape">🌲 Шишкин</button>
+                    <button class="answer-btn" data-value="stilllife">🍋 Сезанн</button>
+                    <button class="answer-btn" data-value="fantasy">🧝‍♂️ Борис Вальехо</button>
+                    <button class="answer-btn" data-value="abstractart">🌀 Кандинский</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Какой характер у твоих картин?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="impressionist">☀️ Живой и светлый</button>
+                    <button class="answer-btn" data-value="realist">📸 Точный и детальный</button>
+                    <button class="answer-btn" data-value="abstract">🌀 Загадочный и сложный</button>
+                    <button class="answer-btn" data-value="graffiti">💥 Дерзкий и яркий</button>
+                    <button class="answer-btn" data-value="classic">📜 Классический и спокойный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Что ты рисуешь, когда скучно?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="portrait">👤 Людей</button>
+                    <button class="answer-btn" data-value="landscape">🏔️ Горные пейзажи</button>
+                    <button class="answer-btn" data-value="stilllife">🍶 Вазы/кувшины</button>
+                    <button class="answer-btn" data-value="fantasy">🐲 Драконов</button>
+                    <button class="answer-btn" data-value="abstractart">🌀 Узоры/каракули</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Твой стиль в одежде?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="impressionist">👗 Бохо/свободный</button>
+                    <button class="answer-btn" data-value="realist">👔 Классика/строгий</button>
+                    <button class="answer-btn" data-value="abstract">👕 Необычный/эклектика</button>
+                    <button class="answer-btn" data-value="graffiti">🧥 Уличный/спортивный</button>
+                    <button class="answer-btn" data-value="classic">🎩 Винтаж/ретро</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Что важнее в искусстве?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="portrait">😊 Эмоции</button>
+                    <button class="answer-btn" data-value="landscape">🌿 Красота природы</button>
+                    <button class="answer-btn" data-value="stilllife">🍞 Простота</button>
+                    <button class="answer-btn" data-value="fantasy">💭 Фантазия</button>
+                    <button class="answer-btn" data-value="abstractart">🌀 Смысл/идея</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🎨 Твой художник:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const artistResults = {
+            impressionist: {
+                title: "🎨 Импрессионист",
+                desc: "Ты — импрессионист! Ты ловишь момент, любишь свет и движение. Твои картины — это эмоции и впечатления, а не детали. Ты видишь красоту в обычном и умеешь передать настроение. Живи здесь и сейчас!",
+                emoji: "☀️",
+                color: "#FADB85"
+            },
+            realist: {
+                title: "🖼️ Реалист",
+                desc: "Ты — реалист! Ты ценишь точность, детали и правду жизни. Твои работы — как фотография, каждая мелочь на своём месте. Ты наблюдательный, терпеливый и любишь настоящую красоту без прикрас!",
+                emoji: "📸",
+                color: "#A9A9A9"
+            },
+            abstract: {
+                title: "🌀 Абстракционист",
+                desc: "Ты — абстракционист! Ты мыслишь образами, чувствами и идеями. Твои картины — это загадки, которые каждый разгадывает по-своему. Ты не боишься быть непонятым, ты ищешь глубину!",
+                emoji: "🎭",
+                color: "#8A6DE9"
+            },
+            graffiti: {
+                title: "🎨 Граффити-художник",
+                desc: "Ты — граффити-художник! Ты дерзкий, уличный и современный. Твои работы — это голос города, протест и искусство для всех. Ты не признаёшь рамок и правил, ты рисуешь, как дышишь!",
+                emoji: "🏙️",
+                color: "#D44A4A"
+            },
+            classic: {
+                title: "🏛️ Классицист",
+                desc: "Ты — классицист! Ты ценишь гармонию, порядок и вечные ценности. Твои картины — как окно в прошлое, полное достоинства и красоты. Ты уважаешь традиции и создаёшь то, что не стареет!",
+                emoji: "📜",
+                color: "#D2B48C"
+            },
+            portrait: {
+                title: "👤 Портретист",
+                desc: "Ты — портретист! Ты видишь душу человека, его характер и эмоции. Ты умеешь поймать взгляд и передать внутренний мир. Люди для тебя — главный источник вдохновения!",
+                emoji: "👀",
+                color: "#B87333"
+            },
+            landscape: {
+                title: "🏞️ Пейзажист",
+                desc: "Ты — пейзажист! Ты любишь природу, просторы и красоту мира. Твои картины — это гимн земле, небу и воде. Ты умеешь остановить мгновение и показать, как прекрасен этот мир!",
+                emoji: "🌲",
+                color: "#3D9970"
+            },
+            stilllife: {
+                title: "🍎 Натюрмортист",
+                desc: "Ты — мастер натюрморта! Ты видишь красоту в простых вещах: фруктах, цветах, посуде. Ты умеешь сделать обычное необычным. Ты ценишь уют, детали и гармонию в мелочах!",
+                emoji: "🍊",
+                color: "#E67E22"
+            },
+            fantasy: {
+                title: "🐉 Фэнтези-художник",
+                desc: "Ты — фэнтези-художник! Ты создаёшь миры, населяешь их драконами и героями. Ты — творец реальностей, мечтатель и сказочник. Твои картины уводят в другие вселенные!",
+                emoji: "🧝",
+                color: "#5D3A9B"
+            },
+            abstractart: {
+                title: "🌀 Абстракция",
+                desc: "Ты — абстракция! Твои работы — это чистые эмоции, линии и пятна. Ты не объясняешь, ты чувствуешь. Ты позволяешь зрителю самому додумать смысл. Ты свободен от правил!",
+                emoji: "🌈",
+                color: "#6A4E9B"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, artistResults, backgroundColors, 'artist');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

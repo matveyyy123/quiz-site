@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты музыкальный инструмент?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🎵 Какой ты инструмент?</h1>
+            <p class="subtitle">Узнай какой инструмент звучит в твоей душе!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какой у тебя характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="guitar">🎸 Свободный и бунтарский</button>
+                    <button class="answer-btn" data-value="piano">🎹 Утончённый и глубокий</button>
+                    <button class="answer-btn" data-value="drums">🥁 Энергичный и громкий</button>
+                    <button class="answer-btn" data-value="violin">🎻 Чувствительный и нежный</button>
+                    <button class="answer-btn" data-value="flute">🌬️ Лёгкий и воздушный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Где ты любишь выступать?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cello">🏛️ В филармонии</button>
+                    <button class="answer-btn" data-value="saxophone">🎷 В джаз-клубе</button>
+                    <button class="answer-btn" data-value="bass">🔊 На рок-концерте</button>
+                    <button class="answer-btn" data-value="harp">🏰 В замке/театре</button>
+                    <button class="answer-btn" data-value="accordion">🎪 На ярмарке</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Какую музыку ты любишь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="guitar">🎸 Рок</button>
+                    <button class="answer-btn" data-value="piano">🎹 Классику</button>
+                    <button class="answer-btn" data-value="drums">🥁 Металл/тяжёлую</button>
+                    <button class="answer-btn" data-value="violin">🎻 Саундтреки</button>
+                    <button class="answer-btn" data-value="flute">🌬️ Спокойную/медитации</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Твой стиль в одежде?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cello">👔 Классический</button>
+                    <button class="answer-btn" data-value="saxophone">🕶️ Стильный/ретро</button>
+                    <button class="answer-btn" data-value="bass">👕 Рокерский/косуха</button>
+                    <button class="answer-btn" data-value="harp">👗 Элегантный/вечерний</button>
+                    <button class="answer-btn" data-value="accordion">🧥 Народный/этнический</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Какой у тебя голос?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="guitar">🎤 Хриплый/низкий</button>
+                    <button class="answer-btn" data-value="piano">🎼 Мелодичный</button>
+                    <button class="answer-btn" data-value="drums">📢 Громкий</button>
+                    <button class="answer-btn" data-value="violin">🎵 Тонкий/высокий</button>
+                    <button class="answer-btn" data-value="flute">🍃 Тихий/спокойный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Что ты ценишь в людях?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cello">🎻 Глубину</button>
+                    <button class="answer-btn" data-value="saxophone">🎶 Чувство ритма</button>
+                    <button class="answer-btn" data-value="bass">🔨 Надёжность</button>
+                    <button class="answer-btn" data-value="harp">🕊️ Нежность</button>
+                    <button class="answer-btn" data-value="accordion">🎉 Весёлость</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Твой способ снять стресс?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="guitar">🎸 Играю на гитаре</button>
+                    <button class="answer-btn" data-value="piano">🎹 Сажусь за пианино</button>
+                    <button class="answer-btn" data-value="drums">🥁 Бью в барабаны</button>
+                    <button class="answer-btn" data-value="violin">🎻 Плачу/грущу</button>
+                    <button class="answer-btn" data-value="flute">🌬️ Медитирую</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Твой любимый цвет?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cello">🤎 Коричневый/дерево</button>
+                    <button class="answer-btn" data-value="saxophone">💛 Золотой/латунь</button>
+                    <button class="answer-btn" data-value="bass">🖤 Чёрный</button>
+                    <button class="answer-btn" data-value="harp">🤍 Белый</button>
+                    <button class="answer-btn" data-value="accordion">❤️ Красный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Какой концерт ты выберешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="guitar">🤘 Рок-фестиваль</button>
+                    <button class="answer-btn" data-value="piano">🎹 Сольный концерт</button>
+                    <button class="answer-btn" data-value="drums">🥁 Барабанное шоу</button>
+                    <button class="answer-btn" data-value="violin">🎻 Симфонический оркестр</button>
+                    <button class="answer-btn" data-value="flute">🌬️ Уличных музыкантов</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Твой девиз?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cello">🎵 "Важна глубина"</button>
+                    <button class="answer-btn" data-value="saxophone">🎷 "Импровизируй"</button>
+                    <button class="answer-btn" data-value="bass">🔊 "Держи ритм"</button>
+                    <button class="answer-btn" data-value="harp">🕊️ "Будь нежным"</button>
+                    <button class="answer-btn" data-value="accordion">🎪 "Радуй людей"</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🎵 Твой инструмент:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const instrumentResults = {
+            guitar: {
+                title: "🎸 Гитара",
+                desc: "Ты — гитара! Ты душа компании, свободный и бунтарский. Ты можешь быть и тихим аккомпанементом у костра, и заводным соло на рок-концерте. Ты универсальный, чувствительный и всегда в центре внимания!",
+                emoji: "🎸",
+                color: "#8B4513"
+            },
+            piano: {
+                title: "🎹 Пианино",
+                desc: "Ты — пианино! Ты глубокий, утончённый и многогранный. Ты можешь быть и нежным, и мощным. Ты любишь порядок и гармонию, но внутри тебя бушуют страсти. Ты — интеллигенция и душа!",
+                emoji: "🎹",
+                color: "#2C3E50"
+            },
+            drums: {
+                title: "🥁 Барабаны",
+                desc: "Ты — барабаны! Ты энергичный, мощный и ритмичный. Ты задаёшь темп всей жизни. Без тебя всё рассыплется. Ты громкий, прямой и никогда не остаёшься незамеченным. Ты — сердце ритма!",
+                emoji: "🥁",
+                color: "#D44A4A"
+            },
+            violin: {
+                title: "🎻 Скрипка",
+                desc: "Ты — скрипка! Ты нежный, чувствительный и пронзительный. Твоя музыка трогает до слёз. Ты умеешь передавать тончайшие эмоции и заставлять сердца биться чаще. Ты — голос души!",
+                emoji: "🎻",
+                color: "#D2B48C"
+            },
+            flute: {
+                title: "🌬️ Флейта",
+                desc: "Ты — флейта! Ты лёгкая, воздушная и свободная. Твой голос — как ветер или пение птиц. Ты приносишь спокойствие и умиротворение. Ты — глоток свежего воздуха в этом мире!",
+                emoji: "🎵",
+                color: "#87CEEB"
+            },
+            cello: {
+                title: "🎻 Виолончель",
+                desc: "Ты — виолончель! Ты глубокая, страстная и бархатная. Твой голос проникает в самое сердце. Ты не кричишь, но тебя слышно всегда. Ты — мудрость и чувственность в одном лице!",
+                emoji: "🎵",
+                color: "#8B5A2B"
+            },
+            saxophone: {
+                title: "🎷 Саксофон",
+                desc: "Ты — саксофон! Ты страстный, загадочный и сексуальный. Ты любишь джаз, импровизацию и ночную жизнь. Ты умеешь создать настроение и заставить людей чувствовать. Ты — голос ночного города!",
+                emoji: "🎷",
+                color: "#C0C0C0"
+            },
+            bass: {
+                title: "🔊 Бас-гитара",
+                desc: "Ты — бас-гитара! Ты надёжный, основательный и незаметный герой. Ты держишь ритм и фундамент, без тебя всё развалится. Ты не на первом плане, но без тебя никуда. Ты — опора!",
+                emoji: "🎸",
+                color: "#4A4A4A"
+            },
+            harp: {
+                title: "🪕 Арфа",
+                desc: "Ты — арфа! Ты нежная, возвышенная и ангельская. Твой голос звучит в сказках и замках. Ты красивая и загадочная. Ты приносишь гармонию и успокоение. Ты — музыка небес!",
+                emoji: "🪕",
+                color: "#FFD700"
+            },
+            accordion: {
+                title: "🎪 Аккордеон",
+                desc: "Ты — аккордеон! Ты весёлый, душевный и народный. Ты играешь на праздниках, свадьбах и ярмарках. Ты любишь, чтобы было шумно и весело. С тобой хочется петь и плясать!",
+                emoji: "🎵",
+                color: "#B22222"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, instrumentResults, backgroundColors, 'instrument');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>
