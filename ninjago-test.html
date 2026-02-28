@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кто ты из Ниндзяго?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🥋 Кто ты из Ниндзяго?</h1>
+            <p class="subtitle">Узнай, какой ты ниндзя!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какой у тебя характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="kai">😤 Вспыльчивый, но преданный</button>
+                    <button class="answer-btn" data-value="jay">😜 Не могу сидеть на месте</button>
+                    <button class="answer-btn" data-value="cole">💪 Спокойный и сильный</button>
+                    <button class="answer-btn" data-value="zane">🧐 Люблю логику и порядок</button>
+                    <button class="answer-btn" data-value="lloyd">🌟 Стараюсь быть лидером</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что делаешь в свободное время?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="nya">⚔️ Тренируюсь</button>
+                    <button class="answer-btn" data-value="garmadon">📜 Читаю древние свитки</button>
+                    <button class="answer-btn" data-value="sensei">🧘 Медитирую</button>
+                    <button class="answer-btn" data-value="skylor">🥋 Учу новые приёмы</button>
+                    <button class="answer-btn" data-value="morro">🗺️ Гуляю один</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Что для тебя важнее всего?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="kai">👨‍👧‍👦 Семья</button>
+                    <button class="answer-btn" data-value="jay">💑 Друзья и любовь</button>
+                    <button class="answer-btn" data-value="cole">🎵 Музыка и танцы</button>
+                    <button class="answer-btn" data-value="zane">🔍 Знания</button>
+                    <button class="answer-btn" data-value="lloyd">⚖️ Справедливость</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Твоя любимая еда?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="nya">🍣 Суши</button>
+                    <button class="answer-btn" data-value="garmadon">🍖 Мясо</button>
+                    <button class="answer-btn" data-value="sensei">🍵 Чай и рис</button>
+                    <button class="answer-btn" data-value="skylor">🍜 Лапша</button>
+                    <button class="answer-btn" data-value="morro">🍎 Фрукты</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Как ты решаешь проблемы?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="kai">💥 Сразу в бой</button>
+                    <button class="answer-btn" data-value="jay">🤔 Придумываю план</button>
+                    <button class="answer-btn" data-value="cole">🛡️ Защищаю других</button>
+                    <button class="answer-btn" data-value="zane">📊 Анализирую</button>
+                    <button class="answer-btn" data-value="lloyd">🤝 Ищу компромисс</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Твой любимый цвет?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="nya">💙 Синий</button>
+                    <button class="answer-btn" data-value="garmadon">🖤 Чёрный</button>
+                    <button class="answer-btn" data-value="sensei">🤍 Белый</button>
+                    <button class="answer-btn" data-value="skylor">🧡 Оранжевый</button>
+                    <button class="answer-btn" data-value="morro">💚 Зелёный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Что ты ценишь в друзьях?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="kai">🤜 Верность</button>
+                    <button class="answer-btn" data-value="jay">😂 Чувство юмора</button>
+                    <button class="answer-btn" data-value="cole">🤝 Надёжность</button>
+                    <button class="answer-btn" data-value="zane">🧠 Ум</button>
+                    <button class="answer-btn" data-value="lloyd">❤️ Доброту</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Твоё любимое место?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="nya">🌊 У воды</button>
+                    <button class="answer-btn" data-value="garmadon">🏯 Тёмный храм</button>
+                    <button class="answer-btn" data-value="sensei">⛰️ Горы</button>
+                    <button class="answer-btn" data-value="skylor">🏙️ Город</button>
+                    <button class="answer-btn" data-value="morro">🌲 Лес</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Как ты отдыхаешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="kai">🏋️ Тренируюсь</button>
+                    <button class="answer-btn" data-value="jay">🎉 Тусуюсь с друзьями</button>
+                    <button class="answer-btn" data-value="cole">🎵 Танцую</button>
+                    <button class="answer-btn" data-value="zane">📖 Читаю</button>
+                    <button class="answer-btn" data-value="lloyd">🧘 Медитирую</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Твоя мечта?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="nya">🥋 Стать мастером</button>
+                    <button class="answer-btn" data-value="garmadon">👑 Стать лидером</button>
+                    <button class="answer-btn" data-value="sensei">🕊️ Найти покой</button>
+                    <button class="answer-btn" data-value="skylor">💪 Стать сильнее</button>
+                    <button class="answer-btn" data-value="morro">🗺️ Быть свободным</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🥋 Твой персонаж:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+const ninjagoResults = {
+    kai: {
+        title: "⚔️ Кай",
+        desc: "Ты — Кай, ниндзя огня! Горячий, страстный и всегда готов защитить семью. Ты вспыльчивый, но твоё сердце всегда на правильной стороне. Ты не боишься бросить вызов и идёшь до конца!",
+        emoji: "🔥",
+        color: "#E63946"
+    },
+    jay: {
+        title: "💬 Джей",
+        desc: "Ты — Джей, ниндзя молнии! Весёлый, энергичный и немного болтливый. Ты душа компании, любишь шутить и никогда не унываешь. Твоя энергия заряжает всех вокруг!",
+        emoji: "⚡",
+        color: "#FFD700"
+    },
+    cole: {
+        title: "🎵 Коул",
+        desc: "Ты — Коул, ниндзя земли! Сильный, надёжный и спокойный. Ты — скала, на которую можно опереться. Ты любишь музыку и всегда готов прийти на помощь. С тобой как за каменной стеной!",
+        emoji: "🗻",
+        color: "#8B4513"
+    },
+    zane: {
+        title: "🧊 Зейн",
+        desc: "Ты — Зейн, ниндзя льда! Хладнокровный, умный и логичный. Ты всегда анализируешь ситуацию и находишь лучшее решение. Ты верный друг и настоящий стратег!",
+        emoji: "❄️",
+        color: "#87CEEB"
+    },
+    lloyd: {
+        title: "🌟 Ллойд",
+        desc: "Ты — Ллойд, зелёный ниндзя энергии! Ты прирождённый лидер, добрый и ответственный. Ты стараешься всех помирить и найти компромисс. Ты — надежда команды!",
+        emoji: "💚",
+        color: "#4CAF50"
+    },
+    nya: {
+        title: "🌊 Ния",
+        desc: "Ты — Ния, ниндзя воды! Сильная, независимая и решительная. Ты не уступаешь парням и всегда готова к бою. Ты верная подруга и настоящий воин!",
+        emoji: "💧",
+        color: "#1E90FF"
+    },
+    garmadon: {
+        title: "👑 Гармадон",
+        desc: "Ты — Гармадон! В тебе борются тьма и свет. Ты сильный, мудрый и загадочный. Ты прошёл долгий путь и теперь ищешь баланс. Ты — настоящий антигерой!",
+        emoji: "🖤",
+        color: "#2C3E50"
+    },
+    sensei: {
+        title: "🕯️ Сенсей Ву",
+        desc: "Ты — Сенсей Ву! Мудрый, спокойный и терпеливый. Ты учитель, наставник и хранитель знаний. Ты всегда знаешь, что делать, и направляешь других на верный путь!",
+        emoji: "🧘",
+        color: "#F4E3B1"
+    },
+    skylor: {
+        title: "🌈 Скайлор",
+        desc: "Ты — Скайлор, мастер поглощения стихий! Умная, хитрая и талантливая. Ты умеешь адаптироваться к любой ситуации и находишь подход к каждому. Ты — универсальный боец!",
+        emoji: "🧡",
+        color: "#FF8C00"
+    },
+    morro: {
+        title: "🌬️ Морро",
+        desc: "Ты — Морро, призрачный ниндзя ветра! Свободный, загадочный и одинокий. Ты ищешь своё место в мире и не боится быть собой. В тебе скрыта огромная сила!",
+        emoji: "🌪️",
+        color: "#708090"
+    }
+};
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, ninjagoResults, backgroundColors, 'ninjago');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

@@ -21,7 +21,7 @@
     <!-- Статистика сайта -->
     <div class="stats-container">
         <div class="stats-row">
-            <span class="stats-item">📊 Всего тестов: <span id="total-tests">33</span></span>
+            <span class="stats-item">📊 Всего тестов: <span id="total-tests">38</span></span>
             <span class="stats-separator">|</span>
             <span class="stats-item">👥 Всего прохождений: <span id="total-played">0</span></span>
         </div>
@@ -284,6 +284,41 @@
     <div class="test-desc">Найди свою любимую лужу</div>
 </div>
 
+<!-- Тест 34: Шаурма -->
+<div class="test-card shawarma" onclick="location.href='shawarma-test.html'">
+    <div class="test-emoji">🌯</div>
+    <div class="test-title">Какая ты шаурма?</div>
+    <div class="test-desc">Узнай свою начинку</div>
+</div>
+
+<!-- Тест 35: Торт -->
+<div class="test-card cake" onclick="location.href='cake-test.html'">
+    <div class="test-emoji">🎂</div>
+    <div class="test-title">Какой ты торт?</div>
+    <div class="test-desc">Узнай свой десерт</div>
+</div>
+
+<!-- Тест 36: Мороженое -->
+<div class="test-card icecream" onclick="location.href='icecream-test.html'">
+    <div class="test-emoji">🍦</div>
+    <div class="test-title">Какое ты мороженое?</div>
+    <div class="test-desc">Найди свой вкус</div>
+</div>
+
+<!-- Тест 37: Бутерброд -->
+<div class="test-card sandwich" onclick="location.href='sandwich-test.html'">
+    <div class="test-emoji">🥪</div>
+    <div class="test-title">Какой ты бутерброд?</div>
+    <div class="test-desc">Твой идеальный перекус</div>
+</div>
+
+<!-- Тест 38: Ниндзяго -->
+<div class="test-card ninjago" onclick="location.href='ninjago-test.html'">
+    <div class="test-emoji">🥋</div>
+    <div class="test-title">Кто ты из Ниндзяго?</div>
+    <div class="test-desc">Найди своего ниндзя</div>
+</div>
+
 </div>
 
             <!-- СВЯЗЬ С НАМИ -->
@@ -334,7 +369,12 @@ function updateTestCounters() {
         instrument: { selector: '.test-card.instrument', name: 'Инструмент' },
         bookgenre: { selector: '.test-card.bookgenre', name: 'Жанр книги' },
         city: { selector: '.test-card.city', name: 'Город' },
-        sea: { selector: '.test-card.sea', name: 'Море' }
+        sea: { selector: '.test-card.sea', name: 'Море' },
+        shawarma: { selector: '.test-card.shawarma', name: 'Шаурма' },
+        cake: { selector: '.test-card.cake', name: 'Торт' },
+        icecream: { selector: '.test-card.icecream', name: 'Мороженое' },
+        sandwich: { selector: '.test-card.sandwich', name: 'Бутерброд' },
+        ninjago: { selector: '.test-card.ninjago', name: 'Ниндзяго' }
     };
     
     // Находим самый популярный тест (первый по порядку при одинаковых значениях)
@@ -636,11 +676,16 @@ const testCategories = {
     'drink': 'food',        // Какой ты напиток?
     'pizza': 'food',        // Какая ты пицца?
     'burger': 'food', 
+    'shawarma': 'food',
+    'cake': 'food',
+    'icecream': 'food',
+    'sandwich': 'food',
     
     // 🎭 ПЕРСОНАЖИ (characters)
     'hero': 'characters',           // Какой ты супергерой?
     'medieval': 'characters',       // Какой ты рыцарь?
     'supervillain': 'characters',   // Какой ты суперзлодей?
+    'ninjago': 'characters',
     
     // 🐾 ЖИВОТНЫЕ (animals)
     'animal': 'animals',        // Какое ты животное?

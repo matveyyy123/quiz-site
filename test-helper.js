@@ -1,6 +1,8 @@
+// ========== ПРОВЕРКА, ЧТОБЫ НЕ ПОДКЛЮЧАТЬ ДВАЖДЫ ==========
+if (typeof window.QuizTest === 'undefined') {
+
 // ========== ПОДКЛЮЧАЕМ КОНФЕТТИ ==========
 (function() {
-    // Проверяем, не загружено ли уже
     if (typeof window.confetti !== 'function') {
         const script = document.createElement('script');
         script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1';
@@ -9,9 +11,6 @@
         console.log('🎉 Конфетти загружается...');
     }
 })();
-
-// ========== ПРОВЕРКА, ЧТОБЫ НЕ ПОДКЛЮЧАТЬ ДВАЖДЫ ==========
-if (typeof window.QuizTest === 'undefined') {
 
 console.log('🎵 Скрипт загружен');
 

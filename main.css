@@ -737,6 +737,37 @@ body.dark-theme .categories-wrapper {
     border: 2px solid #2e558b;
 }
 
+/* КАРТОЧКА 34: Шаурма */
+.test-card.shawarma {
+    background: linear-gradient(135deg, #f5deb3, #ffffff);
+    border: 2px solid #cd853f;
+}
+
+/* КАРТОЧКА 35: Торт */
+.test-card.cake {
+    background: linear-gradient(135deg, #ffe6f0, #ffffff);
+    border: 2px solid #ffb6c1;
+}
+
+/* КАРТОЧКА 36: Мороженое */
+.test-card.icecream {
+    background: linear-gradient(135deg, #e0f0ff, #ffffff);
+    border: 2px solid #87cefa;
+}
+
+/* КАРТОЧКА 37: Бутерброд */
+.test-card.sandwich {
+    background: linear-gradient(135deg, #f5deb3, #ffffff);
+    border: 2px solid #d2b48c;
+}
+
+/* КАРТОЧКА 38: Ниндзяго */
+.test-card.ninjago {
+    background: linear-gradient(135deg, #c2e0ff, #ffffff);
+    border: 2px solid #7dbeff;
+    color: white;
+}
+
 /* ========== СЕКЦИЯ СВЯЗИ ========== */
 .contact-section {
     text-align: center;

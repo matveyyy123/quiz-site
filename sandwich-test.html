@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты бутерброд?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🥪 Какой ты бутерброд?</h1>
+            <p class="subtitle">Узнай, какой бутерброд в твоей душе!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какой у тебя характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cheese">🧀 Простой и понятный</button>
+                    <button class="answer-btn" data-value="sausage">🌭 Основательный и сытный</button>
+                    <button class="answer-btn" data-value="butter">🧈 Классический и надёжный</button>
+                    <button class="answer-btn" data-value="caviar">🐠 Изысканный и праздничный</button>
+                    <button class="answer-btn" data-value="jam">🍓 Сладкий и приятный</button>
+                </div>
+            </div>
+
+<!-- Вопрос 2 (вторые 5) -->
+<div class="question-card" id="question2">
+    <br>
+    <h2 class="question-title">Твой любимый вид спорта?</h2>
+    <div class="question-header">
+        <h4 class="question-number">Вопрос 2/10</h4>
+        <a href="main.html" class="back-small-btn">Назад к тестам</a>
+    </div>
+    <div class="answers">
+        <button class="answer-btn" data-value="ham">⚽ Футбол</button>
+        <button class="answer-btn" data-value="fish">🏀 Баскетбол</button>
+        <button class="answer-btn" data-value="egg">🎾 Теннис</button>
+        <button class="answer-btn" data-value="avocado">🏊 Плавание</button>
+        <button class="answer-btn" data-value="honey">🚴 Велоспорт</button>
+    </div>
+</div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Какой хлеб ты любишь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cheese">🍞 Белый</button>
+                    <button class="answer-btn" data-value="sausage">🍞 Чёрный/ржаной</button>
+                    <button class="answer-btn" data-value="butter">🥖 Багет</button>
+                    <button class="answer-btn" data-value="caviar">🥐 Круассан</button>
+                    <button class="answer-btn" data-value="jam">🍞 Тостовый</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Что ты пьёшь с бутербродом?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ham">☕ Кофе</button>
+                    <button class="answer-btn" data-value="fish">🍵 Чай</button>
+                    <button class="answer-btn" data-value="egg">🥛 Молоко</button>
+                    <button class="answer-btn" data-value="avocado">🧃 Сок</button>
+                    <button class="answer-btn" data-value="honey">☕ Какао</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Где ты любишь есть бутерброды?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cheese">🏠 Дома на кухне</button>
+                    <button class="answer-btn" data-value="sausage">💼 На работе/учебе</button>
+                    <button class="answer-btn" data-value="butter">🧺 На пикнике</button>
+                    <button class="answer-btn" data-value="caviar">🍽️ В ресторане</button>
+                    <button class="answer-btn" data-value="jam">🚶 На ходу</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Твой любимый соус?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ham">🍅 Кетчуп</button>
+                    <button class="answer-btn" data-value="fish">🧈 Майонез</button>
+                    <button class="answer-btn" data-value="egg">🧀 Сырный</button>
+                    <button class="answer-btn" data-value="avocado">🌿 Песто</button>
+                    <button class="answer-btn" data-value="honey">🍯 Мёд</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Твой любимый овощ?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cheese">🥒 Огурец</button>
+                    <button class="answer-btn" data-value="sausage">🍅 Помидор</button>
+                    <button class="answer-btn" data-value="butter">🥬 Листья салата</button>
+                    <button class="answer-btn" data-value="caviar">🧅 Лук</button>
+                    <button class="answer-btn" data-value="jam">🌶️ Перец</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Как ты отдыхаешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ham">🛋️ Лежу на диване</button>
+                    <button class="answer-btn" data-value="fish">📖 Читаю</button>
+                    <button class="answer-btn" data-value="egg">🎮 Играю в игры</button>
+                    <button class="answer-btn" data-value="avocado">🚶 Гуляю</button>
+                    <button class="answer-btn" data-value="honey">🎬 Смотрю кино</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Твой идеальный перекус?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="cheese">🧀 Простой бутерброд</button>
+                    <button class="answer-btn" data-value="sausage">🌭 Горячий сэндвич</button>
+                    <button class="answer-btn" data-value="butter">🥖 Круассан</button>
+                    <button class="answer-btn" data-value="caviar">🐠 Что-то изысканное</button>
+                    <button class="answer-btn" data-value="jam">🍓 Сладкое</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Что для тебя счастье?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="ham">🥖 Сытный ужин</button>
+                    <button class="answer-btn" data-value="fish">🌅 Хороший завтрак</button>
+                    <button class="answer-btn" data-value="egg">🧺 Пикник</button>
+                    <button class="answer-btn" data-value="avocado">🏠 Уют</button>
+                    <button class="answer-btn" data-value="honey">☕ Чашка чая</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🥪 Твой бутерброд:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const sandwichResults = {
+            cheese: {
+                title: "🧀 Бутерброд с сыром",
+                desc: "Ты — бутерброд с сыром! Простой, понятный и любимый всеми. Ты не пытаешься быть сложным, ты просто делаешь людей счастливыми. С тобой уютно и по-домашнему!",
+                emoji: "🧀",
+                color: "#FFD700"
+            },
+            sausage: {
+                title: "🌭 Бутерброд с колбасой",
+                desc: "Ты — бутерброд с колбасой! Основательный, сытный и практичный. Ты всегда готов к любым испытаниям, с тобой не пропадёшь. Ты — классика студенческой жизни!",
+                emoji: "🌭",
+                color: "#CD853F"
+            },
+            butter: {
+                title: "🧈 Бутерброд с маслом",
+                desc: "Ты — бутерброд с маслом! Классический, нежный и душевный. Ты — основа основ, с тебя всё начинается. Ты простой, но без тебя никуда!",
+                emoji: "🧈",
+                color: "#FFFFE0"
+            },
+            caviar: {
+                title: "🐠 Бутерброд с икрой",
+                desc: "Ты — бутерброд с икрой! Праздничный, изысканный и дорогой. Ты любишь быть в центре внимания, у тебя отличный вкус. С тобой любой день становится особенным!",
+                emoji: "🐠",
+                color: "#FF8C00"
+            },
+            jam: {
+                title: "🍓 Бутерброд с джемом",
+                desc: "Ты — бутерброд с джемом! Сладкий, приятный и радостный. Ты даришь улыбки и хорошее настроение. С тобой хочется пить чай и мечтать!",
+                emoji: "🍓",
+                color: "#FF69B4"
+            },
+            ham: {
+                title: "🍖 Бутерброд с ветчиной",
+                desc: "Ты — бутерброд с ветчиной! Сытный, мясистый и серьёзный. Ты не любишь пустоты, ценишь качество и надёжность. С тобой не соскучишься!",
+                emoji: "🍖",
+                color: "#B22222"
+            },
+            fish: {
+                title: "🐟 Бутерброд с рыбой",
+                desc: "Ты — бутерброд с рыбой! Полезный, оригинальный и свежий. Ты следишь за здоровьем, но не отказываешь себе в удовольствиях. С тобой легко и приятно!",
+                emoji: "🐟",
+                color: "#F4A460"
+            },
+            egg: {
+                title: "🥚 Бутерброд с яйцом",
+                desc: "Ты — бутерброд с яйцом! Нежный, питательный и солнечный. Ты даришь энергию на весь день. С тобой хочется начинать утро!",
+                emoji: "🥚",
+                color: "#FFD700"
+            },
+            avocado: {
+                title: "🥑 Бутерброд с авокадо",
+                desc: "Ты — бутерброд с авокадо! Модный, современный и стильный. Ты следишь за трендами, любишь всё новое и необычное. С тобой интересно и полезно!",
+                emoji: "🥑",
+                color: "#3D9970"
+            },
+            honey: {
+                title: "🍯 Бутерброд с мёдом",
+                desc: "Ты — бутерброд с мёдом! Сладкий, тягучий и лечебный. Ты согреваешь людей своей добротой и заботой. С тобой хочется лечиться от грусти!",
+                emoji: "🍯",
+                color: "#FFA500"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, sandwichResults, backgroundColors, 'sandwich');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>

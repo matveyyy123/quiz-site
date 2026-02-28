@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой ты торт?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <script>
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            </script>
+            <h1>🎂 Какой ты торт?</h1>
+            <p class="subtitle">Узнай какое твое любимое лакомство!</p>
+        </header>
+
+        <main class="quiz">
+            <!-- Вопрос 1 (первые 5) -->
+            <div class="question-card active" id="question1">
+                <br>
+                <h2 class="question-title">Какой у тебя характер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 1/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="medovik">🍯 Ностальгический и душевный</button>
+                    <button class="answer-btn" data-value="napoleon">🍰 Воздушный и мечтательный</button>
+                    <button class="answer-btn" data-value="prague">🍫 Насыщенный и глубокий</button>
+                    <button class="answer-btn" data-value="cheesecake">🧀 Нежный и спокойный</button>
+                    <button class="answer-btn" data-value="redvelvet">❤️ Яркий и эффектный</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 (вторые 5) -->
+            <div class="question-card" id="question2">
+                <br>
+                <h2 class="question-title">Что ты любишь на завтрак?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 2/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="honey">🍯 Оладьи с мёдом</button>
+                    <button class="answer-btn" data-value="berry">🍓 Ягоды</button>
+                    <button class="answer-btn" data-value="chocolatecake">🍫 Круассан с шоколадом</button>
+                    <button class="answer-btn" data-value="curd">🥛 Творог</button>
+                    <button class="answer-btn" data-value="creamy">🧁 Йогурт</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 (первые 5) -->
+            <div class="question-card" id="question3">
+                <br>
+                <h2 class="question-title">Твой любимый напиток?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 3/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="medovik">🍵 Чай с мёдом</button>
+                    <button class="answer-btn" data-value="napoleon">☕ Кофе с молоком</button>
+                    <button class="answer-btn" data-value="prague">☕ Эспрессо</button>
+                    <button class="answer-btn" data-value="cheesecake">🍵 Травяной чай</button>
+                    <button class="answer-btn" data-value="redvelvet">🍷 Глинтвейн</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 (вторые 5) -->
+            <div class="question-card" id="question4">
+                <br>
+                <h2 class="question-title">Какой десерт ты выберешь?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 4/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="honey">🍯 Медовик</button>
+                    <button class="answer-btn" data-value="berry">🍓 Чизкейк с ягодами</button>
+                    <button class="answer-btn" data-value="chocolatecake">🍫 Фондю</button>
+                    <button class="answer-btn" data-value="curd">🧀 Сырники</button>
+                    <button class="answer-btn" data-value="creamy">🍦 Панна-котту</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 (первые 5) -->
+            <div class="question-card" id="question5">
+                <br>
+                <h2 class="question-title">Как ты отметишь день рождения?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 5/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="medovik">🏠 В кругу семьи</button>
+                    <button class="answer-btn" data-value="napoleon">🎉 С друзьями</button>
+                    <button class="answer-btn" data-value="prague">🍷 В ресторане</button>
+                    <button class="answer-btn" data-value="cheesecake">🧘 В уединении</button>
+                    <button class="answer-btn" data-value="redvelvet">💃 С размахом</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 6 (вторые 5) -->
+            <div class="question-card" id="question6">
+                <br>
+                <h2 class="question-title">Твой любимый цвет?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 6/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="honey">🟡 Жёлтый</button>
+                    <button class="answer-btn" data-value="berry">🔴 Красный</button>
+                    <button class="answer-btn" data-value="chocolatecake">🟤 Коричневый</button>
+                    <button class="answer-btn" data-value="curd">⚪ Белый</button>
+                    <button class="answer-btn" data-value="creamy">🟣 Розовый</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 7 (первые 5) -->
+            <div class="question-card" id="question7">
+                <br>
+                <h2 class="question-title">Что ты ищешь в людях?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 7/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="medovik">💝 Доброту</button>
+                    <button class="answer-btn" data-value="napoleon">💫 Лёгкость</button>
+                    <button class="answer-btn" data-value="prague">🔍 Глубину</button>
+                    <button class="answer-btn" data-value="cheesecake">🤗 Нежность</button>
+                    <button class="answer-btn" data-value="redvelvet">✨ Харизму</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 8 (вторые 5) -->
+            <div class="question-card" id="question8">
+                <br>
+                <h2 class="question-title">Что делаешь во время стресса?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 8/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="honey">🍯 Ем сладкое</button>
+                    <button class="answer-btn" data-value="berry">🚶 Гуляю</button>
+                    <button class="answer-btn" data-value="chocolatecake">📚 Читаю</button>
+                    <button class="answer-btn" data-value="curd">🧘 Медитирую</button>
+                    <button class="answer-btn" data-value="creamy">🎵 Слушаю музыку</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 9 (первые 5) -->
+            <div class="question-card" id="question9">
+                <br>
+                <h2 class="question-title">Твой идеальный вечер?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 9/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="medovik">🛋️ Семейный уют</button>
+                    <button class="answer-btn" data-value="napoleon">🎭 Кино с друзьями</button>
+                    <button class="answer-btn" data-value="prague">🍷 Романтика</button>
+                    <button class="answer-btn" data-value="cheesecake">📖 Книга и плед</button>
+                    <button class="answer-btn" data-value="redvelvet">💃 Вечеринка</button>
+                </div>
+            </div>
+
+            <!-- Вопрос 10 (вторые 5) -->
+            <div class="question-card" id="question10">
+                <br>
+                <h2 class="question-title">Что для тебя счастье?</h2>
+                <div class="question-header">
+                    <h4 class="question-number">Вопрос 10/10</h4>
+                    <a href="main.html" class="back-small-btn">Назад к тестам</a>
+                </div>
+                <div class="answers">
+                    <button class="answer-btn" data-value="honey">🍯 Маленькие радости</button>
+                    <button class="answer-btn" data-value="berry">🍓 Любовь</button>
+                    <button class="answer-btn" data-value="chocolatecake">🍫 Удовольствие</button>
+                    <button class="answer-btn" data-value="curd">🧘 Покой</button>
+                    <button class="answer-btn" data-value="creamy">🎉 Праздник</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-card" id="result">
+                <br>
+                <h2>🎂 Твой торт:</h2>
+                <div id="result-content"></div>
+                <div class="rating-section">
+                    <h4>Оцените этот тест</h4>
+                    <div class="stars-container">
+                        <button class="star-btn" onclick="rateTest(1)">★</button>
+                        <button class="star-btn" onclick="rateTest(2)">★</button>
+                        <button class="star-btn" onclick="rateTest(3)">★</button>
+                        <button class="star-btn" onclick="rateTest(4)">★</button>
+                        <button class="star-btn" onclick="rateTest(5)">★</button>
+                    </div>
+                </div>
+                <button class="restart-btn" id="restartBtn">Пройти тест заново</button>
+                <button class="restart-btn" onclick="location.href='main.html'">Назад к тестам</button>
+            </div>
+        </main>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <script src="test-helper.js"></script>
+    <script>
+        const cakeResults = {
+            medovik: {
+                title: "🍯 Медовик",
+                desc: "Ты — Медовик! Душевный, тёплый и ностальгический. Ты любишь семейные традиции, уют и домашние вечера. С тобой тепло и спокойно, как в детстве у бабушки!",
+                emoji: "🍯",
+                color: "#D2B48C"
+            },
+            napoleon: {
+                title: "🍰 Наполеон",
+                desc: "Ты — Наполеон! Воздушный, мечтательный и многогранный. В тебе столько слоёв, сколько никто не ожидает. Ты лёгкий, но глубокий. С тобой хочется узнавать тебя снова и снова!",
+                emoji: "🍰",
+                color: "#F4E3B1"
+            },
+            prague: {
+                title: "🍫 Прага",
+                desc: "Ты — Прага! Насыщенный, глубокий и страстный. Ты любишь всё основательное, не терпишь пустоты. Ты — шоколадная фантазия, которая дарит настоящее наслаждение!",
+                emoji: "🍫",
+                color: "#4A2C2C"
+            },
+            cheesecake: {
+                title: "🧀 Чизкейк",
+                desc: "Ты — Чизкейк! Нежный, сливочный и утончённый. Ты ценишь комфорт и гармонию, не любишь суету. С тобой хочется пить чай и разговаривать по душам!",
+                emoji: "🧀",
+                color: "#F5DEB3"
+            },
+            redvelvet: {
+                title: "❤️ Красный бархат",
+                desc: "Ты — Красный бархат! Яркий, эффектный и страстный. Ты притягиваешь взгляды, но внутри ты нежный и ранимый. Ты — праздник, который всегда с тобой!",
+                emoji: "❤️",
+                color: "#B22222"
+            },
+            honey: {
+                title: "🍯 Медовый",
+                desc: "Ты — Медовый торт! Сладкий, тягучий и солнечный. Ты согреваешь людей своим теплом, как мёд в холодный вечер. С тобой уютно и по-домашнему!",
+                emoji: "🍯",
+                color: "#FFA500"
+            },
+            berry: {
+                title: "🍓 Ягодный торт",
+                desc: "Ты — Ягодный торт! Свежий, яркий и сочный. Ты любишь жизнь во всех её проявлениях, всегда полон энергии и идей. С тобой весело и вкусно!",
+                emoji: "🍓",
+                color: "#FF69B4"
+            },
+            chocolatecake: {
+                title: "🍫 Шоколадный торт",
+                desc: "Ты — Шоколадный торт! Страстный, насыщенный и addictive. Тебя хочется ещё и ещё. Ты — удовольствие, от которого невозможно отказаться!",
+                emoji: "🍫",
+                color: "#8B4513"
+            },
+            curd: {
+                title: "🥛 Творожный торт",
+                desc: "Ты — Творожный торт! Лёгкий, полезный и нежный. Ты заботишься о других, но при этом остаёшься собой. С тобой легко и безопасно!",
+                emoji: "🥛",
+                color: "#F0F0F0"
+            },
+            creamy: {
+                title: "🧁 Кремовый торт",
+                desc: "Ты — Кремовый торт! Нежный, воздушный и романтичный. Ты любишь красивое, стремишься к идеалу и умеешь создавать праздник вокруг себя!",
+                emoji: "🧁",
+                color: "#FFDAB9"
+            }
+        };
+
+        const backgroundColors = {
+            1: 'bg-1', 2: 'bg-2', 3: 'bg-3', 4: 'bg-4', 5: 'bg-5',
+            6: 'bg-6', 7: 'bg-7', 8: 'bg-8', 9: 'bg-9', 10: 'bg-10'
+        };
+
+        const quiz = new QuizTest(10, cakeResults, backgroundColors, 'cake');
+        
+        window.rateTest = function(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            if (stars[0] && stars[0].disabled) return;
+            
+            stars.forEach(btn => btn.classList.remove('selected'));
+            for (let i = 0; i < rating; i++) stars[i].classList.add('selected');
+            quiz.saveRating(rating);
+            
+            stars.forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.5';
+                btn.style.cursor = 'default';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star-btn');
+                stars.forEach((star, index) => {
+                    star.addEventListener('mouseenter', function() {
+                        if (this.disabled) return;
+                        stars.forEach(s => s.classList.remove('hover'));
+                        for (let i = 0; i <= index; i++) stars[i].classList.add('hover');
+                    });
+                    star.addEventListener('mouseleave', () => {
+                        stars.forEach(s => s.classList.remove('hover'));
+                    });
+                });
+            }, 200);
+            quiz.init();
+        });
+    </script>
+</body>
+</html>
